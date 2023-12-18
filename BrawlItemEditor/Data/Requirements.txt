@@ -1,4 +1,4 @@
-﻿Character Exists?
+Character Exists?
 Animation End
 Animation has looped?
 On Ground
@@ -7,8 +7,8 @@ Holding a Ledge
 On a Passable Floor
 Compare
 Bit is Set
-Facing Right
-Facing Left
+Facing Right (Doesnt work in Items)
+Facing Left (Doesnt Work in Items)
 Hitbox Connects
 Touching a Floor, Wall, or Ceiling
 Is Throwing Someone
@@ -131,8 +131,8 @@ Has Been Hit by Cape Effect
 In walljump situation
 In wallcling situation
 Is within footstool range.
-2714
-2715
+Is target behind the item
+Distance of the nearest gap
 Is falling+hit down
 Has Smash Ball
 2718

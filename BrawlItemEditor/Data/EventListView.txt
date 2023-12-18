@@ -1,4 +1,4 @@
-﻿00010100
+00010100
 1
 frames=\X
 
@@ -342,3 +342,12 @@ Red=\X, Green=\X, Blue=\X, Alpha=\X, Light Source X=\X, Light Source Y=\X
 21070500
 1
 Transition time=\X, Red=\X, Green=\X, Blue=\X, Alpha=\X
+
+65040100
+1
+frames=\X
+
+65050100
+1
+frames=\X
+

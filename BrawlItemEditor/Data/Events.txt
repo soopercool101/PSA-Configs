@@ -1,4 +1,4 @@
-﻿00010100
+00010100
 Synchronous Timer
 Pause the current flow of events until the set time is reached. Synchronous timers count down when they are reached in the code.
 1
@@ -44,62 +44,62 @@ Return from a Subroutine.
 
 
 000A0100
-If
+If: Requirement
 Start an If block until an Else or an End If is reached. Use this If to check for a requirement.
 6
 
 000A0200
-If
+If: Requirement Value
 Start an If block until an Else or an End If is reached. Use this If to check for a requirement with a specified value.
 65
 
 000A0400
-If
+If: Comparison
 Start an If block until an Else or an End If is reached. Use this If to compare values.
 6505
 
 000B0100
-And
+And: Requirement
 Insert an And statement to an If statement. Use this And to check for a requirement.
 6
 
 000B0200
-And
+And: Requirement Value
 Insert an And statement to an If statement. Use this And to check for a requirement with a specified value.
 65
 
 000B0400
-And Comparison
+And: Comparison
 Insert an And statement to an If statement. Use this And to compare values.
 6505
 
 000C0100
-Or
+Or: Requirement
 Insert an Or statement to an If statement. Use this And to check for a requirement.
 6
 
 000C0200
-Or
+Or: Requirement Value
 Insert an Or statement to an If statement. Use this Or to check for a requirement with a specified value.
 65
 
 000C0400
-Or Comparison
+Or: Comparison
 Insert an Or statement to an If statement. Use this Or to compare values.
 6505
 
 000D0100
-Else If
+Else If: Requirement
 Insert an Else If block to go with an If series. Use this Else If to check for a requirement.
 6
 
 000D0200
-Else If
+Else If: Requirement Value
 Insert an Else If block to go with an If series. Use this Else If to check for a requirement with a specified value.
 65
 
 000D0400
-Else If Comparison
+Else If: Comparison
 Insert an Else If block to go with an If series. Use this Else if to compare values.
 6505
 
@@ -115,7 +115,7 @@ End an If block.
 
 00100200
 Switch
-Begin a multiple case Switch block.
+Begin a multiple case Switch block (Doesnt seem to work on Action Tabs).
 05
 
 00110100
@@ -139,47 +139,47 @@ Appears within Case statements; exits the switch event completely. All code loca
 
 
 02010200
-Change Action
+Change Action: Requirement
 Change the current action upon the specified requirement being met. The requirement does not have to be met at the time this ID is executed - it can be used anytime after execution. This Change Action is based on a requirement being met.
 06
 
 02010300
-Change Action
+Change Action: Requirement Value
 Change the current action upon the specified requirement being met. The requirement does not have to be met at the time this ID is executed - it can be used anytime after execution. This Change Action is based on a requirement with a specified value being met.
 065
 
 02010500
-Change Action
+Change Action: Comparison
 Change the current action upon the specified requirement being met. The requirement does not have to be met at the time this ID is executed - it can be used anytime after execution. This Change Action is based on a comparison.
 06505
 
 02000300
-Change Action Status
+Change Action Status: Requirement
 Change the current action upon the specified requirement being met. The requirement does not have to be met at the time this ID is executed - it can be used anytime after execution. This Change Action Status is based on a requirement being met.
 006
 
 02000400
-Change Action Status
+Change Action Status: Requirement Value
 Change the current action upon the specified requirement being met. The requirement does not have to be met at the time this ID is executed - it can be used anytime after execution. This Change Action Status is based on a requirement with a specified value being met.
 0065
 
 02000600
-Change Action Status
+Change Action Status: Comparison
 Change the current action upon the specified requirement being met. The requirement does not have to be met at the time this ID is executed - it can be used anytime after execution. This Change Action Status is based on a comparison.
 006505
 
 02040100
-Additional Requirement
+Additional: Requirement
 Add an additional requirement to the preceeding Change Action statement. This Additional Action Requirement is based on a requirement being met.
 6
 
 02040200
-Additional Requirement
+Additional Requirement: Requirement Value
 Add an additional requirement to the preceeding Change Action statement. This Additional Action Requirement is based on a requirement with a specified value being met.
 65
 
 02040400
-Additional Requirement
+Additional Requirement: Comparison
 Add an additional requirement to the preceeding Change Action statement. This Additional Action Requirement is based on a comparison.
 6505
 
@@ -224,7 +224,7 @@ Change the current sub action.
 
 
 04000200
-Change Sub Action
+Change Sub Action: Pass Frame
 Change the current sub action. Can specify whether or not to pass the current frame or start the animation over.
 03
 
@@ -242,6 +242,13 @@ Dictates the frame speed of the sub action. Example: Setting to 2 makes the anim
 Change Sub Action (Reverse Play)
 Change the current sub action (plays in reverse). The reading order of the events is normal.
 
+04100200
+Animation Index Select
+Selects which animation to play depending on its index (Peach's turnips use this)
+
+04120200
+Animation Timer Frime?
+Sets which frame the animation should be in? (used in peach turnips to determine its face)
 
 04140100
 Set Animation & Timer Frame
@@ -254,33 +261,33 @@ Stop subsequent loads until achieve the "Set Requirement".
 
 
 04020100
-Set Requirement
-Set requirement for reading "Load Rest" or later.
+Set Loop Resume Condition: Requirement
+Sets the condition that needs to be met in order for a loop to iterate again after a Loop Rest has been hit (must be used before Loop Rest command). This Set Loop Resume is based on a requirement.
 6
 
 04020200
-Set Requirement
-Set requirement for reading "Load Rest" or later.
+Set Loop Resume Condition: Requirement Value
+Sets the condition that needs to be met in order for a loop to iterate again after a Loop Rest has been hit (must be used before Loop Rest command). This Set Loop Resume is based on a requirement with a specified value being met.
 65
 
 04020400
-Set Requirement
-Set requirement for reading "Load Rest" or later.
+Set Loop Resume Condition: Comparison
+Sets the condition that needs to be met in order for a loop to iterate again after a Loop Rest has been hit (must be used before Loop Rest command). This Set Loop Resume is based on a comparison.
 6505
 
 04030100
-Set Extra Requirement
-Add an additional requirement to "Set Requirement".
+Additional Loop Resume Condition: Requirement
+Add an additional requirement to Set Loop Resume Condition. This Additional Set Loop Resume is based on a requirement.
 6
 
 04030200
-Set Extra Requirement
-Add an additional requirement to "Set Requirement".
+Additional Loop Resume Condition: Requirement Value
+Add an additional requirement to Set Loop Resume Condition. This Additional Set Loop Resume is based on a requirement with a specified value being met.
 65
 
 04030400
-Set Extra Requirement
-Add an additional requirement to "Set Requirement".
+Additional Loop Resume Condition: Comparison
+Add an additional requirement to Set Loop Resume Condition. This Additional Set Loop Resume is based on a comparison.
 6505
 
 04010200
@@ -457,6 +464,13 @@ Rotates character's model by amount specified. Persists until changed.
 Set Edge Slide
 Determines whether or not the character will slide off the edge. (Set Aerial/Onstage State)
 
+080C0000
+Detach
+Detaches the current item to let go again
+
+081A0100
+Unknown Boolean
+It turns on some flag with no helpful function call, it takes one bool as argument though.
 
 0E000100
 Set Air/Ground
@@ -1281,4 +1295,63 @@ Undefined. Used in Samus.
 19010000
 Module19 01
 Undefined.
+
+65000000
+Destroy Item
+Destroys the current item
+
+65030300
+Set Model Rotation
+Sets the models rotation (pitch, yaw, roll)
+
+660B0300
+Set Model Rotation
+Sets the models rotation (pitch, yaw, roll)
+
+66010300
+Set Constant Model Rotation
+Sets the models rotation constantly (pitch, yaw, roll)
+
+
+65040100
+Set Deletion Timer
+Sets the time of deletion (in hexadecimals)
+
+651D0200
+Set Ownership
+(Owner?, Team?)Sets the ownership of the current item(0xFFFFFFFF to be neutral)
+
+22000100
+Owner related command?
+When set to FFFFFFF it allows the owner to get hurt by the item.
+
+22020100
+Set Ownership?
+(Owner, usually 0x14) = Set Ownership (again?, this is used in explosives to enable damage to the original attacker)
+
+65070100
+Find Target
+Finds a target (??? usually 0x2/0x4)
+
+66050300
+Metroid Schmovement???
+"(??? usually 0x4, speed, TimetomoveAgain) = Metroid like movement, has to be called once "
+
+66000D00
+Apply Momentum
+Applies Momentum(x-speed, y-speed, x-multiplier, y-multiplier, paramter10/12 = based on facing direction)
+
+66020300
+Remove Momentum
+(x-amount, y-amount, unknown) = Remove momentum
+
+65020600
+Math Functions?
+Seems to carry different values to pre existing ones in order
+
+65050100
+Set Lifespan
+Sets the amount of frames a subaction (in hexadecimals) should be present for (used in Sensor Bomb)
+
+
 

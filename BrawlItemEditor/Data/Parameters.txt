@@ -1,4 +1,4 @@
-﻿00010100
+00010100
 Frames
 The number of frames to wait.
 
@@ -421,40 +421,40 @@ Parameter 4
 Usually RA BIT Basic Variable set at a value of 4.
 
 06101100
-Undefined
-When messed with, seemed to affect the accuracy of the collision detection. Should be set to 0 to be safe.
 ID
-The ID of the hitbox
-Bone?
-Possibly the bone that the hitbubble is attached to.
+The ID of the collision.
+Segment
+Allows the collision of this ID to detect even if the target has already been detected by it (and its segment at the time was a lower value). Allows collisions to detect multiple times without a frame of dead space.
+Bone
+The bone the collision is attached to.
 Size
-The size of the hitbubble.
+The size of the collision.
 X Offset
 Transition relative to the currently attached bone.
 Y Offset
 Transition relative to the currently attached bone.
 Z Offset
 Transition relative to the currently attached bone.
-Flags
-+02 = Hits Normally, +04=Can be reflected....
-Undefined
-Undefined.
+Collision Type
+Specifies if the collision detects hitboxes, hurtboxes, etc, Values are identical to what's used in the Hitbox Connects.
+Possible Targets
+Specifies what the collision can detect (fighters, items, etc)
 Air/Ground
 1 = hits grounded, 2 = hits aerial, 3 = hits grounded and aerial
-Undefined
-Undefined.
-Undefined
-Undefined.
-Undefined
-Undefined.
-Undefined
-Undefined.
-Rehit Rate?
-The rehit rate of the hitbubble?
-Affects Self?
+Unknown Boolean 1
+A boolean that is unknown.
+Collision Region
+Specifies which hurtbox regions the collision can detect (arms,legs,head,etc).
+Unknown Value 1
+(in Braw,l Peach's sideB it's set to 1, in brawl snake dsmash it's set to F, in brawl snake upsmash it's set to 3).
+Ignores scale
+Makes it ignore super mushroom scaling effects.
+Rehit Rate
+The rehit rate of the hitbubble.
+Affects Self
 Possibly if the uninteractive collision affects the host character.
-Undefined
-Undefined.
+Collision shape
+(sphere or capsule).
 
 06140200
 Hitbox ID
@@ -1491,3 +1491,19 @@ Blue
 The blue value (0-255) of the target color.
 Alpha
 The alpha value from 0-255 (0 = fully transparent, 255 = fully opaque).
+
+65020600
+First argument
+where to write result.
+Every even argument
+float to operate on.
+Every odd argument
+type of operation.
+
+65040100
+Frames
+Number of frames to wait before it gets deleted automatically.
+
+65050100
+Frames
+Number of frames correspondant to the respective sub action(?.
