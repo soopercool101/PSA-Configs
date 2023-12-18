@@ -1,0 +1,569 @@
+﻿DataSize0xCC
+07C Par00 A
+080 Par01 14
+084 Par02 1
+088 Par03 1
+08C Par04 8
+090 Art0
+094 Art1
+098 Art2
+09C Art3
+0A0 Art4
+0A4 Art5
+0A8 Art6
+0AC Art7
+0B0 Art8
+0B4 Art9
+0B8 Art10
+0BC Art11
+0C0 Art12
+0C4 Art13
+0C8 Art14
+
+Art0
+5-5
+034 Par00-0 6
+038 Par00-1 8
+
+Art1
+0-3
+
+Art2
+3-2
+034 Par02-0 E
+
+Art3
+0-3
+
+Art4
+4-4
+034 Par04-0 E
+038 Par04-1 8
+
+Art5
+8-7
+034 Par05-0 C
+
+Art7
+1-2
+
+Art8
+3-4
+034 Par08-0 16
+038 Par08-1 8
+
+Art9
+1-5
+034 Par09-0 1
+
+Art10
+1-3
+034 Par10-0 4
+
+Art11
+1-2
+034 Par11-0 6
+
+Art12
+1-1
+034 Par12-0 1
+
+Art13
+3-2
+034 Par13-0 2
+
+Art14
+0-2
+
+Par00
+Hand Grenade
+
+0x0 Forward Sensitivity
+Forward angle input sensitivity. If over 1, can't change.
+
+0x4 Backward Sensitivity
+Back angle input sensitivity.
+
+0x8 Forward H Momentum
+Forward angled throw horizontal momentum
+
+0xC Forward V Momentum
+Forward angled throw vertical momentum
+
+0x10 Normal H Momentum
+Unangled throw horizontal momentum
+
+0x14 Normal V Momentum
+Unangled throw vertical momentum
+
+0x18 Backward H Momentum
+Backward angled throw horizontal momentum
+
+0x1C Backward V Momentum
+Backward angled throw vertical momentum
+
+0x20 Duck and Cover Range
+Duck and cover animation range
+
+*0x24
+No Description Available.
+
+Par01
+Grenade Launcher
+
+0x0 Snake X Position
+Snake X Position
+
+0x4 Snake Y Position
+Snake Y Position
+
+0x8 Snake Z Position
+Snake Z Position
+
+0xC Right Aiming Position
+Horizontal position of snake that moves when the aim is moved in the right half of the screen
+
+0x10 Left Aiming Position
+Horizontal position of snake that moves when the aim is moved in the left half of the screen
+
+0x14 Initial Snake Angle
+Initial horizontal angle of snake
+
+0x18 Right Aiming Angle
+Horizontal angle of snake that moves when the aim is moved in the right half of the screen
+
+0x1C Left Aiming Angle
+Horizontal angle of snake that moves when the aim is moved in the left half of the screen
+
+0x20
+Unknown
+
+*0x24
+Unknown
+
+0x28
+Unknown
+
+0x2C
+Unknown
+
+*0x30 Max Continuously Fire Count
+Maximum number that can be fire continuously (Not affect to total number)
+
+*0x34 Max Interval
+Automatic firing interval (frames)
+
+*0x38 Total Fire Count
+Total number that can be fire
+
+*0x3C FS Duration
+Final Smash duration (max frames)
+
+0x40
+If the value is 2 or more, the position of the gun will shake vertically.
+
+0x44
+If the value is 2 or more, the position of the gun will shake horizontally.
+
+0x48
+If the value is 2 or more, the gun will shake if shoot while moving the aim horizontally.
+
+0x4C
+If the value is 2 or more, the gun will shake if move the aim when reload.
+
+Par02
+ExtraParams2
+
+*0x0
+No Description Available.
+
+Par03
+ExtraParams3
+
+0x0
+No Description Available.
+
+Par04
+ExtraParams4
+
+*0x0
+No Description Available.
+
+0x4
+No Description Available.
+
+*0x8
+No Description Available.
+
+0xC
+No Description Available.
+
+*0x10
+No Description Available.
+
+0x14
+No Description Available.
+
+*0x18
+No Description Available.
+
+0x1C
+No Description Available.
+
+Par00-0
+Mine Article (paramSnakeMineParam__15wnSnakeMineNode)
+
+0x0 Y offset
+Mine height place
+
+*0x4 Duration
+How long before it dissapears (frames)
+
+0x8
+Unknown
+
+0xC
+Unknown
+
+0x10
+Unknown
+
+*0x14
+No Description Available.
+
+Par00-1
+hitDataMine__15wnSnakeMineNode
+
+0x0
+No Description Available.
+
+0x4
+No Description Available.
+
+0x8
+No Description Available.
+
+0xC
+No Description Available.
+
+0x10
+No Description Available.
+
+0x14
+No Description Available.
+
+0x18
+No Description Available.
+
+Flags 0x1C
+No Description Available.
+
+Par02-0
+Up Smash Article (paramSnakeTrenchMortarBullet__29wnSnakeTrenchMortarBulletNode)
+
+0x0 X Offset
+X Offset
+
+0x4 Y Offset
+Default height / Y Offset
+
+0x8 Z Offset
+Z offset (positive = towards camera)
+
+*0xC Automatic Explode Time
+How long before they explode
+
+0x10 Initial V Momentum
+Initial vertical momentum (no charge momentum, closer to 0x14 momentum when more charged)
+
+0x14 Max Charged V Momentum
+Max charged vertical momentum
+
+0x18 Gravity
+Gravity
+
+0x1C Max Fall Speed
+Max fall speed
+
+0x20
+ ?? (read on usmash firing)
+
+0x24
+ ?? (read on usmash firing)
+
+0x28 Model Turn Timing
+Mortar model flips over when this velocity or lower is reached
+
+0x2C Model Turning Speed
+Mortar model turning speed (higher = slow)
+
+0x30
+Affect to model turning speed
+
+0x34 H Momentum Randomness
+Random horizontal momentum
+
+Par04-0
+Cypher Article (paramSnakeCypher__17wnSnakeCypherNode)
+
+0x0
+Momentum preservation? (at 0 don't drop before character rise)
+
+0x4
+Rising Acceleration (When 0, vertical movement becomes preservation movement)
+
+0x8 Final Rising Speed
+Final rising speed
+
+0xC Max Rising Speed
+Maximum rising speed
+
+0x10 Rising H Acceleration
+Rising horizontal acceleration
+
+0x14
+ ?? (read first frame moving)
+
+0x18 Max H Speed
+Maximum horizontal speed
+
+0x1C
+If the values of 0x1C and 0x20 are 0 or close to 0, Cypher will explode at the center of the stage at the start and will grab nothing and rise.
+
+0x20
+Affect to 0x1C
+
+0x24 Released V Momentum
+Initial vertical momentum of cypher when released
+
+0x28 Released V Acceleration
+Vertical acceleration of cypher when released
+
+0x2C
+ ?? (read when letting go of cypher)
+
+*0x30 Duration
+How many frames before it disappears
+
+0x34
+ ?? (read when cyphering)
+
+Par04-1
+hitDataCypher__17wnSnakeCypherNode
+
+0x0
+No Description Available.
+
+0x4
+No Description Available.
+
+0x8
+No Description Available.
+
+0xC
+No Description Available.
+
+0x10
+No Description Available.
+
+0x14
+No Description Available.
+
+0x18
+No Description Available.
+
+Flags 0x1C
+No Description Available.
+
+Par05-0
+paramSnakeC4__13wnSnakeC4Node
+
+0x0 Initial V Momentum (Air)
+Aerial initial vertical momentum
+
+0x4 Gravity
+Gravity
+
+0x8 Max Fall Speed
+Max fall speed
+
+*0xC Stay Time 1
+How long it stays on opponent until falling off (frames) (does not effect falling off from being hit)
+
+*0x10 Stay Time 2
+How long it stays on opponent until falling off (higher = short)
+
+0x14
+Affect to falling off from attack hit
+
+0x18
+Chance of C4 falling off?
+
+*0x1C Duration
+How long C4 stays out until it explodes (frames)
+
+0x20
+Unknown
+
+0x24
+Related to vertical position when set on the ground. If set higher value, C4 will appear from under the current floor. (=ceiling) No affect when not exists ceiling under the current floor.
+
+0x28
+Unknown
+
+*0x2C
+No Description Available.
+
+Par08-0
+paramSnakeNikitaMissile__24wnSnakeNikitaMissileNode
+
+0x0 Initial Speed
+Initial speed. Can exceed maximum speed.
+
+0x4 Acceleration
+Acceleration
+
+0x8 Max Speed
+Max Flying speed
+
+0xC Speed when Turn
+Speed when during turn
+
+0x10 Turning Speed
+Turning Speed
+
+0x14
+Turning radius?
+
+0x18
+ ?? (read on sideB)
+
+0x1C
+ ?? (read on sideB)
+
+0x20
+ ?? (read on sideB)
+
+0x24
+ ?? (read on sideB)
+
+0x28
+ ?? (read on sideB)
+
+*0x2C Duration (Normal)
+How long frames before nikita slows down
+
+*0x30 Duration (Slow)
+How long frames nikita slows down before automatic fall
+
+0x34 Deceleration
+Deceleration when slow or changing direction. Accelerate if negative value.
+
+*0x38
+If set 0, it will explode immediately.
+
+0x3C
+Unknown
+
+*0x40
+Unknown
+
+*0x44
+Unknown
+
+0x48 Fall Gravity
+Gravity of nikita that can no longer be operated
+
+0x4C Max Fall Speed
+Max fall speed of nikita that can no longer be operated
+
+*0x50
+No Description Available.
+
+*0x54
+No Description Available.
+
+Par08-1
+hitDataNikitaMissile__24wnSnakeNikitaMissileNode
+
+0x0
+No Description Available.
+
+0x4
+No Description Available.
+
+0x8
+No Description Available.
+
+0xC
+No Description Available.
+
+0x10
+No Description Available.
+
+0x14
+No Description Available.
+
+0x18
+No Description Available.
+
+Flags 0x1C
+No Description Available.
+
+Par09-0
+ExtraParams0
+
+*0x0
+No Description Available.
+
+Par10-0
+paramSnakeRgb6__15wnSnakeRgb6Node
+
+0x0 X Offset
+X offset where bullets are generated (FS)
+
+0x4 Y Offset
+Y offset where bullets are generated (FS)
+
+0x8 Z Offset
+Z offset where bullets are generated (FS)
+
+*0xC
+No Description Available.
+
+Par11-0
+paramSnakeRgb6Sight__20wnSnakeRgb6SightNode
+
+0x0 Aim H Movement
+The speed at which aim moves horizontally (FS)
+
+0x4 Aim V Movement
+The speed at which aim moves vertically (FS)
+
+0x8
+No Description Available.
+
+0xC
+No Description Available.
+
+0x10
+No Description Available.
+
+0x14
+No Description Available.
+
+Par12-0
+ExtraParams0
+
+*0x0
+No Description Available.
+
+Par13-0
+paramSnakeRgb6Bullet__21wnSnakeRgb6BulletNode
+
+*0x0 Time to Explode
+The time it takes for the shot bullet to explode (FS)
+
+0x4 Trajectory
+If set higher value, the higher the trajectory. No affect to location of the explosion.
+

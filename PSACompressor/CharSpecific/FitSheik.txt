@@ -1,0 +1,222 @@
+﻿DataSize0xA0
+07C Par00 6
+080 Par01 8
+084 Par02 10
+088 Par03 6
+08C Par04 8
+090 Art0
+094 Art1
+098 Art2
+09C Art3
+
+Art0
+4-5
+034 Par00-0 4
+
+Art1
+1-1
+034 Par01-0 1
+
+Art2
+9-3
+034 Par02-0 6
+
+Art3
+1-1
+034 Par03-0 1
+
+Par00
+Needle Storm
+
+0x0 X Offset (Ground)
+X offset grounded needles
+
+0x4 Y Offset (Ground)
+Y offset grounded needles
+
+0x8 X Offset (Air)
+X offset aerial needles
+
+0xC Y Offset (Air)
+Y offset aerial needles
+
+*0x10
+No Description Available.
+
+*0x14
+No Description Available.
+
+Par01
+Chain
+
+*0x0 Min Hold Frame
+How long chain is out before reeling in (release B)
+
+*0x4
+something with hitbox refreshing?
+
+*0x8 Appearance Timing
+Frame chain comes out
+
+*0xC
+Frame that can move chain around (if less than or equal to 0x8 the chain will not come out)
+
+*0x10 Remove Timing
+Frame after releasing B chain reels in
+
+*0x14 Remove Speed
+Frame it takes for the chain to remove
+
+0x18
+ ?? (read all the time when can move chain)
+
+*0x1C
+No Description Available.
+
+Par02
+Vanish
+
+0x0 Startup V Momentum
+Startup vertical momentum
+
+0x4 Startup Gravity
+Startup gravity
+
+0x8 Startup Max Fall Speed
+Startup max fall speed
+
+*0xC Travel Time
+Frames to travel (also changes distance too)
+
+*0x10
+No Description Available.
+
+0x14 Sensitivity
+Joystick sensitivity. If over 1, can't change travel Angle.
+
+0x18 Travel Speed 1
+Travel speed
+
+0x1C Travel Speed 2
+Travel speed
+
+0x20
+No Description Available.
+
+*0x24
+Unknown
+
+0x28 V momentum at End
+Vertical momentum out of second explosion
+
+0x2C
+Unknown
+
+0x30
+No Description Available.
+
+*0x34
+No Description Available.
+
+0x38
+No Description Available.
+
+*0x3C
+No Description Available.
+
+Par03
+Transform
+
+0x0 H Preservation
+Horizontal momentum preservation (less = more)
+
+0x4 V Preservation
+Vertical momentum preservation (less = more)
+
+0x8 Gravity
+Gravity
+
+0xC Max Fall Speed
+Max fall speed
+
+*0x10
+No Description Available.
+
+*0x14
+No Description Available.
+
+Par04
+Light Arrow
+
+0x0
+No Description Available.
+
+0x4
+No Description Available.
+
+0x8
+No Description Available.
+
+0xC
+No Description Available.
+
+0x10
+No Description Available.
+
+0x14
+Zoom time when hit (frames)
+
+0x18
+Damage multiplier on secondary target hit
+
+*0x1C
+No Description Available.
+
+Par00-0
+Needles Article
+
+*0x0 Duration
+Needle duration
+
+*0x4
+ ?? (frame count for something)
+
+0x8
+ ?? (read on nB)
+
+0xC Speed
+Needle speed
+
+Par01-0
+ExtraParams0
+
+*0x0
+No Description Available.
+
+Par02-0
+Chain Article
+
+0x0 Length
+Chain Length
+
+0x4 Rigidity
+Rigidity
+
+0x8 Liveliness
+Liveliness
+
+0xC
+How far it will go into the Z axis?
+
+0x10 Tether Length
+Tether length
+
+0x14 Tether Speed
+Tether speed
+
+Par03-0
+ExtraParams0
+
+*0x0
+No Description Available.
+

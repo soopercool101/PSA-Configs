@@ -1,0 +1,250 @@
+﻿DataSize0x9C
+07C Par00 A
+080 Par01 A
+084 Par02 1A
+088 Par03 7
+08C Par04 3
+090 Art0
+094 Par06 8
+
+Art0
+3-3
+034 Par00-0 8
+
+Par00
+Fatigue/Stamina
+
+0x0 Max Stamina
+Max stamina
+
+0x4 Stamina Decrease per Second
+Stamina decrease value per second
+
+0x8 Stamina Decrease per Attack
+Stamina decrease value per attack
+
+0xC Stamina Increase Value
+Stamina increase value per rest second
+
+0x10 KB Multiplier at Weakest
+Knockback multiplier at Weakest Stamina (0x24)
+
+0x14
+Unknown, not affect tired animation
+
+0x18 Stamina Decrease per KO'd
+Stamina decrease value when KO'd
+
+0x1C Weakness KB Multiplier
+Knockback multiplier when taken weakness element attack
+
+0x20 Resistance KB Multiplier
+Knockback multiplier when taken resistance element attack
+
+0x24 Weakest Stamina
+Weakest stamina level
+
+Par01
+Water Gun
+
+*0x0 Max Charge Frame
+Frames to fully charge
+
+0x4 Initial Angle
+Initial angle (degrees)
+
+0x8 Max Upward Angle
+Max upward angle (degrees)
+
+0xC Max Downward Angle
+Max downward angle (degrees, higher is more angled down)
+
+0x10 Turning Speed
+Turning speed (also affects going back to center)
+
+0x14 Randomness
+Water spread randomness (radians)
+
+0x18
+ ?? (read on water gun)
+
+*0x1C Min Water Charge Frame
+How many frames before not getting spray
+
+0x20 Momentum Backwards
+Momentum backwards when grounded firing
+
+*0x24
+ ?? (read when firing water/spray)
+
+Par02
+Withdraw
+
+0x0
+Unknown
+
+0x4 Tilt Initial Momentum
+Tilt initial horizontal momentum
+
+0x8 Smash Initial Momentum
+Smash initial horizontal momentum
+
+0xC
+Momentum preservation without holding direction?
+
+0x10
+No Description Available.
+
+0x14
+No Description Available.
+
+0x18 Deceleration
+Horizontal speed deceleration
+
+0x1C Min H Speed
+Minimum horizontal speed
+
+0x20
+No Description Available.
+
+0x24
+No Description Available.
+
+0x28
+No Description Available.
+
+0x2C
+Relate to rotation speed
+
+0x30
+No Description Available.
+
+0x34
+No Description Available.
+
+0x38
+Relate to rotation speed
+
+0x3C
+No Description Available.
+
+0x40
+No Description Available.
+
+0x44
+No Description Available.
+
+0x48
+No Description Available.
+
+0x4C
+No Description Available.
+
+*0x50
+No Description Available.
+
+*0x54 Max Continue Frame
+Max continue frame
+
+*0x58 Min Continue Frame
+Min continue frame
+
+0x5C
+No Description Available.
+
+0x60
+No Description Available.
+
+0x64
+No Description Available.
+
+Par03
+Waterfall
+
+0x0
+Unknown
+
+0x4 Sensitivity
+Forward/backward sensitivity. If over 1, can't change jumping Angle.
+
+0x8 Changeable Angle
+Changeable Angle (Degrees) Example: If 30, shift 30 degrees forward when forward input.
+
+0xC Fall Max H Speed
+Special Fall max horizontal speed multiplier
+
+0x10
+ ??
+
+0x14
+ ??
+
+0x18
+ ??
+
+Par04
+Waterfall Extra
+
+0x0 Air H Preservation pre-Jump
+Aerial horizontal momentum preservation on startup (higher = more)
+
+0x4 Air Gravity pre-Jump
+Aerial gravity on startup
+
+0x8 Air Jump Height
+Aerial Jump height
+
+Par06
+ExtraParams6
+
+Flags? 0x0
+No Description Available.
+
+*0x4
+No Description Available.
+
+*0x8
+No Description Available.
+
+*0xC
+No Description Available.
+
+*0x10
+No Description Available.
+
+*0x14
+No Description Available.
+
+0x18
+No Description Available.
+
+0x1C
+No Description Available.
+
+Par00-0
+Water Gun Article
+
+0x0 Base Speed
+Base water momentum
+
+0x4 Speed Growth
+Water momentum add when charged
+
+0x8 Gravity
+Water gravity
+
+0xC
+Water spacing?
+
+*0x10 Duration
+How many frames water stays out
+
+0x14 Random GFX Size 1
+Random water GFX Size 1. Random size from 0x14 to 0x18. The higher value is the maximum size, and the lower value is the minimum size.
+
+0x18 Random GFX Size 2
+Random water GFX Size 2. Random size from 0x14 to 0x18
+
+*0x1C Knockback Growth
+Water knockback add when charged
+
