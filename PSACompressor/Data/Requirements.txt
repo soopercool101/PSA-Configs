@@ -23,12 +23,12 @@ Article Exists
 Is Overstepping an Edge
 Distance from Floor
 18
-19
+Raycast
 1A
 Change in Air/Ground State
 Article Available
 Current Triggered Status ID
-1E
+Interrupt Available
 Holding Item
 Holding Item of Type
 Light Item is in Grabbing Range
@@ -43,13 +43,13 @@ Turning with Item
 Is in Water
 Roll A Die
 Subaction Exists
-2D
+Random Chance
 Button Mashing? Status Expired (sleep/bury/freeze)?
 Is Not in Damaging Magnifier
-Button Press
-Button Release
-Button Pressed
-Button Not Pressed
+Button Press Occurs
+Button Becomes Released
+Button is Held Down
+Button in Pressable State
 Stick Direction Pressed?
 Stick Direction Not Pressed?
 36
@@ -69,18 +69,18 @@ Hitbox has Connected
 44
 45
 46
-Pick up an Item
+Pick Up an Item
 48
 49
 4A
-4B
+If Has Been Reflected (Article Only)
 Has Been Hit by Cape Effect
-4D
-4E
-4F
-50
-51
-52
+SDI Input (PM)
+Any Shield Input Occurs (PM)
+Any Shield Input Held (PM)
+Any Taunt Input Occurs (PM)
+Any Taunt Input Held (PM)
+Specific Hitbox Connects (Custom)
 53
 54
 55
@@ -94,7 +94,7 @@ Has Been Hit by Cape Effect
 5D
 5E
 5F
-60
+Thread is Null (Custom)
 61
 62
 63
@@ -128,16 +128,16 @@ Has Been Hit by Cape Effect
 7F
 270F
 2710
-In walljump situation
-In wallcling situation
-Is within footstool range
+In Walljump Situation
+In Wallcling Situation
+Is Within Footstool Range.
 2714
 2715
-Is falling+hit down
+Is Falling + Hit Down
 Has Smash Ball
 2718
 Can Pick Up Another Item
-Successfully tethered ledge
+Successfully Tethered Ledge
 271B
 271C
 F-Smash Shortcut
@@ -148,4 +148,4 @@ F-Smash Shortcut
 2722
 2723
 Fighter Loaded
-Tap Jump On & C-Stick not Held
+Tap Jump On & C-Stick Not Held
