@@ -1438,14 +1438,6 @@ Location of the subroutine code to be ran.
 Thread ID
 ID of the thread to be terminated.
 
-05060300
-X
-Amount to rotate model on X Axis
-Y
-Amount to rotate model on Y Axis
-Z
-Amount to rotate model on Z Axis
-
 12200200
 Value
 The value to set the variable(s) to.
@@ -1874,13 +1866,41 @@ The bone to use for this command.
 Z Translation
 How much this bone will translate on the Z-axis.
 
+05050100
+Size
+Character size after changed.
+
+05060300
+X Rotation
+Amount to rotate the model on the X-Axis.
+Y Rotation
+Amount to rotate the model on the Y-Axis.
+Z Rotation
+Amount to rotate the model on the Z-Axis.
+
+05090300
+X Position
+Where to place the character on the X-axis. 0 is not always the center of the stage. Can surely go to the center of the stage by getting the left and right boundaries. (Snake's FS Exit = Center position / Dragoon Exit = Revival platform position) However, when using in Subspace, these variables may not be available.
+Y Position
+Where to place the character on the Y-axis. On most stages, 0 is closer to below the center. When go to the top of the stage, IC-Basic[30] (CameraLimit-Top) or IC-Basic[34] (DeadLine-Top) is useful. (Snake's FS Exit = IC-Basic[30] / Dragoon Exit = IC-Basic[34]) However, when using in Subspace, these variables may not be available.
+Z Position
+Where to place the character on the Z-axis. Normally set to 0. You can check the operation only when Set Air/Ground: Stop (0x32) was pre-loaded.
+
 050A0300
 X Position
 Where to place the character on the X-axis.
 Y Position
 Where to place the character on the Y-axis.
 Z Position
-Where to place the character on the Z-axis.
+Where to place the character on the Z-axis. Normally set to 0. You can check the operation only when Set Air/Ground: Stop (0x32) was pre-loaded.
+
+050B0300
+X Position
+How far to move the character on the X-axis.
+Y Position
+How far to move the character on the Y-axis.
+Z Position
+How far to move the character on the Z-axis. Normally set to 0. You can check the operation only when Set Air/Ground: Stop (0x32) was pre-loaded.
 
 04080300
 Animation Layer ID

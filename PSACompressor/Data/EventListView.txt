@@ -583,7 +583,23 @@ Bone=\X, Y Translation=\X
 1
 Bone=\X, Z Translation=\X
 
+05050100
+1
+Size=\X
+
+05060300
+1
+X Rotation=\X, Y Rotation=\X, Z Rotation=\X
+
+05090300
+1
+X Position=\X, Y Position=\X, Z Position=\X
+
 050A0300
+1
+X Position=\X, Y Position=\X, Z Position=\X
+
+050B0300
 1
 X Position=\X, Y Position=\X, Z Position=\X
 

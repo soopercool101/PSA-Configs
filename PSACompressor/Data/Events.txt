@@ -300,11 +300,6 @@ Set Animation Frame
 Changes the current frame of the animation. Does not change the frame of the sub action (i.e. timers and such are unaffected). Works when used in articles that have assigned animations in the FitEtc file.
 1
 
-05000000
-Reverse Direction
-The object is now considered to be facing the other direction. It will not visually change direction until the current animation ends or is interrupted.
-
-
 06000D00
 Offensive Collision
 Generate an offensive collision bubble with the specified parameters. Helpful info: tinyurl.com/HitboxParam
@@ -1047,6 +1042,11 @@ Sub Action Animation Offset
 Offsets a Change Sub Action command by what's specified in this command.
 0
 
+05000000
+Reverse Direction
+The object is now considered to be facing the other direction. It will not visually change direction until the current animation ends or is interrupted.
+
+
 05010000
 Left Direction
 Sets the character's direction to the left. The effect occurs when the current Action is changed. To change the direction immediately, "Decide Direction" is required.
@@ -1067,14 +1067,34 @@ Decide Direction
 Immediately changes the direction of the character in the direction set by "Set Direction" and similar commands.
 
 
-05070300
-Posture 07
-Unknown.
+05050100
+Change Model Size
+Change the character size. Resizing by this event does not change the ability or damage done. Also, when get an item that changes size such as mushrooms, it will change from the base size. (In other words, the size changed by this event will be invalid.)
+1
 
+05060300
+Rotate Character Model
+Rotates character's model by amount specified. Persists until changed.
+111
 
-050D0100
-Posture 0D
-Unknown.
+05090300
+Set Character Position
+Teleport to the specified position based on the stage. Normally, unaffected by terrain. However, usually cannot move normally during ground actions. (Even during ground action, if the specified position exceeds the boundary, it will self-destruct)
+111
+
+050A0300
+Set Character Position 2
+Teleport to the specified position based on the stage. If there are walls, floors, or ceilings before to the specified position, There is a case that stops at that place. And, usually cannot move normally during ground actions. (Even during ground action, if the specified position exceeds the boundary, it will self-destruct)
+111
+
+050B0300
+Set Character Position (Relative)
+Teleport to the specified position based on the character position. If there are walls, floors, or ceilings before to the specified position, There is a case that stops at that place. And, usually cannot move normally during ground actions. (Even during ground action, if the specified position exceeds the boundary, it will self-destruct)
+111
+
+050C0000
+Reverse Model Direction (Transient)
+Reverse Model Direction. This effect ends when current action is changed.
 
 
 06020200
@@ -1414,11 +1434,6 @@ Terminate Independent Subroutine (Custom)
 Stops a running independent subroutine. (Requires the relevant code by Mawootad.)
 2
 
-05060300
-Rotate Character Model
-Rotates character's model by amount specified
-111
-
 12200200
 Attribute Range Set (Custom)
 Requires the On the Fly Attribute Modification code by Mawootad.
@@ -1624,11 +1639,6 @@ Translates the given bone on the Y-axis.
 Set Bone Translation (Z)
 Translates the given bone on the Z-axis.
 01
-
-050A0300
-Set Character Position
-Sets the character's current stage position.
-111
 
 1C000200
 Set Hitlag
