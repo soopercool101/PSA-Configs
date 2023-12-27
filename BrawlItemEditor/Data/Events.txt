@@ -1303,15 +1303,17 @@ Destroys the current item
 65030300
 Set Model Rotation
 Sets the models rotation (pitch, yaw, roll)
+111
 
 660B0300
 Set Model Rotation
 Sets the models rotation (pitch, yaw, roll)
+111
 
 66010300
 Set Constant Model Rotation
 Sets the models rotation constantly (pitch, yaw, roll)
-
+111
 
 65040100
 Set Deletion Timer
@@ -1319,15 +1321,24 @@ Sets the time of deletion (in hexadecimals)
 
 651D0200
 Set Ownership
-(Owner?, Team?)Sets the ownership of the current item(0xFFFFFFFF to be neutral)
+(Owner?, Team?)Sets the ownership of the current item(0xFFFFFFFF to be neutral).
 
 22000100
-Owner related command?
+Set Ownership Interactibility
 When set to FFFFFFF it allows the owner to get hurt by the item.
 
 22020100
-Set Ownership?
-(Owner, usually 0x14) = Set Ownership (again?, this is used in explosives to enable damage to the original attacker)
+Set Ownership Interactibility
+(usually 0x14) = Set Ownership Interactibility (again?, this is used in explosives to enable damage to the original attacker).
+
+66060100
+Stick to Surface
+Can make an item stick to a surface and reflect its inclination, used on Bumper and Motion Sensor Bomb.
+
+08050300
+ECB Modifier
+Modifies the current ECB to match the given inputs.
+111 
 
 65070100
 Find Target
@@ -1339,19 +1350,22 @@ Metroid Schmovement???
 
 66000D00
 Apply Momentum
-Applies Momentum(x-speed, y-speed, x-multiplier, y-multiplier, paramter10/12 = based on facing direction)
+Alters the item's vertical and horizontal speed. 
+1111111111333
 
 66020300
 Remove Momentum
 (x-amount, y-amount, unknown) = Remove momentum
+11
 
 65020600
 Math Functions?
 Seems to carry different values to pre existing ones in order
 
 65050100
-Set Lifespan
-Sets the amount of frames a subaction (in hexadecimals) should be present for (used in Sensor Bomb)
+Set Vanish Timer (global)
+sets the timer (la-basic 11, not la-basic 6), doesn't disappear normally, however the timer ticks down, you have to manually check la-basic 11 to make it disappear (used in snake's grenade)
+
 
 
 
