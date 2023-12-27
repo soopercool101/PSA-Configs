@@ -1500,6 +1500,46 @@ float to operate on.
 Every odd argument
 type of operation.
 
+08050300
+Top Vertical Point
+Dictates the new offset for the upper point, should be positive.
+Bottom Vertical Point
+Dictates the new offset for the lowest point, should be negative.
+Middle points
+Dictates the width of the ECB, positive values make it expand and negative make it retract.
+Unknown
+changes r3 to edit another offset? can be used without it.
+
+66000D00
+X Speed
+Amount of speed the X value should receive.
+Y Speed
+Amount of speed the Y value should receive.
+X Multiplier
+How much should the X Speed parameter get multiplied by (if negative, it multiplies differently?).
+Y Multiplier
+How much should the Y Speed parameter get multiplied by (if negative, it multiplies differently?).
+Unknown X
+???.
+Unknown Y
+???.
+X Gravity 
+Added every frame, not affected by traction.
+Y Gravity
+Added every frame, not affected by traction.
+X Traction
+A speed multiplier done over time.
+Y Traction
+A speed multiplier done over time.
+Speed 1
+Speed is based on direction.
+Unknown
+Usually False.
+Speed 2
+speed is based on direction (again).
+
+
+
 65040100
 Frames
 Number of frames to wait before it gets deleted automatically.
@@ -1507,3 +1547,11 @@ Number of frames to wait before it gets deleted automatically.
 65050100
 Frames
 Number of frames correspondant to the respective sub action(?.
+
+66060100
+Stick state
+0 - Dissapear?, 03 = sticks to surface.
+
+651F0100
+Grab state
+0 = Can be picked uo, 2 = Cant be picked up.
