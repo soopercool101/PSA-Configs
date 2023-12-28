@@ -310,11 +310,11 @@ Shield Damage/BKB
 Size
 The size of the collision bubble.
 X Offset
-The offset in the Z direction from the attached bone (affected by its rotation). (Note: PSAC incorrectly calls this Z on some screens.)
+The offset in the X direction from the attached bone (affected by its rotation). 
 Y Offset
 The offset in the Y direction from the attached bone (affected by its rotation).
 Z Offset
-The offset in the X direction from the attached bone (affected by its rotation). (Note: PSAC incorrectly calls this X on some screens.)
+The offset in the Z direction from the attached bone (affected by its rotation). 
 Tripping Rate
 The percent possibility of the collision bubble inducing a trip, provided the target doesn't leave the ground from the knockback. (1 = 100%)
 Hitlag Multiplier
@@ -479,12 +479,12 @@ Shield Damage/BKB
 (full info can be read at tinyurl.com/HitboxParam) The amount of damage dealt to the target's shield if it is up/The distance the target is launched regardless of its damage (zero for fixed knockback hits). Where XXXXYYYY is X=Shield Damage, Y=Base Knockback.
 Size
 The size of the collision bubble.
-Z Offset
-The offset in the Z direction from the attached bone (affected by its rotation). (Note: BrawlBox incorrectly calls this X on some screens.)
+X Offset
+The offset in the X direction from the attached bone (affected by its rotation). 
 Y Offset
 The offset in the Y direction from the attached bone (affected by its rotation).
-X Offset
-The offset in the X direction from the attached bone (affected by its rotation). (Note: BrawlBox incorrectly calls this Z on some screens.)
+Z Offset
+The offset in the Z direction from the attached bone (affected by its rotation). 
 Tripping Rate
 The percent possibility of the collision bubble inducing a trip, provided the target doesn't leave the ground from the knockback. (1 = 100%)
 Hitlag Multiplier
@@ -521,11 +521,11 @@ Hitbox ID
 ID of the hitbox to be changed.
 New Bone
 The bone the collision bubble is attached to
-New Z Offset
+New X Offset
 Transition relative to the currently attached bone.
 New Y Offset
 Transition relative to the currently attached bone.
-New X Offset
+New Z Offset
 Transition relative to the currently attached bone.
 
 062B0D00
@@ -541,12 +541,12 @@ Shield Damage/BKB
 (full info can be read at tinyurl.com/HitboxParam) The amount of damage dealt to the target's shield if it is up/The distance the target is launched regardless of its damage (zero for fixed knockback hits). Where XXXXYYYY is X=Shield Damage, Y=Base Knockback.
 Size
 The size of the collision bubble.
-Z Offset
-The offset in the Z direction from the attached bone (affected by its rotation). (Note: BrawlBox incorrectly calls this X on some screens.)
+X Offset
+The offset in the X direction from the attached bone (affected by its rotation).
 Y Offset
 The offset in the Y direction from the attached bone (affected by its rotation).
-X Offset
-The offset in the X direction from the attached bone (affected by its rotation). (Note: BrawlBox incorrectly calls this Z on some screens.)
+Z Offset
+The offset in the Z direction from the attached bone (affected by its rotation). 
 Tripping Rate
 The percent possibility of the collision bubble inducing a trip, provided the target doesn't leave the ground from the knockback. (1 = 100%)
 Hitlag Multiplier
@@ -1081,12 +1081,12 @@ Y Offset
 Transition from the attached bone along the Y axis.
 Z Offset
 Transition from the attached bone along the Z axis.
-Z Rotation
-Rotation along the Z axis.
-Y Rotation
-Rotation along the Y axis.
 X Rotation
 Rotation along the X axis.
+Y Rotation
+Rotation along the Y axis.
+Z Rotation
+Rotation along the Z axis.
 Size
 The size of the graphic.
 Random X Offset
