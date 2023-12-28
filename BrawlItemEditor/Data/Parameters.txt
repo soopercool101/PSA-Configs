@@ -1973,3 +1973,55 @@ The ID of the bubble used with the currently active defensive collision.
 04180100
 Offset
 How much to offset the Sub Action ID by. For example, if this is set to 0x5, and the following Change Sub Action command is set to A (10), the result will use Sub Action 0xA's coding, but with Sub Action 0xF's animation.
+
+651F0100
+Grab state
+Dictates whether or not the item should be capable of being picked up. 0x0 = Can be picked up, 0x2 = Cant be picked up.
+
+66060100
+Stick State
+Modifies the model to reflect the current inclination of whatever surface its attached to, during this state it cant be moved. 0x0 = Release from surface, 0x3 = Sticks to surface.
+
+66000D00
+X Speed
+Amount of speed the X value should receive.
+Y Speed
+Amount of speed the Y value should receive.
+X Multiplier
+How much should the X Speed parameter get multiplied by.
+Y Multiplier
+How much should the Y Speed parameter get multiplied by.
+X Unknown
+???.
+Y Unknown
+???.
+X Gravity
+Added every frame, not affected by traction.
+Y Gravity
+Added every frame, not affected by traction.
+X Traction
+A speed multiplier done over time.
+Y Traction
+A speed multiplier done over time.
+Directional Speed
+Speed is based on direction.
+Unknown
+False.
+Directional Speed 2
+Speed is based on direction.
+
+65020600
+First argument
+where to write result.
+Every even argument
+float to operate on.
+Every odd argument
+type of operation.
+
+65040100
+Frames
+Number of frames to wait before it gets deleted automatically.
+
+65050100
+Frames
+Number of frames timer should countdown for, doesnt dissapear normally.
