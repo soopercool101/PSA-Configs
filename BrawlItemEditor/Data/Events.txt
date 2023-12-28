@@ -4,15 +4,8 @@ Pause the current flow of events until the set time is reached. Synchronous time
 1
 
 00020000
-00010100
-Synchronous Timer
-Pause the current flow of events until the set time is reached. Synchronous timers count down when they are reached in the code.
-1
-
-00020000
 No Event
 No Event.
-
 
 00020100
 Asynchronous Timer
