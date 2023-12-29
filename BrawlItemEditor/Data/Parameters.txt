@@ -2040,6 +2040,14 @@ Accepts value or a variable.
 Bool
 decides if it forces hitlag on. i believe this means if called during hitlag, (which is extremely hard to do when in psa script), you can extend/shrink hitlag from there.
 
+66020300
+X Speed
+Amount of horizontal speed to remove.
+Y Speed
+Amount of vertical speed to reove.
+Unknown
+???.
+
 05060300
 Z Rotation
 Amount to rotate the model on the Z-Axis.
