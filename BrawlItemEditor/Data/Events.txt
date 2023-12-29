@@ -835,6 +835,10 @@ Allow or disallow grabbing ledges during the current sub action.
 Set Air/Ground
 Sets the current physics state of your character.
 
+0E050100
+Set Air/Ground Article/Item ?
+Sets the current physics state of the article/item. Used in Snake's mortar and Ness' PK fire.
+
 08000100
 Set Aerial/Onstage State
 Determines whether or not the character will slide off the edge.
