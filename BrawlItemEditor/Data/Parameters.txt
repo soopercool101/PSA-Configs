@@ -2022,6 +2022,44 @@ type of operation.
 Frames
 Number of frames to wait before it gets deleted automatically.
 
+22000100
+Interactibility
+Setting it to 0x14/0xFFFFFFFF seems to enable friendly fire against the owner?.
+
+22020100
+Interactibility
+Setting it to 0x14/0xFFFFFFFF seems to enable friendly fire against the owner?.
+
 65050100
 Frames
 Number of frames timer should countdown for, doesnt dissapear normally.
+
+1C000200
+Hitlag to set
+Accepts value or a variable.
+Bool
+decides if it forces hitlag on. i believe this means if called during hitlag, (which is extremely hard to do when in psa script), you can extend/shrink hitlag from there.
+
+05060300
+Z Rotation
+Amount to rotate the model on the Z-Axis.
+Y Rotation
+Amount to rotate the model on the Y-Axis.
+X Rotation
+Amount to rotate the model on the X-Axis.
+
+660B0300
+Z Rotation
+Amount to rotate the model on the Z-Axis.
+Y Rotation
+Amount to rotate the model on the Y-Axis.
+X Rotation
+Amount to rotate the model on the X-Axis.
+
+66010300
+Z Rotation
+Amount to rotate the model on the Z-Axis.
+Y Rotation
+Amount to rotate the model on the Y-Axis.
+X Rotation
+Amount to rotate the model on the X-Axis.
