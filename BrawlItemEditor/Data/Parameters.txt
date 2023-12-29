@@ -1980,7 +1980,7 @@ Dictates whether or not the item should be capable of being picked up. 0x0 = Can
 
 66060100
 Stick State
-Modifies the model to reflect the current inclination of whatever surface its attached to, during this state it cant be moved. 0x0 = Release from surface, 0x2 = Sort of sticks to surfaces (Model isnt rotated against them)  0x3 = Sticks to surface.
+Modifies the model to reflect the current inclination of whatever surface its attached to, during this state it cant be moved. 0x0 = Release from surface, 0x2 = Sort of sticks to surfaces (Model isnt rotated against them),  0x3 = Sticks to surface.
 
 66000D00
 X Speed
