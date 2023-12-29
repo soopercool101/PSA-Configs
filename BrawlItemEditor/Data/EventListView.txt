@@ -1216,5 +1216,6 @@ V
 
 66060100
 V
-00000000-Releases
+00000000-Release from surface
+00000002-Semmi-Sticks to surface
 00000003-Sticks to surface
