@@ -676,6 +676,10 @@ The event stack to run the subroutine (use 4, 6, or 9 or you risk crashes)
 State
 The state of the character's air/ground status. 0 = In Air, 1 = Floating on Ground, 6 = On Ground, A = Control stick does not affect horizontal movement (or fastfall?), F = Grounded TransN Movement (Movement is determined by the current coordinates of the TransN bone from the animation), 11 = Aerial TransN Movement (Same as F but on air), 32 = Stop (???)
 
+0E050100
+State
+The state of the article's/item's air/ground status, 0x2 = Stops horizontal momentum, 0x3 = Stops vertical momentum. Could also be capable of using the values of 0E000100, needs testing.
+
 0E010200
 Horizontal Velocity
 The speed of the character moving left/right.
