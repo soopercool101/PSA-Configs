@@ -1986,6 +1986,28 @@ Dictates whether or not the item should be capable of being picked up. 0x0 = Can
 Stick State
 Modifies the model to reflect the current inclination of whatever surface its attached to, during this state it cant be moved. 0x0 = Release from surface, 0x2 = Sort of sticks to surfaces (Model isnt rotated against them),  0x3 = Sticks to surface.
 
+66000A00
+X Speed
+Amount of speed the X value should receive.
+Y Speed
+Amount of speed the Y value should receive.
+X Multiplier
+How much should the X Speed parameter get multiplied by.
+Y Multiplier
+How much should the Y Speed parameter get multiplied by.
+X Unknown
+???.
+Y Unknown
+???.
+X Gravity
+Added every frame, not affected by traction.
+Y Gravity
+Added every frame, not affected by traction.
+X Traction
+A speed multiplier done over time.
+Y Traction
+A speed multiplier done over time.
+
 66000D00
 X Speed
 Amount of speed the X value should receive.
