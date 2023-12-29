@@ -2048,7 +2048,7 @@ Amount of vertical speed to reove.
 Unknown
 ???.
 
-05060300
+65030300
 Z Rotation
 Amount to rotate the model on the Z-Axis.
 Y Rotation
