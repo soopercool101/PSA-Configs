@@ -3369,6 +3369,10 @@ When set to FFFFFFF it allows the owner to get hurt by the item.
 Set Ownership Interactibility 2
 (usually 0x14) = Set Ownership Interactibility (again?, this is used in explosives to enable damage to the original attacker).
 
+651F0100
+Grabbable state
+Determines wheter or not the item can be picked up by players or not.
+
 66060100
 Stick to Surface
 Can make an item stick to a surface and reflect its inclination, used on Bumper and Motion Sensor Bomb.
@@ -3393,7 +3397,7 @@ Alters the item's vertical and horizontal speed.
 
 66020300
 Remove Momentum
-(x-amount, y-amount, unknown) = Remove momentum
+Decreases the item's horizontal and vertical speed
 11
 
 65020600
@@ -3411,3 +3415,4 @@ Detaches the current item to let go again.
 081A0100
 Unknown Boolean
 It turns on some flag with no helpful function call, it takes one bool as argument though.
+3
