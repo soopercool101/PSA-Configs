@@ -367,6 +367,10 @@ Inert Collision
 Generates an oblivious hitbox only used to detect collision with other characters/objects.
 00011110003003030
 
+06130000
+Terminate Inert Collisions
+Remove all currently present inert collision bubbles.
+
 06140200
 Add Hitbox Damage
 Add a specific hitbox's damage.
