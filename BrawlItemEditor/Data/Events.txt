@@ -312,6 +312,14 @@ Generate an offensive collision bubble with the specified parameters. Helpful in
 Change Hitbox Damage
 Changes a specific hitbox's damage to the new amount. Only guaranteed to work on Offensive Collisions.
 
+06140200
+Add Hitbox Damage
+Add a specific hitbox's damage.
+
+06160100
+Hitbox Damage Multiplier
+Muliplies the damage of every hitbox spawned from the character by the specified value. Persists until changed
+1
 
 06030100
 Delete Hitbox
@@ -321,6 +329,11 @@ Deletes a hitbox of the specified ID. Only guaranteed to work on Offensive Colli
 Change Hitbox Size
 Changes a specific hitbox's size to the new amount. Only guaranteed to work on Offensive Collisions.
 01
+
+061B0500
+Move Hitbox
+Repositions an already-existing hitbox.
+00111
 
 06040000
 Terminate Collisions
@@ -357,7 +370,6 @@ Generate a grabbing collision bubble with the specified parameters.
 Delete Catch Collision
 Deletes the catch collision with the specified ID.
 
-
 060D0000
 Terminate Catch Collisions
 Remove all currently present grab collision bubbles.
@@ -370,16 +382,6 @@ Generates an oblivious hitbox only used to detect collision with other character
 06130000
 Terminate Inert Collisions
 Remove all currently present inert collision bubbles.
-
-06140200
-Add Hitbox Damage
-Add a specific hitbox's damage.
-
-
-06160100
-Hitbox Damage Multiplier
-Muliplies the damage of every hitbox spawned from the character by the specified value. Persists until changed
-1
 
 062C0F00
 Special Collateral Collision
@@ -401,6 +403,11 @@ Special Offensive Collision
 Generate an offensive collision bubble - is able to achieve unique effects. Helpful info: tinyurl.com/HitboxParam
 000001111111000
 
+06192F00
+Special Offensive Collision SSE
+Generate an offensive collision bubble - is able to achieve unique effects and is natively used in Subspace. Helpful info: tinyurl.com/HitboxParam
+00001001010111111011133000030030333303303333305
+
 06170300
 Defensive Collision
 Generate a defensive collision bubble that nullifies close combat attacks. Read more about how this works here: https://tinyurl.com/defensive-collisions
@@ -409,16 +416,6 @@ Generate a defensive collision bubble that nullifies close combat attacks. Read 
 06180300
 Defensive Collision: Remove
 Removes defensive collisions.
-
-06192F00
-Special Offensive Collision SSE
-Generate an offensive collision bubble - is able to achieve unique effects and is natively used in Subspace. Helpful info: tinyurl.com/HitboxParam
-00001001010111111011133000030030333303303333305
-
-061B0500
-Move Hitbox
-Repositions an already-existing hitbox.
-00111
 
 061E0300
 Defensive Collision: Flip Toggle
