@@ -1693,9 +1693,14 @@ Finds a target (??? usually 0x2/0x4)
 Metroid Schmovement???
 "(??? usually 0x4, speed, TimetomoveAgain) = Metroid like movement, has to be called once "
 
-66000D00
+66000A00
 Apply Momentum
 Alters the item's vertical and horizontal speed. 
+1111111111
+
+66000D00
+Apply Momentum & Direction Speed
+Alters the item's vertical. horizontal speed and whether or not its based on its direction. 
 1111111111333
 
 66020300
