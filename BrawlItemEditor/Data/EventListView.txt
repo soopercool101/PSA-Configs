@@ -289,6 +289,12 @@ V
 00000032-Stop
 XDefault-Undefined(\D)
 
+0E050100
+V
+00000002-No horizontal momentum
+00000003-No Vertical momentum
+XDefault-Undefined(\D)
+
 0E010200
 1
 Horizontal Speed=\X, Vertical Speed=\X
