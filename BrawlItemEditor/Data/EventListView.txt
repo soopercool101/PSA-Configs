@@ -1,10 +1,10 @@
 00010100
 1
-frames=\X
+Frames=\X
 
 00020100
 1
-frames=\X
+Frames=\X
 
 00040100
 V
@@ -77,31 +77,54 @@ Action=\X, Requirement=\X: \X \C \X
 
 02050300
 1
-Interrupt ID=\X, Status ID=\X, Requirement=\X
+Interrupt=\X, Status ID=\X, Requirement=\X
 
 02050400
 1
-Interrupt ID=\X, Status ID=\X, Requirement=\X: \X
+Interrupt=\X, Status ID=\X, Requirement=\X: \X
 
 02050600
 1
-Interrupt ID=\X, Status ID=\X, Requirement=\X: \X \C \X
+Interrupt=\X, Status ID=\X, Requirement=\X: \X \C \X
 
 020A0100
 V
 00000001-Ground Special
 00000002-Ground Item
-00000003-Ground Grab
+00000003-Grab
 00000004-Ground Attack
 00000005-Ground Dodge
-00000006-Ground Guard
+00000006-Shield
 00000007-Ground Jump
 00000008-Ground (Other)
 00000009-Landing
 0000000A-Ledge Grab
 0000000B-Air Special
 0000000C-Air Item Throw
-0000000D-Air Tether
+0000000D-Air Grab
+0000000E-Air Dodge
+0000000F-Air Attack
+00000010-Footstool
+00000011-Wall Jump
+00000012-Air Jump
+00000013-Fall Through Platform (Squat Only)
+XDefault-Undefined(\D)
+
+020B0100
+V
+00000001-Ground Special
+00000002-Ground Item
+00000003-Grab
+00000004-Ground Attack
+00000005-Ground Dodge
+00000006-Shield
+00000007-Ground Jump
+00000008-Ground (Other)
+00000009-Landing
+0000000A-Ledge Grab
+0000000B-Air Special
+0000000C-Air Item Throw
+0000000D-Air Grab
 0000000E-Air Dodge
 0000000F-Air Attack
 00000010-Footstool
@@ -117,6 +140,22 @@ Sub Action=\X
 04000200
 1
 Sub Action=\X, pass frame=\X
+
+04000300
+1
+Sub Action=\X, pass frame=\X, pass frame speed=\X
+
+040C0100
+1
+Sub Action=\X
+
+040C0200
+1
+Sub Action=\X, pass frame=\X
+
+040C0300
+1
+Sub Action=\X, pass frame=\X, pass frame speed=\X
 
 04020200
 01
@@ -134,17 +173,9 @@ Sub Action=\X, pass frame=\X
 01
 \X: \X \C \X
 
-040C0100
-1
-Sub Action=\X
-
-040C0200
-1
-Sub Action=\X, pass frame=\X
-
 06000D00
 C
-ID=\H0048, Damage=\X01, ShieldDamage=\H0404, direction=\X02, WeightKnockback=\H0304, KnockbackGrowth=\H0348, BaseKnockback=\H0448, Size=\X05, Bone=\H0004, X Offset=\X06, Y Offset=\X07, Z Offset=\X08, TripRate=\X09, HitlagMultiplier=\X10, SDIMultiplier=\X11, Flags=\F12
+ID=\H0048, Dmg=\X01, Angle=\X02, WDSK=\H0304, KBG=\H0348, BKB=\H0448, Bone=\H0004, Size=\X05, X Offset=\X06, Y Offset=\X07, Z Offset=\X08, Hitlag Mult=\X10, SDI Mult=\X11, Shield Dmg=\H0404, Trip Rate=\X09, Flags=\X12
 
 06010200
 1
@@ -168,20 +199,68 @@ XDefault-Undefined(\D)
 ID=\X, Bone=\X, Size=\X, X Offset=\X, Y Offset=\X, Z Offset=\X, Action=\X, Air/Ground=\X
 
 060E1100
+C
+ID=\X00, Dmg=\X02, Angle=\X03, KBG=\X04, WDSK=\X05, BKB=\X06, Bone=\X01, Element=\X07, Trip Rate?=\X08, Hitlag Mult?=\X09, SDI Mult?=\X10, Undefined=\X11, SFX=\X12, Air/Ground=\X13, Hitlag Boolean=\X14, Undefined=\X15, Type?=\X16
+
+06150F00
+C
+ID=\H0048, Dmg=\X01, Angle=\X02, WDSK=\H0304, KBG=\H0348, BKB=\H0448, Bone=\H0004, Size=\X05, Z Offset=\X06, Y Offset=\X07, X Offset=\X08, Hitlag Mult=\X10, SDI Mult=\X11, Rehit Rate=\X13, Trip Rate=\X09, Flags=\X12, Special Flags=\X14
+
+06150F00
 1
-ID=\X, Bone=\X, Damage=\X, direction=\X, KnockbackGrowth=\X, WeightKnockback=\X, BaseKnockback=\X, Element=\X, \X, \X, \X, \X, \X, \X, \X, \X, \X
+Type=\X, Hurtbox ID=\X, Bubble ID=\X
+
+06180300
+1
+Type=\X, Hurtbox ID=\X, Bubble ID=\X
+
+06101100
+1
+ID=\X, Segment=\X, Bone=\X, Size=\X, X Offset=\X, Y Offset=\X, Z Offset=\X, Collision Kind Mask=\X, Collision Category Mask=\X, Air/Ground=\X, Boolean=\X, Collision Part Mask=\X, Value=\X, Boolean=\X, Rehit Rate=\X, Self-Affection=\X, Collision Shape=\X
 
 06140200
 1
 ID=\X, Damage=\X
 
-06150F00
+06160100
 C
-ID=\H0048, Damage=\X01, ShieldDamage=\H0404, direction=\X02, WeightKnockback=\H0304, KnockbackGrowth=\H0348, BaseKnockback=\H0448, Size=\X05, Bone=\H0004, X Offset=\X06, Y Offset=\X07, Z Offset=\X08, TripRate=\X09, HitlagMultiplier=\X10, SDIMultiplier=\X11, Flags=\F12, RehitRate=\X13, SpecialFlags=\F14
+\X00
 
 06192F00
 1
-ID=\X, Segment=\X, Bone=\X, Damage=\X, Scalar=\X, Angle=\X, KnockbackGrowth=\X, Scalar=\X, WeightKnockback=\X Scalar=\X, BaseKnockback=\X, Scalar=\X, Size=\X, Scalar=\X, X Offset=\X, Y Offset=\X, Z Offset=\X, Effect=\X, TripRate=\X, HitlagMultiplier=\X, SDIMultiplier=\X, Clank=\X, Rebound=\X, ShieldDamage=\X, Sound Level=\X, Sound=\X, Air/Ground=\X, Direct/Indirect=\X, Type=\X, Hit Bit=\X, Boolean=\X, Value=\X, Boolean=\X, Shieldability=\X, Reflectability=\X, Absorbability=\X, Rehit Rate=\X, Piercing=\X, Boolean=\X, Angle Flip=\X, Grabby=\X, Team Damage=\X, Hitlag Disable=\X, Boolean=\X, Flinchless=\X, Stretchy=\X, Variable=\X
+ID=\X, Segment=\X, Bone=\X, Dmg=\X, Scalar=\X, Angle=\X, KBG=\X, Scalar=\X, WDSK=\X Scalar=\X, BK=\X, Scalar=\X, Size=\X, Scalar=\X, X Offset=\X, Y Offset=\X, Z Offset=\X, Effect=\X, Trip Rate=\X, Hitlag Mult=\X, SDI Mult=\X, Clank=\X, Rebound=\X, ShieldDamage=\X, Sound Level=\X, Sound=\X, Air/Ground=\X, Direct/Indirect=\X, Type=\X, Hit Bit=\X, Boolean=\X, Value=\X, Boolean=\X, Shieldability=\X, Reflectability=\X, Absorbability=\X, Rehit Rate=\X, Piercing=\X, Boolean=\X, Angle Flip=\X, Grabby=\X, Team Damage=\X, Hitlag Disable=\X, Boolean=\X, Flinchless=\X, Stretchy=\X, Variable=\X
+
+12500200
+1
+sin(\X) = \X
+
+12510200
+1
+cos(\X) = \X
+
+12530200
+1
+asin(\X) = \X
+
+12530200
+1
+acos(\X) = \X
+
+12540300
+1
+aTan2(\X, \X) = \X
+
+12550200
+1
+sqrt(\X) = \X
+
+12560300
+1
+power(\X, \X) = \X
+
+12570100
+1
+pi = \X
 
 061B0500
 1
@@ -189,11 +268,11 @@ ID=\X, Bone=\X, X Offset=\X, Y Offset=\X, Z Offset=\X
 
 06241000
 1
-Type=\X, \X, Bone=\X, Size=\X, 1st X Offset=\X, 1st Y Offset=\X, 1st Z Offset=\X, 2nd X Offset=\X, 2nd Y Offset=\X, 2nd Z Offset=\X, DamageMultiplier=\X, SpeedMultiplier=\X, Threshold=\X, \X, \X, \X
+Type=\X, Hurtbox ID=\X, Bone=\X, Size=\X, 1st X Offset=\X, 1st Y Offset=\X, 1st Z Offset=\X, 2nd X Offset=\X, 2nd Y Offset=\X, 2nd Z Offset=\X, Dmg Mult=\X, Speed Mult=\X, Dmg Threshold=\X, Bool=\X, Duration Mult=\X, Value=\X
 
 08000100
 V
-00000000-Can pass through stage objects
+00000000-Can pass through solid stage elements
 00000001-Can drop off side of stage
 00000002-Can't drop off side of stage
 00000005-In Air; Can leave stage vertically
@@ -210,53 +289,66 @@ V
 00000032-Stop
 XDefault-Undefined(\D)
 
+0E050100
+V
+00000002-No horizontal momentum
+00000003-No Vertical momentum
+XDefault-Undefined(\D)
+
 0E010200
 1
 Horizontal Speed=\X, Vertical Speed=\X
 
 0E080400
 1
-Horizontal Speed=\X, Vertical Speed=\X, \X, Add/Set=\X
+Horizontal Speed=\X, Vertical Speed=\X, Add/Set=\X, Add/Set=\X
+
+0C090100
+V
+00000000-Cant
+00000001-Only in Front
+00000002-Always
+XDefault-Undefined(\D)
 
 11001000
 1
-File#=\H, Graphic=\H, Bone=\X, X Offset=\X, Y Offset=\X, Z Offset=\X, X Rotate=\X, Y Rotate=\X, Z Rotate=\X, Size=\X, Random X Offset=\X, Random Y Offset=\X, Random Z Offset=\X, Random X Rotate=\X, Random Y Rotate=\X, Random Z Rotate=\X, Depends by Bone Rotation=\X
+File#=\H, Graphic=\H, Bone=\X, X Offset=\X, Y Offset=\X, Z Offset=\X, X Rotate=\X, Y Rotate=\X, Z Rotate=\X, Size=\X, Random X Offset=\X, Random Y Offset=\X, Random Z Offset=\X, Random X Rotate=\X, Random Y Rotate=\X, Random Z Rotate=\X, Terminate With Animation=\X
 
 11010A00
 1
-File#=\H, Graphic=\H, Bone=\X, X Offset=\X, Y Offset=\X, Z Offset=\X, X Rotate=\X, Y Rotate=\X, Z Rotate=\X, Size=\X, Terminate with Action=\X
+File#=\H, Graphic=\H, Bone=\X, X Offset=\X, Y Offset=\X, Z Offset=\X, X Rotate=\X, Y Rotate=\X, Z Rotate=\X, Size=\X, Terminate With Animation=\X
 
 11020A00
 1
-File#=\H, Graphic=\H, Bone=\X, X Offset=\X, Y Offset=\X, Z Offset=\X, X Rotate=\X, Y Rotate=\X, Z Rotate=\X, Size=\X, Terminate with Action=\X
+File#=\H, Graphic=\H, Bone=\X, X Offset=\X, Y Offset=\X, Z Offset=\X, X Rotate=\X, Y Rotate=\X, Z Rotate=\X, Size=\X, Terminate With Animation=\X
 
 11031400
 1
 ID=\X, Blur=\X, 1st Bone=\X, 1st X Offset=\X, 1st Y Offset=\X, 1st Z Offset=\X, 2nd Bone=\X, 2nd X Offset=\X, 2nd Y Offset=\X, 2nd Z Offset=\X, \X, Graphic=\X, Bone=\X, X Offset=\X, Y Offset=\X, Z Offset=\X, X Rotate=\X, Y Rotate=\X, Z Rotate=\X, Size=\X
-
+ 
 11041700
 1
-ID=\X, Blur=\X, 1st Bone=\X, 1st X Offset=\X, 1st Y Offset=\X, 1st Z Offset=\X, 2nd Bone=\X, 2nd X Offset=\X, 2nd Y Offset=\X, 2nd Z Offset=\X, \X, Graphic=\X, Bone=\X, X Offset=\X, Y Offset=\X, Z Offset=\X, X Rotate=\X, Y Rotate=\X, Z Rotate=\X, Size=\X, \X, \X, Glow Scale=\X
+ID=\X, Blur=\X, 1st Bone=\X, 1st X Offset=\X, 1st Y Offset=\X, 1st Z Offset=\X, 2nd Bone=\X, 2nd X Offset=\X, 2nd Y Offset=\X, 2nd Z Offset=\X, \X, Graphic=\X, Bone=\X, X Offset=\X, Y Offset=\X, Z Offset=\X, X Rotate=\X, Y Rotate=\X, Z Rotate=\X, Size=\X, \X, \X, \X
 
 11170700
 1
-Undefined=\X, Transition time=\X, Red=\X, Green=\X, Blue=\X, Alpha=\X, \X
+Undefined=\X, Transition Time=\X, Red=\X, Green=\X, Blue=\X, Alpha=\X
 
 11190A00
 1
-File#=\H, Graphic=\H, Bone=\X, X Offset=\X, Y Offset=\X, Z Offset=\X, X Rotate=\X, Y Rotate=\X, Z Rotate=\X, Size=\X, Terminate with Action=\X
+File#=\H, Graphic=\H, Bone=\X, X Offset=\X, Y Offset=\X, Z Offset=\X, X Rotate=\X, Y Rotate=\X, Z Rotate=\X, Size=\X, Terminate With Animation=\X
 
 111A1000
 1
-File#=\H, Graphic=\H, Bone=\X, X Offset=\X, Y Offset=\X, Z Offset=\X, X Rotate=\X, Y Rotate=\X, Z Rotate=\X, Size=\X, Random X Offset=\X, Random Y Offset=\X, Random Z Offset=\X, Random X Rotate=\X, Random Y Rotate=\X, Random Z Rotate=\X, Depends by Bone Rotation=\X
+File #=\H, Graphic=\H, Bone=\X, X Offset=\X, Y Offset=\X, Z Offset=\X, X Rotate=\X, Y Rotate=\X, Z Rotate=\X, Size=\X, Random X Offset=\X, Random Y Offset=\X, Random Z Offset=\X, Random X Rotate=\X, Random Y Rotate=\X, Random Z Rotate=\X, Terminate With Animation=\X
 
 111B1000
 1
-File#=\H, Graphic=\H, Bone=\X, X Offset=\X, Y Offset=\X, Z Offset=\X, X Rotate=\X, Y Rotate=\X, Z Rotate=\X, Size=\X, Random X Offset=\X, Random Y Offset=\X, Random Z Offset=\X, Random X Rotate=\X, Random Y Rotate=\X, Random Z Rotate=\X, Depends by Bone Rotation=\X
+File #=\H, Graphic=\H, Bone=\X, X Offset=\X, Y Offset=\X, Z Offset=\X, X Rotate=\X, Y Rotate=\X, Z Rotate=\X, Size=\X, Random X Offset=\X, Random Y Offset=\X, Random Z Offset=\X, Random X Rotate=\X, Random Y Rotate=\X, Random Z Rotate=\X, Terminate With Animation=\X
 
 111C1000
 1
-File#=\H, Graphic=\H, Bone=\X, X Offset=\X, Y Offset=\X, Z Offset=\X, X Rotate=\X, Y Rotate=\X, Z Rotate=\X, Size=\X, Random X Offset=\X, Random Y Offset=\X, Random Z Offset=\X, Random X Rotate=\X, Random Y Rotate=\X, Random Z Rotate=\X, Depends by Bone Rotation=\X
+File #=\H, Graphic=\H, Bone=\X, X Offset=\X, Y Offset=\X, Z Offset=\X, X Rotate=\X, Y Rotate=\X, Z Rotate=\X, Size=\X, Random X Offset=\X, Random Y Offset=\X, Random Z Offset=\X, Random X Rotate=\X, Random Y Rotate=\X, Random Z Rotate=\X, Terminate With Animation=\X
 
 12000200
 C
@@ -290,6 +382,10 @@ C
 C
 \X01 -= \X00
 
+12090300
+C
+\X02 = rand(\X00, \X01)
+
 120A0100
 1
 \X = true
@@ -314,6 +410,14 @@ C
 C
 \X01 /= \X00
 
+12110200
+C
+\X01 = abs(\X00)
+
+12120200
+C
+\X01 = abs(\X00)
+
 1A040500
 1
 Zoom Time=\X, Undefined=\X, Distance=\X, X Rotate=\X, Y Rotate=\X
@@ -323,7 +427,8 @@ V
 00000000-Normal,
 00000001-Super Armor,
 00000002-Knockback Armor,
-00000003-Damage Armor,
+00000003-Dmg Armor,
+00000004-Subtractive Armor (PM),
 XDefault-Undefined(\D)
 XDefault-\X
 
@@ -333,7 +438,7 @@ Red=\X, Green=\X, Blue=\X, Alpha=\X
 
 21020500
 1
-Transition time=\X, Red=\X, Green=\X, Blue=\X, Alpha=\X
+Transition Time=\X, Red=\X, Green=\X, Blue=\X, Alpha=\X
 
 21050600
 1
@@ -341,7 +446,766 @@ Red=\X, Green=\X, Blue=\X, Alpha=\X, Light Source X=\X, Light Source Y=\X
 
 21070500
 1
-Transition time=\X, Red=\X, Green=\X, Blue=\X, Alpha=\X
+Transition Time=\X, Red=\X, Green=\X, Blue=\X, Alpha=\X
+
+0D070200
+1
+(Thread \X): \X
+
+0D050200
+1
+(Thread \X): \X
+
+0D060100
+1
+Thread \X
+
+12200200
+C
+range(\X01) = \X00 
+
+12210200
+C
+range(\X01) += \X00 
+
+12220200
+C
+range(\X01) -= \X00 
+
+12230200
+C
+range(\X01) *= \X00 
+
+12240200
+C
+range(\X01) /= \X00 
+
+C0DE0100
+1
+0x\X
+
+12150300
+C
+Read Into \X00, with Error : \X01, the Value found at \X02 with offsets
+
+12160400
+C
+Read Into \X00, with Error : \X01 and Mask \X02, the Value found at \X04 with offsets
+
+12180300
+C
+Write Integer \X00, with Error : \X01, into location \X02 with offsets
+
+12190300
+C
+Write Float \X00, with Error : \X01, into location \X02 with offsets
+
+12190400
+C
+Write Bit \X00, with Error : \X01 using Mask \X02, into location \X03 with offsets
+
+121A0200
+C
+Read Into \X00, with Error : \X01, the Value found at Main Index with offsets
+
+121A0F00
+C
+Read Into \X00, with Error : \X01, the Value found at Main Index with offsets : \X02, \X03, \X04, \X05, \X06, \X07, \X08, \X09, \X10, \X11, \X12, \X13 : Variable number to grab \X14
+
+
+121B0300
+C
+Read Into \X00, with Error : \X01 and Mask \X02, the Value found at Main Index with offsets
+
+121C0200
+C
+Write Integer \X00, with Error : \X01, into Main Index with offsets
+
+121D0200
+C
+Write Float \X00, with Error : \X01, into Main Index with offsets
+
+121E0300
+C
+Write Bit \X00, with Error : \X01 using Mask \X02, into Main Index with offsets
+
+06192F00
+1
+ID=\X, Segment=\X, Bone=\X, Dmg=\X, Scalar=\X, Angle=\X, KBG=\X, Scalar=\X, WDSK=\X Scalar=\X, BKB=\X, Scalar=\X, Size=\X, Scalar=\X, Z Offset=\X, Y Offset=\X, X Offset=\X, Effect=\X, Trip Rate=\X, Hitlag Mult=\X, SDI Mult=\X, Clank=\X, Rebound=\X, Shield Dmg=\X, Sound Level=\X, Sound=\X, Air/Ground=\X, Direct/Indirect=\X, Type=\X, Hit Bit=\X, Boolean=\X, Value=\X, Boolean=\X, Shieldability=\X, Reflectability=\X, Absorbability=\X, Rehit Rate=\X, Piercing=\X, Boolean=\X, Angle Flip=\X, Grabby=\X, Team Damage=\X, Hitlag Disable=\X, Boolean=\X, Flinchless=\X, Stretchy=\X, Variable=\X
+
+03010400
+1
+Bone=\X, X Rotation=\X, Y Rotation=\X, Z Rotation=\X
+
+03020200
+1
+Bone=\X, X Rotation=\X
+
+03030200
+1
+Bone=\X, Y Rotation=\X
+
+03040200
+1
+Bone=\X, Z Rotation=\X
+
+03050100
+1
+Bone=\X
+
+03060400
+1
+Bone=\X, X Scale=\X, Y Scale=\X, Z Scale=\X
+
+03070200
+1
+Bone=\X, X Scale=\X
+
+03080200
+1
+Bone=\X, Y Scale=\X
+
+03090200
+1
+Bone=\X, Z Scale=\X
+
+030A0400
+1
+Bone=\X, X Offset=\X, Y Offset=\X, Z Offset=\X
+
+030B0400
+1
+Bone=\X, X Translation=\X, Y Translation=\X, Z Translation=\X
+
+030C0200
+1
+Bone=\X, X Translation=\X
+
+030D0200
+1
+Bone=\X, Y Translation=\X
+
+030E0200
+1
+Bone=\X, Z Translation=\X
+
+05050100
+1
+Size=\X
+
+05060300
+1
+X Rotation=\X, Y Rotation=\X, Z Rotation=\X
+
+05090300
+1
+X Position=\X, Y Position=\X, Z Position=\X
+
+050A0300
+1
+X Position=\X, Y Position=\X, Z Position=\X
+
+050B0300
+1
+X Position=\X, Y Position=\X, Z Position=\X
+
+04080300
+1
+ID=\X, Sub Action=\X, Bone=\X
+
+040D0100
+1
+ID=\X
+
+040E0200
+1
+ID=\X, Frame=\X
+
+040F0200
+1
+ID=\X, Frame Speed=\X
+
+04100200
+1
+ID=\X, Sub Action=\X
+
+04110100
+1
+ID=\X
+
+04120200
+1
+ID=\X, Frame=\X
+
+04130200
+1
+ID=\X, Frame Speed=\X
+
+14070A00
+1
+ID=\X, Strength=\X, Angle=\X, Frame Variance=\X, Angle Variance=\X, X Offset=\X, Y Offset=\X, X Scale=\X, Y Scale=\X, Strength Variance=\X
+
+14070900
+1
+ID=\X, Strength=\X, Angle=\X, Frame Variance=\X, Angle Variance=\X, X Offset=\X, Y Offset=\X, X Scale=\X, Y Scale=\X
+
+07070200
+1
+Strength=\X, Duration=\D Frames
+
+070B0200
+1
+Strength=\X, Duration=\D Frames
+
+11150300
+1
+File#=\H, Graphic=\H, \X, \X
+
+1F080100
+V
+00000000-Assist Trophy
+00000001-Franklin Badge
+00000002-Banana Peel
+00000003-Barrel
+00000004-Beam Sword
+00000005-Dollar Bill
+00000006-Bob-Omb
+00000007-Crate
+00000008-Bumper
+00000009-Capsule
+0000000A-Rolling Crate
+0000000B-CD
+0000000C-Gooey Bomb
+0000000D-Cracker Launcher
+0000000E-Cracker Launcher Shot
+0000000F-Coin
+00000010-Superspicy Curry/Turbo
+00000011-Superspicy Curry Shot
+00000012-Deku Nut
+00000013-Mr. Saturn
+00000014-Dragoon Part
+00000015-Dragoon Set
+00000016-Dragoon Sight
+00000017-Trophy
+00000018-Fire Flower
+00000019-Fire Flower Shot
+0000001A-Freezie
+0000001B-Golden Hammer
+0000001C-Green Shell
+0000001D-Hammer
+0000001E-Hammer Head
+0000001F-Fan
+00000020-Heart Container
+00000021-Homerun Bat
+00000022-Party Ball
+00000023-Manaphy Heart
+00000024-Maximum Tomato
+00000025-Poison Mushroom
+00000026-Super Mushroom
+00000027-Metal Box
+00000028-Hothead
+00000029-Pitfall
+0000002A-Poké Ball
+0000002B-Blast Box
+0000002C-Ray Gun
+0000002D-Ray Gun Shot
+0000002E-Lip's Stick
+0000002F-Lip's Stick Flower
+00000030-Lip's Stick Shot
+00000031-Sandbag
+00000032-Screw Attack
+00000033-Sticker
+00000034-Motion-Sensor Bomb
+00000035-Timer
+00000036-Smart Bomb
+00000037-Smash Ball
+00000038-Smoke Ball
+00000039-Spring
+0000003A-Star Rod
+0000003B-Star Rod Shot
+0000003C-Soccer Ball
+0000003D-Super Scope
+0000003E-Super Scope Shot
+0000003F-Starman
+00000040-Food
+00000041-Team Healer
+00000042-Lightning
+00000043-Urina
+00000044-Bunny Hood
+00000045-Warp Star
+00000046-Trophy (Subspace only)
+00000047-Key (Subspace only)
+00000048-Trophy Stand (Subspace only)
+00000049-Stock Ball (Subspace only)
+0000004A-Apple (Green Greens only)
+0000004B-Sidestepper (Mario Bros. only)
+0000004C-Shellcreeper (Mario Bros. only)
+0000004D-Pellet (Distant Planet only)
+0000004E-Vegetable (Summit only)
+0000004F-Sandbag (Homerun Contest only)
+00000050-Auroros (Subspace only)
+00000051-Koopa Shell (Subspace only)
+00000052-Koopa Shell (Subspace only)
+00000053-Cardboard Box (Snake only)
+00000054-Peanut (Diddy Kong only)
+00000055-Bomb (Link only)
+00000056-Turnip (Peach only)
+00000057-Gyro (R.O.B. only)
+00000058-Peanut Seed (Diddy Kong only)
+00000059-Grenade (Snake only)
+0000005A-Varia Suit Armor Piece (Zero Suit Samus only)
+0000005B-Bomb (Toon Link only)
+0000005C-Bike (Wario only)
+0000005D Bike Piece A (Wario only)
+0000005E-Bike Piece B (Wario only)
+0000005F-Bike Piece C (Wario only)
+00000060-Bike Piece D (Wario only)
+00000061-Bike Piece E (Wario only)
+00000062-Torchic
+00000063-Celebi
+00000064-Chikorita
+00000065-Chikorita Shot
+00000066-Entei
+00000067-Moltres
+00000068-Munchlax
+00000069-Deoxys
+0000006A-Groudon
+0000006B-Gulpin
+0000006C-Staryu
+0000006D-Staryu Shot
+0000006E-Ho-Oh
+0000006F-Ho-Oh Shot
+00000070-Jirachi
+00000071-Snorlax
+00000072-Bellossom
+00000073-Kyogre
+00000074-Kyogre Shot
+00000075-Latios/Latias
+00000076-Lugia
+00000077-Lugia Shot
+00000078-Manaphy
+00000079-Weavile
+0000007A-Electrode
+0000007B-Metagross
+0000007C-Mew
+0000007D-Meowth
+0000007E-Meowth Shot
+0000007F-Piplup
+00000080-Togepi
+00000081-Goldeen
+00000082-Gardevoir
+00000083-Wobbuffet
+00000084-Suicune
+00000085-Bonsly
+00000086-Andross
+00000087-Andross Shot
+00000088-Barbara
+00000089-Gray Fox
+0000008A-Ray MK II
+0000008B-Ray MK II Bomb
+0000008C-Ray MK II Shot
+0000008D-Samurai Goroh
+0000008E-Devil
+0000008F-Excitebike
+00000090-Jeff
+00000091-Jeff Pencil Bullet
+00000092-Jeff Pencil Rocket
+00000093-Lakiyu
+00000094-Knuckle Joe
+00000095-Knuckle Joe Shot
+00000096-Hammer Bro.
+00000097-Hammer Bro. Hammer
+00000098-Helirin
+00000099-Kat & Ana
+0000009A-Ana
+0000009B-Jill & Drill Dozer
+0000009C-Lyn
+0000009D-Little Mac
+0000009E-Metroid
+0000009F-Nintendog
+000000A0-Nintendog (Full-Size)
+000000A1-Mr. Resetti
+000000A2-Isaac
+000000A3-Isaac Shot
+000000A4-Saki
+000000A5-Saki Shot 1
+000000A6-Saki Shot 2
+000000A7-Shadow
+000000A8-Infantry
+000000A9-Infantry Shot
+000000AA-Stafy
+000000AB-Tank (Infantry)
+000000AC-Tank Shot
+000000AD-Tingle
+000000AE-Lakitu Shot
+000000AF-Waluigi
+000000B0-Dr. Wright
+000000B1-Dr. Wright Building
+XDefault-Undefined(\X)
+
+1F080200
+V
+00000000-Assist Trophy
+00000001-Franklin Badge
+00000002-Banana Peel
+00000003-Barrel
+00000004-Beam Sword
+00000005-Dollar Bill
+00000006-Bob-Omb
+00000007-Crate
+00000008-Bumper
+00000009-Capsule
+0000000A-Rolling Crate
+0000000B-CD
+0000000C-Gooey Bomb
+0000000D-Cracker Launcher
+0000000E-Cracker Launcher Shot
+0000000F-Coin
+00000010-Superspicy Curry/Turbo
+00000011-Superspicy Curry Shot
+00000012-Deku Nut
+00000013-Mr. Saturn
+00000014-Dragoon Part
+00000015-Dragoon Set
+00000016-Dragoon Sight
+00000017-Trophy
+00000018-Fire Flower
+00000019-Fire Flower Shot
+0000001A-Freezie
+0000001B-Golden Hammer
+0000001C-Green Shell
+0000001D-Hammer
+0000001E-Hammer Head
+0000001F-Fan
+00000020-Heart Container
+00000021-Homerun Bat
+00000022-Party Ball
+00000023-Manaphy Heart
+00000024-Maximum Tomato
+00000025-Poison Mushroom
+00000026-Super Mushroom
+00000027-Metal Box
+00000028-Hothead
+00000029-Pitfall
+0000002A-Poké Ball
+0000002B-Blast Box
+0000002C-Ray Gun
+0000002D-Ray Gun Shot
+0000002E-Lip's Stick
+0000002F-Lip's Stick Flower
+00000030-Lip's Stick Shot
+00000031-Sandbag
+00000032-Screw Attack
+00000033-Sticker
+00000034-Motion-Sensor Bomb
+00000035-Timer
+00000036-Smart Bomb
+00000037-Smash Ball
+00000038-Smoke Ball
+00000039-Spring
+0000003A-Star Rod
+0000003B-Star Rod Shot
+0000003C-Soccer Ball
+0000003D-Super Scope
+0000003E-Super Scope Shot
+0000003F-Starman
+00000040-Food
+00000041-Team Healer
+00000042-Lightning
+00000043-Urina
+00000044-Bunny Hood
+00000045-Warp Star
+00000046-Trophy (Subspace only)
+00000047-Key (Subspace only)
+00000048-Trophy Stand (Subspace only)
+00000049-Stock Ball (Subspace only)
+0000004A-Apple (Green Greens only)
+0000004B-Sidestepper (Mario Bros. only)
+0000004C-Shellcreeper (Mario Bros. only)
+0000004D-Pellet (Distant Planet only)
+0000004E-Vegetable (Summit only)
+0000004F-Sandbag (Homerun Contest only)
+00000050-Auroros (Subspace only)
+00000051-Koopa Shell (Subspace only)
+00000052-Koopa Shell (Subspace only)
+00000053-Cardboard Box (Snake only)
+00000054-Peanut (Diddy Kong only)
+00000055-Bomb (Link only)
+00000056-Turnip (Peach only)
+00000057-Gyro (R.O.B. only)
+00000058-Peanut Seed (Diddy Kong only)
+00000059-Grenade (Snake only)
+0000005A-Varia Suit Armor Piece (Zero Suit Samus only)
+0000005B-Bomb (Toon Link only)
+0000005C-Bike (Wario only)
+0000005D Bike Piece A (Wario only)
+0000005E-Bike Piece B (Wario only)
+0000005F-Bike Piece C (Wario only)
+00000060-Bike Piece D (Wario only)
+00000061-Bike Piece E (Wario only)
+00000062-Torchic
+00000063-Celebi
+00000064-Chikorita
+00000065-Chikorita Shot
+00000066-Entei
+00000067-Moltres
+00000068-Munchlax
+00000069-Deoxys
+0000006A-Groudon
+0000006B-Gulpin
+0000006C-Staryu
+0000006D-Staryu Shot
+0000006E-Ho-Oh
+0000006F-Ho-Oh Shot
+00000070-Jirachi
+00000071-Snorlax
+00000072-Bellossom
+00000073-Kyogre
+00000074-Kyogre Shot
+00000075-Latios/Latias
+00000076-Lugia
+00000077-Lugia Shot
+00000078-Manaphy
+00000079-Weavile
+0000007A-Electrode
+0000007B-Metagross
+0000007C-Mew
+0000007D-Meowth
+0000007E-Meowth Shot
+0000007F-Piplup
+00000080-Togepi
+00000081-Goldeen
+00000082-Gardevoir
+00000083-Wobbuffet
+00000084-Suicune
+00000085-Bonsly
+00000086-Andross
+00000087-Andross Shot
+00000088-Barbara
+00000089-Gray Fox
+0000008A-Ray MK II
+0000008B-Ray MK II Bomb
+0000008C-Ray MK II Shot
+0000008D-Samurai Goroh
+0000008E-Devil
+0000008F-Excitebike
+00000090-Jeff
+00000091-Jeff Pencil Bullet
+00000092-Jeff Pencil Rocket
+00000093-Lakiyu
+00000094-Knuckle Joe
+00000095-Knuckle Joe Shot
+00000096-Hammer Bro.
+00000097-Hammer Bro. Hammer
+00000098-Helirin
+00000099-Kat & Ana
+0000009A-Ana
+0000009B-Jill & Drill Dozer
+0000009C-Lyn
+0000009D-Little Mac
+0000009E-Metroid
+0000009F-Nintendog
+000000A0-Nintendog (Full-Size)
+000000A1-Mr. Resetti
+000000A2-Isaac
+000000A3-Isaac Shot
+000000A4-Saki
+000000A5-Saki Shot 1
+000000A6-Saki Shot 2
+000000A7-Shadow
+000000A8-Infantry
+000000A9-Infantry Shot
+000000AA-Stafy
+000000AB-Tank (Infantry)
+000000AC-Tank Shot
+000000AD-Tingle
+000000AE-Lakitu Shot
+000000AF-Waluigi
+000000B0-Dr. Wright
+000000B1-Dr. Wright Building
+XDefault-Undefined(\X), \X
+
+1F120600
+V
+00000000-Assist Trophy
+00000001-Franklin Badge
+00000002-Banana Peel
+00000003-Barrel
+00000004-Beam Sword
+00000005-Dollar Bill
+00000006-Bob-Omb
+00000007-Crate
+00000008-Bumper
+00000009-Capsule
+0000000A-Rolling Crate
+0000000B-CD
+0000000C-Gooey Bomb
+0000000D-Cracker Launcher
+0000000E-Cracker Launcher Shot
+0000000F-Coin
+00000010-Superspicy Curry/Turbo
+00000011-Superspicy Curry Shot
+00000012-Deku Nut
+00000013-Mr. Saturn
+00000014-Dragoon Part
+00000015-Dragoon Set
+00000016-Dragoon Sight
+00000017-Trophy
+00000018-Fire Flower
+00000019-Fire Flower Shot
+0000001A-Freezie
+0000001B-Golden Hammer
+0000001C-Green Shell
+0000001D-Hammer
+0000001E-Hammer Head
+0000001F-Fan
+00000020-Heart Container
+00000021-Homerun Bat
+00000022-Party Ball
+00000023-Manaphy Heart
+00000024-Maximum Tomato
+00000025-Poison Mushroom
+00000026-Super Mushroom
+00000027-Metal Box
+00000028-Hothead
+00000029-Pitfall
+0000002A-Poké Ball
+0000002B-Blast Box
+0000002C-Ray Gun
+0000002D-Ray Gun Shot
+0000002E-Lip's Stick
+0000002F-Lip's Stick Flower
+00000030-Lip's Stick Shot
+00000031-Sandbag
+00000032-Screw Attack
+00000033-Sticker
+00000034-Motion-Sensor Bomb
+00000035-Timer
+00000036-Smart Bomb
+00000037-Smash Ball
+00000038-Smoke Ball
+00000039-Spring
+0000003A-Star Rod
+0000003B-Star Rod Shot
+0000003C-Soccer Ball
+0000003D-Super Scope
+0000003E-Super Scope Shot
+0000003F-Starman
+00000040-Food
+00000041-Team Healer
+00000042-Lightning
+00000043-Urina
+00000044-Bunny Hood
+00000045-Warp Star
+00000046-Trophy (Subspace only)
+00000047-Key (Subspace only)
+00000048-Trophy Stand (Subspace only)
+00000049-Stock Ball (Subspace only)
+0000004A-Apple (Green Greens only)
+0000004B-Sidestepper (Mario Bros. only)
+0000004C-Shellcreeper (Mario Bros. only)
+0000004D-Pellet (Distant Planet only)
+0000004E-Vegetable (Summit only)
+0000004F-Sandbag (Homerun Contest only)
+00000050-Auroros (Subspace only)
+00000051-Koopa Shell (Subspace only)
+00000052-Koopa Shell (Subspace only)
+00000053-Cardboard Box (Snake only)
+00000054-Peanut (Diddy Kong only)
+00000055-Bomb (Link only)
+00000056-Turnip (Peach only)
+00000057-Gyro (R.O.B. only)
+00000058-Peanut Seed (Diddy Kong only)
+00000059-Grenade (Snake only)
+0000005A-Varia Suit Armor Piece (Zero Suit Samus only)
+0000005B-Bomb (Toon Link only)
+0000005C-Bike (Wario only)
+0000005D Bike Piece A (Wario only)
+0000005E-Bike Piece B (Wario only)
+0000005F-Bike Piece C (Wario only)
+00000060-Bike Piece D (Wario only)
+00000061-Bike Piece E (Wario only)
+00000062-Torchic
+00000063-Celebi
+00000064-Chikorita
+00000065-Chikorita Shot
+00000066-Entei
+00000067-Moltres
+00000068-Munchlax
+00000069-Deoxys
+0000006A-Groudon
+0000006B-Gulpin
+0000006C-Staryu
+0000006D-Staryu Shot
+0000006E-Ho-Oh
+0000006F-Ho-Oh Shot
+00000070-Jirachi
+00000071-Snorlax
+00000072-Bellossom
+00000073-Kyogre
+00000074-Kyogre Shot
+00000075-Latios/Latias
+00000076-Lugia
+00000077-Lugia Shot
+00000078-Manaphy
+00000079-Weavile
+0000007A-Electrode
+0000007B-Metagross
+0000007C-Mew
+0000007D-Meowth
+0000007E-Meowth Shot
+0000007F-Piplup
+00000080-Togepi
+00000081-Goldeen
+00000082-Gardevoir
+00000083-Wobbuffet
+00000084-Suicune
+00000085-Bonsly
+00000086-Andross
+00000087-Andross Shot
+00000088-Barbara
+00000089-Gray Fox
+0000008A-Ray MK II
+0000008B-Ray MK II Bomb
+0000008C-Ray MK II Shot
+0000008D-Samurai Goroh
+0000008E-Devil
+0000008F-Excitebike
+00000090-Jeff
+00000091-Jeff Pencil Bullet
+00000092-Jeff Pencil Rocket
+00000093-Lakiyu
+00000094-Knuckle Joe
+00000095-Knuckle Joe Shot
+00000096-Hammer Bro.
+00000097-Hammer Bro. Hammer
+00000098-Helirin
+00000099-Kat & Ana
+0000009A-Ana
+0000009B-Jill & Drill Dozer
+0000009C-Lyn
+0000009D-Little Mac
+0000009E-Metroid
+0000009F-Nintendog
+000000A0-Nintendog (Full-Size)
+000000A1-Mr. Resetti
+000000A2-Isaac
+000000A3-Isaac Shot
+000000A4-Saki
+000000A5-Saki Shot 1
+000000A6-Saki Shot 2
+000000A7-Shadow
+000000A8-Infantry
+000000A9-Infantry Shot
+000000AA-Stafy
+000000AB-Tank (Infantry)
+000000AC-Tank Shot
+000000AD-Tingle
+000000AE-Lakitu Shot
+000000AF-Waluigi
+000000B0-Dr. Wright
+000000B1-Dr. Wright Building
+XDefault-Undefined(\X), \X, \X, \X, \X, \X
 
 65040100
 1
@@ -351,3 +1215,13 @@ frames=\X
 1
 frames=\X
 
+651F0100
+V
+00000000-Can be picked up
+00000002-Cant be picked up
+
+66060100
+V
+00000000-Release from surface
+00000002-Semmi-Sticks to surface
+00000003-Sticks to surface
