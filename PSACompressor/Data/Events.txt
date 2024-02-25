@@ -172,6 +172,21 @@ Change Action: Comparison
 Change the current action upon the specified requirement being met. The requirement does not have to be met at the time this ID is executed - it can be used anytime after execution. This Change Action is based on a comparison.
 06505
 
+02030500
+Change Action in Status (Permanent): Requirement
+Changes the action only if in a specific status and in a specific interrupt. Used mainly by Peach in her Extra Action Interrupts for float. This Change Action in Status is based on a requirement being met.
+00006555
+
+02030600
+Change Action in Status (Permanent): Value
+Changes the action only if in a specific status and in a specific interrupt. Used mainly by Peach in her Extra Action Interrupts for float. This Change Action is based on a requirement with a specified value being met.
+00006555
+
+02030600
+Change Action in Status (Permanent): Comparison
+Changes the action only if in a specific status and in a specific interrupt. Used mainly by Peach in her Extra Action Interrupts for float. This Change Action is based on a comparison.
+00006555
+
 02040100
 Additional Action Requirement: Requirement
 Add an additional requirement to the preceeding Change Action statement. This Additional Action Requirement is based on a requirement being met.
