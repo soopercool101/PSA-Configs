@@ -146,6 +146,48 @@ The method used to compare the two variables. From 0 to 5: <, <=, =, !=, >=, >
 Variable
 The second variable in the comparison requirement.
 
+02030500
+Interrupt ID
+The interrupt to hook to. 1-Ground Special, 2-Ground Item, 3-Grab, 4-Ground Attack, 5-Ground Dodge, 6-Shield, 7-Ground Jump, 8-Ground (other), 9-Landing, A-Ledge Grab, B-Air Special, C-Air Item Throw, D-Air Grab, E-Air Dodge, F-Air Attack, 10-Footstool, 11-Wall Jump, 12-Air Jump, 13-Fall Through Plat(only works in squat).
+Status ID
+The Status ID to influence.
+Unknown
+Unknown (some specific id, by any chance? usually 0).
+Action
+The ID of the action that the character will execute.
+Requirement
+If true, the status ID will be enabled, else disabled.
+
+02030600
+Interrupt ID
+The interrupt to hook to. 1-Ground Special, 2-Ground Item, 3-Grab, 4-Ground Attack, 5-Ground Dodge, 6-Shield, 7-Ground Jump, 8-Ground (other), 9-Landing, A-Ledge Grab, B-Air Special, C-Air Item Throw, D-Air Grab, E-Air Dodge, F-Air Attack, 10-Footstool, 11-Wall Jump, 12-Air Jump, 13-Fall Through Plat(only works in squat).
+Status ID
+The Status ID to influence.
+Unknown
+Unknown (some specific id, by any chance? usually 0).
+Action
+The ID of the action that the character will execute.
+Requirement
+If true, the status ID will be enabled, else disabled.
+Variable
+The variable applied to the requirement.
+
+02030800
+Interrupt ID
+The interrupt to hook to. 1-Ground Special, 2-Ground Item, 3-Grab, 4-Ground Attack, 5-Ground Dodge, 6-Shield, 7-Ground Jump, 8-Ground (other), 9-Landing, A-Ledge Grab, B-Air Special, C-Air Item Throw, D-Air Grab, E-Air Dodge, F-Air Attack, 10-Footstool, 11-Wall Jump, 12-Air Jump, 13-Fall Through Plat(only works in squat).
+Status ID
+The Status ID to influence.
+Unknown
+Unknown (some specific id, by any chance? usually 0).
+Action
+The ID of the action that the character will execute.
+Variable
+The first variable in the comparison requirement.
+Comparison Method
+The method used to compare the two variables. From 0 to 5: <, <=, =, !=, >=, >
+Variable
+The second variable in the comparison requirement.
+
 02040100
 Requirement
 The form of requirement used in evaluation of the event.
