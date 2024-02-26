@@ -1372,9 +1372,19 @@ Usually an internal constant basic variable set at 1029.
 Power Multiplier
 A speed/power multiplier. Usually an internal constant basic variable set at 1031.
 
+1F040200
+Transition Time
+How much time it should take to reach desired size.
+Blade Size
+Increase Beam Swords size.
+
 1F080100
 Item ID
 Choose your Item.
+
+1F0B0100
+Bone ID
+Bone the "item holding" bone should be redirected to.
 
 1F080200
 Item ID
