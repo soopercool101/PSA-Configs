@@ -786,8 +786,8 @@ Change Item Bone ID
 Change the bone where the character has the item.
 
 1F040200
-Item Property
-Modify a property of the currently held item.
+Change Beam Sword Size
+Modify blade size of held Beam Sword. The value is transition time, Scalar is blade size.
 01
 
 1F050000
