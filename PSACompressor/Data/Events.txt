@@ -781,6 +781,9 @@ Cause the character to drop any currently held item.
 Consume Item
 Cause the character to consume the currently held item.
 
+1F0B0100
+Change Item Bone ID
+Change the bone where the character has the item.
 
 1F040200
 Item Property
