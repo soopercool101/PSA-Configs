@@ -1484,58 +1484,53 @@ Change the sound effect of the next hitbox. Requires the Hitbox Sound Effect Cha
 
 12150300
 Read from Pointer Path to variable (Custom)
-Requires Pointer Wizardry code by Eon
+Reads any given Pointer W/ offsets  and stores its contents into a variable. Added parameters will be considered as offsets (therefore must be in hex). Requires Pointer Wizardry code by Eon.
 550
 
 12160400
 Read from Pointer Path with Mask to variable (Custom)
-Requires Pointer Wizardry code by Eon
+Reads any given Pointer W/ offsets, compares it to a given mask, and stores its contents into a variable. Added parameters will be considered as offsets (therefore must be in hex). Requires Pointer Wizardry code by Eon.
 5500 
 
 12170300
 Write Integer to Pointed Address (Custom)
-Requires Pointer Wizardry code by Eon
+Writes any given integer into any Pointer w/ offsets. Added parameters will be considered as offsets (therefore must be in hex). Requires Pointer Wizardry code by Eon.
 550
 
 12180300
 Write Float to Pointed Address (Custom)
-Requires Pointer Wizardry code by Eon
+Writes any given Float into a Pointer w/ offsets. Added parameters will be considered as offsets (therefore must be in hex). Requires Pointer Wizardry code by Eon
 550
 
 12190400
 Write Bit using Mask to Pointed Address (Custom)
-Requires Pointer Wizardry code by Eon
+Writes any given Bit into a Pointer w/ offsets, gets compared to the mask beforehand. Added parameters will be considered as offsets (therefore must be in hex). Requires Pointer Wizardry code by Eon.
 5500
 
 121A0200
 Read from Pointer Path using Main Index to variable (Custom)
-Requires Pointer Wizardry code by Eon
-550
-
-121A0F00
-Read from Pointer Path using Main Index to variable (Custom)(+D00)
-Requires Pointer Wizardry code by Eon
+Reads a Pointer within the character/article w/ offsets and stores its contents into a variable. Added parameters will be considered as offsets (therefore must be in hex). Requires Pointer Wizardry code by Eon.
 550
 
 
 121B0300
 Read from Pointer Path using Main Index with Mask to variable (Custom)
-Requires Pointer Wizardry code by Eon
+Reads a Pointer within the character/article w/ offsets, compares it to a Mask, and stores its contents into a variable. Added parameters will be considered as offsets (therefore must be in hex). Requires Pointer Wizardry code by Eon.
 5500 
 
 121C0200
 Write Integer to Pointed Address using Main Index (Custom)
-Requires Pointer Wizardry code by Eon
+Writes any given integer into the characters/articles Pointers' w/ offsets. Added parameters will be considered as offsets (therefore must be in hex). Requires Pointer Wizardry code by Eon.
 550
 
 121D0200
 Write Float to Pointed Address using Main Index (Custom)
-Requires Pointer Wizardry code by Eon
+Writes any given Float into the characters/articles Pointers' w/ offsets. Added parameters will be considered as offsets (therefore must be in hex). Requires Pointer Wizardry code by Eon.
 550
 
 121E0300
 Write Bit using Mask to Pointed Address using Main Index (Custom)
-Requires Pointer Wizardry code by Eon
+Writes any given bit into the character/article Pointers' w/ offsets, gets compared to the mask beforehand. Added parameters will be considered as offsets (therefore must be in hex). Requires Pointer Wizardry code by Eon.
 550
 
 12500200
