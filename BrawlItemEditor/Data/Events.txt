@@ -238,6 +238,10 @@ Closes the specific interruption window. Must be set to the same thing as the al
 Clear Prevent Interrupt
 Possibly unregisters a previously created interrupt.
 
+020E0000
+Clear All Action Interrupts
+Unregisters all previously created interrupts.
+
 04000100
 Change Sub Action
 Change the current sub action.

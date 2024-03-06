@@ -146,6 +146,48 @@ The method used to compare the two variables. From 0 to 5: <, <=, =, !=, >=, >
 Variable
 The second variable in the comparison requirement.
 
+02030500
+Interrupt ID
+The interrupt to hook to. 1-Ground Special, 2-Ground Item, 3-Grab, 4-Ground Attack, 5-Ground Dodge, 6-Shield, 7-Ground Jump, 8-Ground (other), 9-Landing, A-Ledge Grab, B-Air Special, C-Air Item Throw, D-Air Grab, E-Air Dodge, F-Air Attack, 10-Footstool, 11-Wall Jump, 12-Air Jump, 13-Fall Through Plat(only works in squat).
+Status ID
+The Status ID to influence.
+Unknown
+Unknown (some specific id, by any chance? usually 0).
+Action
+The ID of the action that the character will execute.
+Requirement
+If true, the status ID will be enabled, else disabled.
+
+02030600
+Interrupt ID
+The interrupt to hook to. 1-Ground Special, 2-Ground Item, 3-Grab, 4-Ground Attack, 5-Ground Dodge, 6-Shield, 7-Ground Jump, 8-Ground (other), 9-Landing, A-Ledge Grab, B-Air Special, C-Air Item Throw, D-Air Grab, E-Air Dodge, F-Air Attack, 10-Footstool, 11-Wall Jump, 12-Air Jump, 13-Fall Through Plat(only works in squat).
+Status ID
+The Status ID to influence.
+Unknown
+Unknown (some specific id, by any chance? usually 0).
+Action
+The ID of the action that the character will execute.
+Requirement
+If true, the status ID will be enabled, else disabled.
+Variable
+The variable applied to the requirement.
+
+02030800
+Interrupt ID
+The interrupt to hook to. 1-Ground Special, 2-Ground Item, 3-Grab, 4-Ground Attack, 5-Ground Dodge, 6-Shield, 7-Ground Jump, 8-Ground (other), 9-Landing, A-Ledge Grab, B-Air Special, C-Air Item Throw, D-Air Grab, E-Air Dodge, F-Air Attack, 10-Footstool, 11-Wall Jump, 12-Air Jump, 13-Fall Through Plat(only works in squat).
+Status ID
+The Status ID to influence.
+Unknown
+Unknown (some specific id, by any chance? usually 0).
+Action
+The ID of the action that the character will execute.
+Variable
+The first variable in the comparison requirement.
+Comparison Method
+The method used to compare the two variables. From 0 to 5: <, <=, =, !=, >=, >
+Variable
+The second variable in the comparison requirement.
+
 02040100
 Requirement
 The form of requirement used in evaluation of the event.
@@ -1330,9 +1372,19 @@ Usually an internal constant basic variable set at 1029.
 Power Multiplier
 A speed/power multiplier. Usually an internal constant basic variable set at 1031.
 
+1F040200
+Transition Time
+How much time it should take to reach desired size.
+Blade Size
+Increase Beam Swords size.
+
 1F080100
 Item ID
 Choose your Item.
+
+1F0B0100
+Bone ID
+Bone the "item holding" bone should be redirected to.
 
 1F080200
 Item ID
@@ -1474,113 +1526,81 @@ The ID number for the sound effect called.
 
 12150300
 Variable
-Variable to Write to from Pointed Address with Offsets
+Variable the Pointer's contents will be stored to. 
 ErrorBit
-Set to True if pointer path is invalid
+If the pointer path is valid, returns True, otherwise, False.
 Pointer
-Base Address to write to (Do not use Pointer variable type)
+Address in question that should be read. If offsets are added the contents of the total sum will be read instead (Do not use Pointer variable type).
 
 12160400
 Variable
-Variable to Write to from Pointed Address with Offsets
+Variable the Pointer's contents will be stored and compared to.
 ErrorBit
-Set to True if pointer path is invalid
+If the pointer path is valid, returns True, otherwise, False.
 Mask
-ANDed with Value found before storing into Variable 
+Acts like an AND operation, gets compared bit by bit to the variable. If it equals the stored value will be True, else, False.
 Pointer
-Base Address to write to (Do not use Pointer variable type)
+Address in question that should be read. If offsets are added the contents of the total sum will be read instead (Do not use Pointer variable type).
 
 12170300
 Variable
-Integer Variable to store value pointed to by Pointer Path
+Integer type Variable to read from.
 ErrorBit
-Set to True if pointer path is invalid
+If the pointer path is valid, returns True, otherwise, False.
 Pointer
-Base Address to write to (Do not use Pointer variable type)
+Base Address to write to. If offsets are added it will be written to the contents of the total sum instead (Do not use Pointer variable type).
 
 12180300
 Variable
-Float Variable to store value pointed to by Pointer Path
+Float type Variable to read from.
 ErrorBit
-Set to True if pointer path is invalid
+If the pointer path is valid, returns True, otherwise, False.
 Pointer
-Base Address to write to (Do not use Pointer variable type)
+Base Address to write to. If offsets are added it will be written to the contents of the total sum instead (Do not use Pointer variable type).
 
 12190400
 Variable
-Boolean Variable to store value pointed to by Pointer Path
+Boolean Variable to read from and compare to.
 ErrorBit
-Set to True if pointer path is invalid
+If the pointer path is valid, returns True, otherwise, False.
 Mask
-Sets values at Pointed address to true/false according to this BitMask
+Acts like an AND operation, gets compared bit by bit to the variable. If it equals the stored value will be True, else, False.
 Pointer
-Base Address to write to (Do not use Pointer variable type)
+Base Address to write to (Do not use Pointer variable type).
 
 121A0200
 Variable
-Variable to Write to from Pointed Address with Offsets
+Variable which the Pointers w/ offset's contents will be stored to. Pointer in question being the one correspondant to the entity this event was executed in.
 ErrorBit
-Set to True if pointer path is invalid
-
-121A0F00
-Variable
-Variable to Write to from Pointed Address with Offsets
-ErrorBit
-Set to True if pointer path is invalid
-Parameter2
-Value of 60
-Parameter3
-Value of D8
-Parameter4
-Value of 54
-Parameter5
-Value of 48
-Parameter6
-Value of D4
-Parameter7
-Value of 44
-Parameter8
-Value of 8
-Parameter9
-Value of 60
-Parameter10
-Value of D8
-Parameter11
-Value of 64
-Parameter12
-Value of 24. If you want this command to grab an LA-Basic variable, you'd change Param 12 from 24 to 20. If you want this command to grab an LA-Float variable, you'd change Param 12 from 24  to 20 and change Param 13 from C to 14.
-Parameter13
-Value of C. If you want this command to grab an RA-Float variable, you'd change Param 13 from C to 14. These next two haven't BEEN verified or tested yet, but if you need to grab an RA-Bit, change Param 13 from C to 1C.
-Variable Number
-The Variable Number you want to grab multiplied by 4 (Value). For example, to grab Basic/Float 8, you'd multiply 8 by 4 to get 0x20.
+If the pointer path is valid, returns True, otherwise, False.
 
 121B0300
 Variable
-Variable to Write to from Pointed Address with Offsets
+Variable which the Pointers w/ offset's contents will be stored to and compared to. Pointer in question being the one correspondant to the entity this event was executed in.
 ErrorBit
-Set to True if pointer path is invalid
+If the pointer path is valid, returns True, otherwise, False.
 Mask
-ANDed with Value found before storing into Variable 
+Acts like an AND operation, gets compared bit by bit to the variable. If it equals the stored value will be True, else, False.
 
 121C0200
 Variable
-Integer Variable to store value pointed to by Pointer Path
+Integer Variable to be written within the Pointers w/ offset's contents. Pointer in question being the one correspondant to the entity this event was executed in.
 ErrorBit
-Set to True if pointer path is invalid
+If the pointer path is valid, returns True, otherwise, False.
 
 121D0200
 Variable
-Float Variable to store value pointed to by Pointer Path
+Float Variable to be written within the Pointers w/ offset's contents. Pointer in question being the one correspondant to the entity this event was executed in.
 ErrorBit
-Set to True if pointer path is invalid
+If the pointer path is valid, returns True, otherwise, False.
 
 121E0300
 Variable
-Boolean Variable to store value pointed to by Pointer Path
+Boolean Variable to be compared to and written within the Pointers w/ offset's contents. Pointer in question being the one correspondant to the entity this event was executed in.
 ErrorBit
-Set to True if pointer path is invalid
+If the pointer path is valid, returns True, otherwise, False.
 Mask
-Sets values at Pointed address to true/false according to this BitMask
+Acts like an AND operation, gets compared bit by bit to the variable. If it equals the stored value will be True, else, False.
 
 06241000
 Collision Type

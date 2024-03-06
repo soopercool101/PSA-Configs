@@ -7,8 +7,8 @@ Holding a Ledge
 On a Passable Floor
 Compare (Scalar/Float)
 Bit is Set
-Facing Right (Doesnt work in Items)
-Facing Left (Doesnt Work in Items)
+Facing Right
+Facing Left
 Hitbox Connects
 Touching a Floor, Wall, or Ceiling
 Is Throwing Someone

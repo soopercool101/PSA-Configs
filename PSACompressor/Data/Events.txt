@@ -172,6 +172,21 @@ Change Action: Comparison
 Change the current action upon the specified requirement being met. The requirement does not have to be met at the time this ID is executed - it can be used anytime after execution. This Change Action is based on a comparison.
 06505
 
+02030500
+Change Action in Status (Permanent): Requirement
+Changes the action only if in a specific status and in a specific interrupt. Used mainly by Peach in her Extra Action Interrupts for float. This Change Action in Status is based on a requirement being met.
+00006555
+
+02030600
+Change Action in Status (Permanent): Value
+Changes the action only if in a specific status and in a specific interrupt. Used mainly by Peach in her Extra Action Interrupts for float. This Change Action is based on a requirement with a specified value being met.
+00006555
+
+02030600
+Change Action in Status (Permanent): Comparison
+Changes the action only if in a specific status and in a specific interrupt. Used mainly by Peach in her Extra Action Interrupts for float. This Change Action is based on a comparison.
+00006555
+
 02040100
 Additional Action Requirement: Requirement
 Add an additional requirement to the preceeding Change Action statement. This Additional Action Requirement is based on a requirement being met.
@@ -766,10 +781,13 @@ Cause the character to drop any currently held item.
 Consume Item
 Cause the character to consume the currently held item.
 
+1F0B0100
+Change Item Bone ID
+Change the bone where the character has the item.
 
 1F040200
-Item Property
-Modify a property of the currently held item.
+Change Beam Sword Size
+Modify blade size of held Beam Sword. The value is transition time, Scalar is blade size.
 01
 
 1F050000
@@ -1432,7 +1450,7 @@ Makes and starts a new independent subroutine. (Requires the Independent Subrout
 0D060100
 Terminate Independent Subroutine (Custom)
 Stops a running independent subroutine. (Requires the relevant code by Mawootad.)
-2
+0
 
 12200200
 Attribute Range Set (Custom)
@@ -1466,58 +1484,53 @@ Change the sound effect of the next hitbox. Requires the Hitbox Sound Effect Cha
 
 12150300
 Read from Pointer Path to variable (Custom)
-Requires Pointer Wizardry code by Eon
+Reads any given Pointer W/ offsets  and stores its contents into a variable. Added parameters will be considered as offsets (therefore must be in hex). Requires Pointer Wizardry code by Eon.
 550
 
 12160400
 Read from Pointer Path with Mask to variable (Custom)
-Requires Pointer Wizardry code by Eon
+Reads any given Pointer W/ offsets, compares it to a given mask, and stores its contents into a variable. Added parameters will be considered as offsets (therefore must be in hex). Requires Pointer Wizardry code by Eon.
 5500 
 
 12170300
 Write Integer to Pointed Address (Custom)
-Requires Pointer Wizardry code by Eon
+Writes any given integer into any Pointer w/ offsets. Added parameters will be considered as offsets (therefore must be in hex). Requires Pointer Wizardry code by Eon.
 550
 
 12180300
 Write Float to Pointed Address (Custom)
-Requires Pointer Wizardry code by Eon
+Writes any given Float into a Pointer w/ offsets. Added parameters will be considered as offsets (therefore must be in hex). Requires Pointer Wizardry code by Eon
 550
 
 12190400
 Write Bit using Mask to Pointed Address (Custom)
-Requires Pointer Wizardry code by Eon
+Writes any given Bit into a Pointer w/ offsets, gets compared to the mask beforehand. Added parameters will be considered as offsets (therefore must be in hex). Requires Pointer Wizardry code by Eon.
 5500
 
 121A0200
 Read from Pointer Path using Main Index to variable (Custom)
-Requires Pointer Wizardry code by Eon
-550
-
-121A0F00
-Read from Pointer Path using Main Index to variable (Custom)(+D00)
-Requires Pointer Wizardry code by Eon
+Reads a Pointer within the character/article w/ offsets and stores its contents into a variable. Added parameters will be considered as offsets (therefore must be in hex). Requires Pointer Wizardry code by Eon.
 550
 
 
 121B0300
 Read from Pointer Path using Main Index with Mask to variable (Custom)
-Requires Pointer Wizardry code by Eon
+Reads a Pointer within the character/article w/ offsets, compares it to a Mask, and stores its contents into a variable. Added parameters will be considered as offsets (therefore must be in hex). Requires Pointer Wizardry code by Eon.
 5500 
 
 121C0200
 Write Integer to Pointed Address using Main Index (Custom)
-Requires Pointer Wizardry code by Eon
+Writes any given integer into the characters/articles Pointers' w/ offsets. Added parameters will be considered as offsets (therefore must be in hex). Requires Pointer Wizardry code by Eon.
 550
 
 121D0200
 Write Float to Pointed Address using Main Index (Custom)
-Requires Pointer Wizardry code by Eon
+Writes any given Float into the characters/articles Pointers' w/ offsets. Added parameters will be considered as offsets (therefore must be in hex). Requires Pointer Wizardry code by Eon.
 550
 
 121E0300
 Write Bit using Mask to Pointed Address using Main Index (Custom)
-Requires Pointer Wizardry code by Eon
+Writes any given bit into the character/article Pointers' w/ offsets, gets compared to the mask beforehand. Added parameters will be considered as offsets (therefore must be in hex). Requires Pointer Wizardry code by Eon.
 550
 
 12500200

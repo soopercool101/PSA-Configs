@@ -87,6 +87,18 @@ Interrupt=\X, Status ID=\X, Requirement=\X: \X
 1
 Interrupt=\X, Status ID=\X, Requirement=\X: \X \C \X
 
+02030500
+1
+Interrupt=\X, Status ID=\X, Unknown=\X, Action=\X, Requirement=\X
+
+02030600
+1
+Interrupt=\X, Status ID=\X, Unknown=\X, Action=\X, Requirement=\X: \X
+
+02030600
+1
+Interrupt=\X, Status ID=\X, Unknown=\X, Action=\X, Requirement=\X: \X \C \X
+
 020A0100
 V
 00000001-Ground Special
