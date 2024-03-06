@@ -1450,7 +1450,7 @@ Makes and starts a new independent subroutine. (Requires the Independent Subrout
 0D060100
 Terminate Independent Subroutine (Custom)
 Stops a running independent subroutine. (Requires the relevant code by Mawootad.)
-2
+0
 
 12200200
 Attribute Range Set (Custom)
