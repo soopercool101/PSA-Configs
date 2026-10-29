@@ -717,20 +717,40 @@ Basic Variable Add
 Add a specified value to a basic variable.
 05
 
+12010300
+Basic Variable Add
+Adds two specified values, and writes the result into a variable.
+055
+
 12020200
 Basic Variable Subtract
 Subtract a specified value from a basic variable.
 05
+
+12020300
+Basic Variable Subtract
+Subtracts the first value from the second, and writes the result into a variable.
+055
 
 120D0200
 Basic Variable Multiply
 Multiply a basic value by the specified value.
 05
 
+120D0300
+Basic Variable Multiply
+Multiplies two specified values, and writes the result into a variable.
+055
+
 120E0200
 Basic Variable Divide
 Divide a basic value by the specified value.
 05
+
+120E0300
+Basic Variable Divide
+Divides the second value by the first, and writes the result into a variable.
+055
 
 12030100
 Basic Variable Increment
@@ -762,20 +782,40 @@ Float Variable Add
 Add a specified value to a float variable.
 15
 
+12070300
+Float Variable Add
+Adds two specified values, and writes the result into a variable.
+155
+
 12080200
 Float Variable Subtract
 Subtract a specified value from a float variable.
 15
+
+12080300
+Float Variable Subtract
+Subtracts the first value from the second, and writes the result into a variable.
+155
 
 120F0200
 Float Variable Multiply
 Multiply a specified value with a float variable.
 15
 
+120F0300
+Float Variable Multiply
+Multiplies two specified values, and writes the result into a variable.
+155
+
 12100200
 Float Variable Divide
 Divide a specified value with a float variable.
 15
+
+12100300
+Float Variable Divide
+Divides the second value by the first, and writes the result into a variable.
+155
 
 12090300
 Float Variable Random
