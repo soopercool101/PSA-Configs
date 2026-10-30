@@ -654,9 +654,25 @@ Appears to use similar values to "Set Aerial/Onstage State".
 Sound Effect
 The ID number for the sound effect called.
 
+0A000200
+Sound Effect
+The ID number for the sound effect called.
+Handle Variable
+The variable which will receive the handle for the started effect.
+
 0A010100
 Sound Effect
 The ID number for the sound effect called.
+
+0A020100
+Sound Effect
+The ID number for the sound effect called.
+
+0A020200
+Sound Effect
+The ID number for the sound effect called.
+Handle Variable
+The variable which will receive the handle for the started effect.
 
 0A030100
 Sound Effect
@@ -673,6 +689,18 @@ The ID number for the sound effect called.
 0A0A0100
 Sound Effect
 The ID number for the sound effect called.
+
+0A0E0200
+Handle
+The handle attached to the sound to modify. Retrieved by passing an extra variable parameter to the (+100) version of some Sound Effect events.
+Multiplier
+The multiplier to apply to the property.
+
+0A0F0200
+Handle
+The handle attached to the sound to modify. Retrieved by passing an extra variable parameter to the (+100) version of some Sound Effect events.
+Multiplier
+The multiplier to apply to the property.
 
 0B000200
 BoneSwitch ID

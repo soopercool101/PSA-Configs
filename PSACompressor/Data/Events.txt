@@ -403,6 +403,11 @@ Generates a damage collision bubble surrounding the character being thrown.
 Sound Effect
 Play a specified sound effect.
 
+0A000200
+Sound Effect (w/ Handle Store)
+Play a specified sound effect, and store the associated handle in the provided variable.
+05
+
 
 0A010100
 Sound Effect (Added Terrain)
@@ -412,6 +417,11 @@ Play a specified sound effect with an added terrain sound effect.
 0A020100
 Sound Effect (Transient)
 Play a specified sound effect. The sound effect ends with the animation.
+
+0A020200
+Sound Effect (Transient) (w/ Handle Store)
+Play a specified sound effect, and store the associated handle in the provided variable. The sound effect ends with the action.
+05
 
 
 0A050100
@@ -446,6 +456,14 @@ Stops the specified sound effect immediately.
 Sound Effect 07
 Play a specified sound effect. sound effect occurs when landing. (Exception: Mario's Fireball)
  
+0A0E0200
+Set SE Pitch
+Sets the pitch of the sound effect attached to the provided handle.
+
+0A0F0200
+Set SE Volume
+Sets the volume of the sound effect attached to the provided handle.
+
 
 0C050000
 Terminate Instance
