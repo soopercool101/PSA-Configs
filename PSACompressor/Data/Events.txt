@@ -646,6 +646,15 @@ Tint the screen to the specified color.
 End Screen Tint
 End Screen Tint.
 
+11300100
+Get Shifted Primary Effect Bank ID
+Clears the provided variable, then writes the ID used for the character's main effects bank into its upper half.
+5
+
+11310100
+Get Shifted Secondary Effect Bank ID
+Clears the provided variable, then writes the ID used for the character's Etc effects bank into its upper half.
+5
 
 14070A00
 Aesthetic Wind Effect

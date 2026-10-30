@@ -1146,6 +1146,14 @@ A random value lesser than the specified value and added to the Z Rotation.
 Terminate With Animation
 Sets whether or not this graphic effect terminates when the animation ends.
 
+11300100
+Variable
+The variable which will receive the provided Bank ID.
+
+11310100
+Variable
+The variable which will receive the provided Bank ID.
+
 12000200
 Value
 the value to place inside the specified variable.
