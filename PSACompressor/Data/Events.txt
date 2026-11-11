@@ -403,6 +403,11 @@ Generates a damage collision bubble surrounding the character being thrown.
 Sound Effect
 Play a specified sound effect.
 
+0A000200
+Sound Effect (w/ Handle Store)
+Play a specified sound effect, and store the associated handle in the provided variable.
+05
+
 
 0A010100
 Sound Effect (Added Terrain)
@@ -412,6 +417,11 @@ Play a specified sound effect with an added terrain sound effect.
 0A020100
 Sound Effect (Transient)
 Play a specified sound effect. The sound effect ends with the animation.
+
+0A020200
+Sound Effect (Transient) (w/ Handle Store)
+Play a specified sound effect, and store the associated handle in the provided variable. The sound effect ends with the action. [Requires PSAExtensions v0.3.2+]
+05
 
 
 0A050100
@@ -446,6 +456,14 @@ Stops the specified sound effect immediately.
 Sound Effect 07
 Play a specified sound effect. sound effect occurs when landing. (Exception: Mario's Fireball)
  
+0A0E0200
+Set SE Pitch
+Sets the pitch of the sound effect attached to the provided handle. [Requires PSAExtensions v0.3.2+]
+
+0A0F0200
+Set SE Volume
+Sets the volume of the sound effect attached to the provided handle. [Requires PSAExtensions v0.3.2+]
+
 
 0C050000
 Terminate Instance
@@ -646,6 +664,15 @@ Tint the screen to the specified color.
 End Screen Tint
 End Screen Tint.
 
+11300100
+Get Shifted Primary Effect Bank ID
+Clears the provided variable, then writes the ID used for the character's main effects bank into its upper half. [Requires PSAExtensions v0.3.2+]
+5
+
+11310100
+Get Shifted Secondary Effect Bank ID
+Clears the provided variable, then writes the ID used for the character's Etc effects bank into its upper half. [Requires PSAExtensions v0.3.2+]
+5
 
 14070A00
 Aesthetic Wind Effect
@@ -667,10 +694,20 @@ Basic Variable Add
 Add a specified value to a basic variable.
 05
 
+12010300
+Basic Variable Add
+Adds two specified values, and writes the result into a variable. [Requires PSAExtensions v0.3.2+]
+055
+
 12020200
 Basic Variable Subtract
 Subtract a specified value from a basic variable.
 05
+
+12020300
+Basic Variable Subtract
+Subtracts the first value from the second, and writes the result into a variable. [Requires PSAExtensions v0.3.2+]
+055
 
 12050300
 Basic Variable Random
@@ -682,10 +719,20 @@ Basic Variable Multiply
 Multiply a basic value by the specified value.
 05
 
+120D0300
+Basic Variable Multiply
+Multiplies two specified values, and writes the result into a variable. [Requires PSAExtensions v0.3.2+]
+055
+
 120E0200
 Basic Variable Divide
 Divide a basic value by the specified value.
 05
+
+120E0300
+Basic Variable Divide
+Divides the second value by the first, and writes the result into a variable. [Requires PSAExtensions v0.3.2+]
+055
 
 12030100
 Basic Variable Increment
@@ -702,6 +749,10 @@ Basic Variable Set Absolute
 Sets a Basic type variable to the absolute value of the specified value
 05
 
+12050300
+Basic Variable Random
+Load a basic variable with a random integer between a min and max value.
+
 12060200
 Float Variable Set
 Set a floating point variable to the specified value.
@@ -712,10 +763,20 @@ Float Variable Add
 Add a specified value to a float variable.
 15
 
+12070300
+Float Variable Add
+Adds two specified values, and writes the result into a variable. [Requires PSAExtensions v0.3.2+]
+155
+
 12080200
 Float Variable Subtract
 Subtract a specified value from a float variable.
 15
+
+12080300
+Float Variable Subtract
+Subtracts the first value from the second, and writes the result into a variable. [Requires PSAExtensions v0.3.2+]
+155
 
 12090300
 Float Variable Random
@@ -727,10 +788,20 @@ Float Variable Multiply
 Multiply a specified value with a float variable.
 15
 
+120F0300
+Float Variable Multiply
+Multiplies two specified values, and writes the result into a variable. [Requires PSAExtensions v0.3.2+]
+155
+
 12100200
 Float Variable Divide
 Divide a specified value with a float variable.
 15
+
+12100300
+Float Variable Divide
+Divides the second value by the first, and writes the result into a variable. [Requires PSAExtensions v0.3.2+]
+155
 
 12120200
 Float Variable Set Absolute

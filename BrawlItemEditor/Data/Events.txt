@@ -441,9 +441,19 @@ Generates a damage collision bubble surrounding the character being thrown.
 Sound Effect
 Play a specified sound effect.
 
+0A000200
+Sound Effect (w/ Handle Store)
+Play a specified sound effect, and store the associated handle in the provided variable.
+05
+
 0A020100
 Sound Effect (Transient)
 Play a specified sound effect. The sound effect ends with the action.
+
+0A020200
+Sound Effect (Transient) (w/ Handle Store)
+Play a specified sound effect, and store the associated handle in the provided variable. The sound effect ends with the action. [Requires PSAExtensions v0.3.2+]
+05
 
 0A050100
 Entity Independent Sound Effect
@@ -469,6 +479,14 @@ Play a specified sound effect. sound effect occurs when landing. However, it has
 0A080000
 Call Setted Sound Effect
 Plays the sound effect set by "Sound Effect 07".
+
+0A0E0200
+Set SE Pitch
+Sets the pitch of the sound effect attached to the provided handle. [Requires PSAExtensions v0.3.2+]
+
+0A0F0200
+Set SE Volume
+Sets the volume of the sound effect attached to the provided handle. [Requires PSAExtensions v0.3.2+]
 
 0C0B0000
 Low Voice Clip
@@ -717,20 +735,40 @@ Basic Variable Add
 Add a specified value to a basic variable.
 05
 
+12010300
+Basic Variable Add
+Adds two specified values, and writes the result into a variable. [Requires PSAExtensions v0.3.2+]
+055
+
 12020200
 Basic Variable Subtract
 Subtract a specified value from a basic variable.
 05
+
+12020300
+Basic Variable Subtract
+Subtracts the first value from the second, and writes the result into a variable. [Requires PSAExtensions v0.3.2+]
+055
 
 120D0200
 Basic Variable Multiply
 Multiply a basic value by the specified value.
 05
 
+120D0300
+Basic Variable Multiply
+Multiplies two specified values, and writes the result into a variable. [Requires PSAExtensions v0.3.2+]
+055
+
 120E0200
 Basic Variable Divide
 Divide a basic value by the specified value.
 05
+
+120E0300
+Basic Variable Divide
+Divides the second value by the first, and writes the result into a variable. [Requires PSAExtensions v0.3.2+]
+055
 
 12030100
 Basic Variable Increment
@@ -762,20 +800,40 @@ Float Variable Add
 Add a specified value to a float variable.
 15
 
+12070300
+Float Variable Add
+Adds two specified values, and writes the result into a variable. [Requires PSAExtensions v0.3.2+]
+155
+
 12080200
 Float Variable Subtract
 Subtract a specified value from a float variable.
 15
+
+12080300
+Float Variable Subtract
+Subtracts the first value from the second, and writes the result into a variable. [Requires PSAExtensions v0.3.2+]
+155
 
 120F0200
 Float Variable Multiply
 Multiply a specified value with a float variable.
 15
 
+120F0300
+Float Variable Multiply
+Multiplies two specified values, and writes the result into a variable. [Requires PSAExtensions v0.3.2+]
+155
+
 12100200
 Float Variable Divide
 Divide a specified value with a float variable.
 15
+
+12100300
+Float Variable Divide
+Divides the second value by the first, and writes the result into a variable. [Requires PSAExtensions v0.3.2+]
+155
 
 12090300
 Float Variable Random

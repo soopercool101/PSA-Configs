@@ -612,9 +612,25 @@ Appears to use similar values to "Set Aerial/Onstage State".
 Sound Effect
 The ID number for the sound effect called.
 
+0A000200
+Sound Effect
+The ID number for the sound effect called.
+Handle Variable
+The variable which will receive the handle for the started effect.
+
 0A010100
 Sound Effect
 The ID number for the sound effect called.
+
+0A020100
+Sound Effect
+The ID number for the sound effect called.
+
+0A020200
+Sound Effect
+The ID number for the sound effect called.
+Handle Variable
+The variable which will receive the handle for the started effect.
 
 0A030100
 Sound Effect
@@ -631,6 +647,18 @@ The ID number for the sound effect called.
 0A0A0100
 Sound Effect
 The ID number for the sound effect called.
+
+0A0E0200
+Handle
+The handle attached to the sound to modify. Retrieved by passing an extra variable parameter to the (+100) version of some Sound Effect events.
+Multiplier
+The multiplier to apply to the property.
+
+0A0F0200
+Handle
+The handle attached to the sound to modify. Retrieved by passing an extra variable parameter to the (+100) version of some Sound Effect events.
+Multiplier
+The multiplier to apply to the property.
 
 0B000200
 BoneSwitch ID
@@ -1120,11 +1148,27 @@ the value add to the specified variable.
 Variable
 The Basic type variable to access.
 
+12010300
+Value
+The first of the values to be added together.
+Value
+The second of the values to be added together.
+Result Variable
+The variable to write the result of the calculation to.
+
 12020200
 Value
 the value to subtract from the specified variable.
 Variable
 The Basic type variable to access.
+
+12020300
+Value
+The value to subtract from the second value.
+Value
+The value from which the first value will be subtracted.
+Result Variable
+The variable to write the result of the calculation to.
 
 12030100
 Variable
@@ -1154,11 +1198,27 @@ The floating point value to add to the specified variable.
 Variable
 The Float type variable to access.
 
+12070300
+Value
+The first of the values to be added together.
+Value
+The second of the values to be added together.
+Result Variable
+The variable to write the result of the calculation to.
+
 12080200
 Value
 The floating point value to subtract from the specified variable.
 Variable
 The Float type variable to access.
+
+12080300
+Value
+The value to subtract from the second value.
+Value
+The value from which the first value will be subtracted.
+Result Variable
+The variable to write the result of the calculation to.
 
 12090300
 Value
@@ -1182,11 +1242,27 @@ The value to multiply the selected variable by.
 Variable
 The Basic type variable to be multiplied.
 
+120D0300
+Value
+The first of the values to be multiplied together.
+Value
+The second of the values to be multiplied together.
+Result Variable
+The variable to write the result of the calculation to.
+
 120E0200
 Value
 The value to divide the selected variable by.
 Variable
 The Basic type variable to be divided.
+
+120E0300
+Value
+The value to divide the second value by (the divisor).
+Value
+The value which will be divided by the first value (the numerator).
+Result Variable
+The variable to write the result of the calculation to.
 
 120F0200
 Value
@@ -1194,11 +1270,27 @@ The floating point value to multiply with the specified variable.
 Variable
 The Float type variable to access.
 
+120F0300
+Value
+The first of the values to be multiplied together.
+Value
+The second of the values to be multiplied together.
+Result Variable
+The variable to write the result of the calculation to.
+
 12100200
 Value
 The floating point value to divide with the specified variable.
 Variable
 The Float type variable to access.
+
+12100300
+Value
+The value to divide the second value by (the divisor).
+Value
+The value which will be divided by the first value (the numerator).
+Result Variable
+The variable to write the result of the calculation to.
 
 12110200
 Value
