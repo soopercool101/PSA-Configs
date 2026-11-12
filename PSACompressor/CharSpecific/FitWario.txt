@@ -3,25 +3,25 @@
 080 Par01 8
 084 Par02 8
 088 Par03 8
-08C Art0
-090 Art1
+08C Art0 Wario Bike
+090 Art1 Garlic?
 094 Par06 8
 0A0 Par09 10
 X50 27-00iBone Index Replacement Data0
 X3C 27-01iBone Index Replacement Data1
 
-Art0
+Art0 Wario Bike
 13-16
 034 Par00-0 28
 030 Par00D3 4
 X1E 23-0E-00x
 
-Art1
+Art1 Garlic?
 1-1
 034 Par01-0 1
 
 Par00
-Chomp
+Neutral B: Chomp
 
 *0x0 Min Hold Frame
 Minimum hold continue frame
@@ -30,10 +30,10 @@ Minimum hold continue frame
 Maximum hold continue frame
 
 0x8
-No Description Available.
+Unknown
 
 0xC
-No Description Available.
+Unknown
 
 0x10 Bite Speed
 Biting animation speed when attack button pressed
@@ -42,19 +42,19 @@ Biting animation speed when attack button pressed
 If value is low, can't change biting animation speed when attack button pressed
 
 0x18
-No Description Available.
+Unknown
 
 0x1C Bomb Damage
 Damage taken when eat a bomb
 
 0x20
-No Description Available.
+Unknown
 
 *0x24 Interval after Throw
 Frame to can't bite after throwing
 
 Par01
-Wario Bike
+Side B: Wario Bike
 
 0x0
 Unknown
@@ -63,10 +63,10 @@ Unknown
  ?? (read on aerial start)
 
 0x8
-No Description Available.
+Unknown
 
 0xC
-No Description Available.
+Unknown
 
 0x10 Jump H Momentum
 Jumping off bike horizontal momentum
@@ -78,10 +78,10 @@ Jumping off bike vertical momentum
 How long does it take to get the bike out again after it's gone (Frames)
 
 *0x1C
-No Description Available.
+Unknown
 
 Par02
-Corkscrew
+Up B: Corkscrew
 
 0x0 Startup H Preservation
 Startup horizontal momentum preservation
@@ -105,10 +105,10 @@ Horizontal momentum added to end of corkscrew
 Vertical momentum added to end of corkscrew (positive = rise)
 
 *0x1C
-No Description Available.
+Unknown
 
 Par03
-Wario Waft
+Down B: Wario Waft
 
 *0x0 Full Charge Time
 Seconds to fully charge (SpecialLwFly) If only this value is low, it will suddenly reach fully charge
@@ -249,7 +249,7 @@ Gravity
 Aerial max fall speed
 
 *0x2C
-No Description Available.
+Unknown
 
 0x30 Damage Growth
 Damage Growth Constant (Equation is roughly something like Speed (in Units) x this = damage output. At fullspeed with this set to 100, the hitbox did 699%-744%)
@@ -261,7 +261,7 @@ Minimum speed at which Hitbox occurs
 Minimum speed to have a hitbox?
 
 0x3C
-No Description Available.
+Unknown
 
 0x40 Turn Speed 1
 Turning speed when high-speed (less = slow)
@@ -282,7 +282,7 @@ Bounce (vertical) momentum when the bike is tilted and landing
 Grounded horizontal acceleration
 
 0x58
-No Description Available.
+Unknown
 
 0x5C Ground Max Rotation
 Max rotation on ground
@@ -294,10 +294,10 @@ Rotation speed on ground
 Return rotation speed on ground
 
 0x68
-No Description Available.
+Unknown
 
 0x6C
-No Description Available.
+Unknown
 
 *0x70
 Something with how long character have to be at max rotation before falling off at slow speeds?
@@ -318,22 +318,22 @@ Maximum number turn before falling off the bike
 Deceleration of bike after jumping off while running on the ground
 
 0x88
-No Description Available.
+Unknown
 
 0x8C Down after Jump
 If the bike falls below this value after jumping off while running on the ground, it will fell down.
 
 0x90
-No Description Available.
+Unknown
 
 0x94
-No Description Available.
+Unknown
 
 0x98
-No Description Available.
+Unknown
 
 *0x9C
-No Description Available.
+Unknown
 
 Par00D3
 Data3

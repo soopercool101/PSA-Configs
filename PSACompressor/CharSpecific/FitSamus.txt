@@ -6,50 +6,50 @@
 08C Par04 8
 090 Par05 2
 094 Par06 1
-09C Art0
-0A4 Art1
-0AC Art2
-0B4 Art3
-0BC Art4
-0C4 Art5
-0CC Art6
-0D0 Art7
+09C Art0 Charge Shot
+0A4 Art1 Bomb
+0AC Art2 Homing Missile
+0B4 Art3 Zero Laser
+0BC Art4 Zero Laser Assistance
+0C4 Art5 Arm
+0CC Art6 Super Missile
+0D0 Art7 Grapple Beam
 
-Art0
+Art0 Charge Shot
 9-9
 034 Par00-0 8
 
-Art1
+Art1 Bomb
 2-2
 034 Par01-0 9
 
-Art2
+Art2 Homing Missile
 2-2
 034 Par02-0 A
 
-Art3
+Art3 Zero Laser
 2-2
 034 Par03-0 1
 
-Art4
+Art4 Zero Laser Assistance
 2-2
 034 Par04-0 1
 
-Art5
+Art5 Arm
 1-8
 034 Par05-0 1
 030 Par05D3 4
 
-Art6
+Art6 Super Missile
 2-2
 034 Par06-0 6
 
-Art7
+Art7 Grapple Beam
 9-A
 034 Par07-0 6
 
 Par00
-Charge Shot
+Neutral B: Charge Shot
 
 *0x0 Max Charge Level
 Max charge level
@@ -61,10 +61,10 @@ Aerial horizontal momentum from shooting charged Charge shot (negative = backwar
 Frames between change in charge level
 
 *0xC
-No Description Available.
+Unknown
 
 Par01
-Screw Attack
+Up B: Screw Attack
 
 0x0 H Momentum (Ground)
 Horizontal momentum added with no control when ground start
@@ -88,10 +88,10 @@ Special Fall max horizontal speed multiplier
 Landing lag
 
 *0x1C
-No Description Available.
+Unknown
 
 Par02
-Bomb
+Down B: Bomb
 
 0x0 V Momentum (Ground)
 Vertical momentum grounded bomb
@@ -112,10 +112,10 @@ Grounded horizontal acceleration
 Aerial horizontal acceleration
 
 0x18 H Preservation (Ground)
-Grounded horizontal momentum preservation
+Grounded horizontal momentum preservation. Can't accelerate. (smaller = less)
 
 0x1C H Preservation (Air)
-Aerial horizontal momentum preservation
+Aerial horizontal momentum preservation. Can't accelerate. (smaller = less)
 
 0x20 X Offset
 X offset
@@ -148,10 +148,10 @@ Max horizontal speed after bomb jump
  ??
 
 0x48
- ?? (read on bomb lay)
+If set to 0, the character will break if releases the bomb and then let it explode at feet without moving horizontally.
 
 Par03
-Missile
+Side B: Missile
 
 *0x0
 Unknown, it is not affect to differentiating tilt input from Smash input
@@ -166,7 +166,7 @@ Aerial deceleration to horizontal momentum preservation
 X-offset of missile launch
 
 Par04
-Zero Laser
+Final Smash: Zero Laser
 
 0x0 Initial V Momentum
 Aerial initial vertical momentum
@@ -190,7 +190,7 @@ Speed of hitbox length increase
 Hitbox duration
 
 *0x1C
-No Description Available.
+Unknown
 
 Par05
 ExtraParams5
@@ -295,19 +295,19 @@ Homing max changeable angle (radians)
 Homing turning speed. Higher = slower.
 
 *0x24
-No Description Available.
+Unknown
 
 Par03-0
-ExtraParams0
+Zero Laser Article
 
-*0x0
-No Description Available.
+*0x0 Duration
+Time from release to disappearance (frames)
 
 Par04-0
-ExtraParams0
+Zero Laser Assistance Article
 
-*0x0
-No Description Available.
+*0x0 Duration
+Time from release to disappearance (frames)
 
 Par05-0
 ExtraParams0

@@ -3,14 +3,14 @@
 080 Par01 C
 084 Par02 8
 088 Par03 E
-08C Art0
+08C Art0 Flame
 
-Art0
+Art0 Flame
 1-1
 034 Par00-0 6
 
 Par00
-Fire Breath
+Neutral B: Fire Breath
 
 0x0 Initial Angle
 Initial fire angle
@@ -58,7 +58,7 @@ Speed charge drain rate (per frame)
 Size charge drain rate (per frame)
 
 *0x3C
-Unknown
+Unknown. There seems to be no connection to the location of the flame.
 
 *0x40 Flames Interval
 Frames interval until the flame reoccurs
@@ -73,7 +73,7 @@ Y offset
  ?? (read on flame gfx reduction)
 
 Par01
-Whirling Fortress
+Up B: Whirling Fortress
 
 *0x0
 Unknown
@@ -112,7 +112,7 @@ Resumes from the number of animation frames minus this value when landing
 Landing lag (frames)
 
 Par02
-Bowser Bomb
+Down B: Bowser Bomb
 
 0x0 Air H Preservation
 Horizontal aerial momentum preservation on startup (higher = more)
@@ -139,7 +139,7 @@ Unknown
 Unknown
 
 Par03
-Flying Slam
+Side B: Flying Slam
 
 0x0 Default H Momentum
 Momentum to move forward when there is no forward / backward movement
@@ -181,7 +181,7 @@ Horizontal momentum after throwing
 Vertical momentum after throwing
 
 *0x34
-No Description Available.
+Unknown
 
 Par00-0
 Flame Article
@@ -202,5 +202,5 @@ Flame momentum randomness. Random momentum from 0xC to 0x10. The higher value is
 Flame momentum randomness. Random momentum from 0xC to 0x10
 
 *0x14
-No Description Available.
+Unknown
 

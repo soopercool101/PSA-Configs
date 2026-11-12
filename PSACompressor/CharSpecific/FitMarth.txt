@@ -7,7 +7,7 @@
 090 Par05 6
 
 Par00
-Shield Breaker (paramMarthSpecialN__11ftMarthNode)
+Neutral B: Shield Breaker (paramMarthSpecialN__11ftMarthNode)
 
 *0x0 Max Charge Level
 Max charge level
@@ -28,7 +28,7 @@ Aerial deceleration to horizontal momentum preservation on startup
 unknown, read once on initial pullback
 
 Par01
-Dancing Blade (paramMarthSpecialS__11ftMarthNode)
+Side B: Dancing Blade (paramMarthSpecialS__11ftMarthNode)
 
 0x0 Air H Preservation
 Aerial horizontal momentum preservation on startup (higher = more)
@@ -37,7 +37,7 @@ Aerial horizontal momentum preservation on startup (higher = more)
 unknown, read once on first aerial startup
 
 0x8 Air V Momentum
-Vertical momentum for 1st aerial usage
+Vertical momentum when perform while rising in the air. Even if perform it for the 1st time in the air, cannot rise if character is not rising.
 
 0xC
 unknown, read once on first aerial startup
@@ -49,7 +49,7 @@ No Description Available.
 No Description Available.
 
 Par02
-Dolphin Slash (paramMarthSpecialHi__11ftMarthNode)
+Up B: Dolphin Slash (paramMarthSpecialHi__11ftMarthNode)
 
 0x0 Fall Max H Speed
 Special Fall max horizontal speed multiplier
@@ -82,7 +82,7 @@ post jump max fall speed
 unknown, read once post-jump
 
 Par03
-Counter (paramMarthSpecialLw__11ftMarthNode)
+Down B: Counter (paramMarthSpecialLw__11ftMarthNode)
 
 0x0 Air H Preservation
 Aerial horizontal momentum preservation on startup (higher = more)
@@ -136,7 +136,7 @@ Block bubble size
 No Description Available.
 
 Par05
-Critical Hit (paramMarthFinal__11ftMarthNode)
+Final Smash: Critical Hit (paramMarthFinal__11ftMarthNode)
 
 0x0 Travel Speed
 Travel Speed

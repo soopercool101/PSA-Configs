@@ -8,11 +8,11 @@
 098 Par07 2
 09C Par08 1
 0A0 Par09 1
-0A4 Art0
-0A8 Art1
-0AC Art2
+0A4 Art0 Pikmin
+0A8 Art1 Spaceship
+0AC Art2 Pikmin Chain
 
-Art0
+Art0 Pikmin
 34-3B
 034 ActionExit
 038 SubAction RedMain
@@ -38,14 +38,14 @@ Art0
 088 Par00-5 10
 X02 29-25x
 
-Art1
+Art1 Spaceship
 5-8
 034 Par01-0 C
 038 Par01-1 6
 040 Par01-3 8
 030 Par01D3 1
 
-Art2
+Art2 Pikmin Chain
 9-1
 034 Par02-0 6
 
@@ -683,7 +683,7 @@ White Pikmin ratio on Homerun floor (Detail: 0x8)
 Purple Pikmin ratio on Homerun floor (Detail: 0x8)
 
 Par02
-Pikmin Pluck (paramSpecialN__12ftPikminNode)
+Neutral B: Pikmin Pluck (paramSpecialN__12ftPikminNode)
 
 0x0 X Offset
 X offset of pluck
@@ -692,7 +692,7 @@ X offset of pluck
 Y offset of pluck
 
 Par03
-Pikmin Toss (paramSpecialS__12ftPikminNode)
+Side B: Pikmin Toss (paramSpecialS__12ftPikminNode)
 
 *0x0
  ?? (read on pluck)
@@ -704,7 +704,7 @@ X offset of Side-B toss
 Y offset of Side-B toss
 
 *0xC
-No Description Available.
+Unknown
 
 Par04
 Forward Smash (paramAttackS4__12ftPikminNode)
@@ -743,7 +743,7 @@ X offset of grab action
 Y offset of grab action
 
 Par08
-End of Day (paramFinal__12ftPikminNode)
+Final Smash: End of Day (paramFinal__12ftPikminNode)
 
 0x0 Landing V Momentum
 Vertical momentum when the spaceship explodeds
@@ -832,11 +832,11 @@ Budding time (frames)
 0x24 Full Bloom Time
 Full bloom time (frames)
 
-0x28
-Budded movement speed multiplier?
+0x28 Budded Return Speed Multiplier
+Running speed multiplier when returning to Olimar while in budded state after moving away from Olimar due to such as attack.
 
-0x2C
-Flower movement speed multiplier?
+0x2C Flower Return Speed Multiplier
+Running speed multiplier when returning to Olimar while in full bloom state after moving away from Olimar due to such as attack.
 
 0x30 Pluck Backward Momentum
 Backward momentum pikmin pluck
@@ -862,11 +862,11 @@ Something with fsmash velocity?
 0x4C F-Smash H Momentum
 Horizontal momentum when F-smash (No affect Purple Pikmin)
 
-0x50
-Pikmin Fsmash Angle?
+0x50 F-Smash H Momentum Inverse Ratio
+Horizontal momentum when F-smash. No affect Purple Pikmin. (less = more)
 
-0x54
- ?? (read on fsmash)
+0x54 F-Smash H Momentum
+Horizontal momentum when F-smash. If set to 0, Pikmin will hardly fly forward.
 
 0x58 F-Smash V Momentum
 Initial vertical momentum when F-smash
@@ -881,7 +881,7 @@ Initial vertical momentum when Up-smash
 Gravity when Up-smash
 
 0x68
-No Description Available.
+Unknown
 
 0x6C Side Smash B H Momentum
 Horizontal momentum multiplier when smash input (Side B)
@@ -902,43 +902,43 @@ Horizontal Momentum after the latch end
 Vertical Momentum after the latch end
 
 *0x84
-No Description Available.
+Unknown
 
 0x88
-No Description Available.
+Unknown
 
-*0x8C
-No Description Available.
+*0x8C Down B Return Frame
+The time it takes to back to Olimar after the animation ends in response to Pikmin Order whistle (frames). If set to 0, the action will be cancel in response to the whistle, but Pikmin will not return to Olimar.
 
-0x90
-No Description Available.
+0x90 Down B Return Range
+Range where Olimar can gather Pikmin by Pikmin Order (Down B)
 
 0x94
-No Description Available.
+Unknown
 
 0x98
-No Description Available.
+Unknown
 
 0x9C
-No Description Available.
+Unknown
 
 0xA0
-No Description Available.
+Unknown
 
 0xA4
-No Description Available.
+Unknown
 
 0xA8
-No Description Available.
+Unknown
 
 0xAC
-No Description Available.
+Unknown
 
 0xB0
-No Description Available.
+Unknown
 
 *0xB4
-No Description Available.
+Unknown
 
 Par00-2
 Pikmin Article Params18
@@ -977,10 +977,10 @@ Chasing run speed after sideB (Red Pikmin)
 Pikmin Speed/Response to Turn Run (Red Pikmin)
 
 0x2C
-No Description Available.
+Unknown
 
 0x30
-No Description Available.
+Unknown
 
 0x34 Red Jump Momentum 1
 Ground jump momentum when Chasing (Red Pikmin)
@@ -998,13 +998,13 @@ Max fall speed (Red Pikmin)
 Knockback Ratio (Red Pikmin)
 
 0x48
-No Description Available.
+Unknown
 
 *0x4C Red Swim Time
 Max time for Red Pikmin to swim
 
 0x50
-No Description Available.
+Unknown
 
 0x54 Red H Momentum
 Horizontal velocity when Red Pikmin Toss
@@ -1019,16 +1019,16 @@ Initial vertical velocity when Red Pikmin Toss
 Has something to do with grab and dash grab length (Red Pikmin)
 
 0x64
-No Description Available.
+Unknown
 
 0x68
-No Description Available.
+Unknown
 
 0x6C
-No Description Available.
+Unknown
 
 0x70
-No Description Available.
+Unknown
 
 *0x74 Yellow Pikmin HP
 Yellow Pikmin HP
@@ -1064,10 +1064,10 @@ Chasing run speed after sideB (Yellow Pikmin)
 Pikmin Speed/Response to Turn Run (Yellow Pikmin)
 
 0xA0
-No Description Available.
+Unknown
 
 0xA4
-No Description Available.
+Unknown
 
 0xA8 Yellow Jump Momentum 1
 Ground jump momentum when Chasing (Yellow Pikmin)
@@ -1085,13 +1085,13 @@ Max fall speed (Yellow Pikmin)
 Knockback Ratio (Yellow Pikmin)
 
 0xBC
-No Description Available.
+Unknown
 
 *0xC0 Yellow Swim Time
 Max time for Yellow Pikmin to swim
 
 0xC4
-No Description Available.
+Unknown
 
 0xC8 Yellow H Momentum
 Horizontal velocity when Yellow Pikmin Toss
@@ -1106,16 +1106,16 @@ Initial vertical velocity when Yellow Pikmin Toss
 Has something to do with grab and dash grab length (Yellow Pikmin)
 
 0xD8
-No Description Available.
+Unknown
 
 0xDC
-No Description Available.
+Unknown
 
 0xE0
-No Description Available.
+Unknown
 
 0xE4
-No Description Available.
+Unknown
 
 *0xE8 Blue Pikmin HP
 Blue Pikmin HP
@@ -1151,10 +1151,10 @@ Chasing run speed after sideB (Blue Pikmin)
 Pikmin Speed/Response to Turn Run (Blue Pikmin)
 
 0x114
-No Description Available.
+Unknown
 
 0x118
-No Description Available.
+Unknown
 
 0x11C Blue Jump Momentum 1
 Ground jump momentum when Chasing (Blue Pikmin)
@@ -1172,13 +1172,13 @@ Max fall speed (Blue Pikmin)
 Knockback Ratio (Blue Pikmin)
 
 0x130
-No Description Available.
+Unknown
 
 *0x134
 Max time for Blue Pikmin to swim? (Blue Pikmin don't drown)
 
 0x138
-No Description Available.
+Unknown
 
 0x13C Blue H Momentum
 Horizontal velocity when Blue Pikmin Toss
@@ -1193,16 +1193,16 @@ Initial vertical velocity when Blue Pikmin Toss
 Has something to do with grab and dash grab length (Blue Pikmin)
 
 0x14C
-No Description Available.
+Unknown
 
 0x150
-No Description Available.
+Unknown
 
 0x154
-No Description Available.
+Unknown
 
 0x158
-No Description Available.
+Unknown
 
 *0x15C White Pikmin HP
 White Pikmin HP
@@ -1238,10 +1238,10 @@ Chasing run speed after sideB (White Pikmin)
 Pikmin Speed/Response to TurnRun (White Pikmin)
 
 0x188
-No Description Available.
+Unknown
 
 0x18C
-No Description Available.
+Unknown
 
 0x190 White Jump Momentum 1
 Ground jump momentum when Chasing (White Pikmin)
@@ -1259,13 +1259,13 @@ Max fall speed (White Pikmin)
 Knockback Ratio (White Pikmin)
 
 0x1A4
-No Description Available.
+Unknown
 
 *0x1A8 White Swim Time
 Max time for White Pikmin to swim
 
 0x1AC
-No Description Available.
+Unknown
 
 0x1B0 White H Momentum
 Horizontal velocity when White Pikmin Toss
@@ -1280,16 +1280,16 @@ Initial vertical velocity when White Pikmin Toss
 Has something to do with grab and dash grab length (White Pikmin)
 
 0x1C0
-No Description Available.
+Unknown
 
 0x1C4
-No Description Available.
+Unknown
 
 0x1C8
-No Description Available.
+Unknown
 
 0x1CC
-No Description Available.
+Unknown
 
 *0x1D0 Purple Pikmin HP
 Purple Pikmin HP
@@ -1325,10 +1325,10 @@ Chasing run speed after sideB (Purple Pikmin)
 Pikmin Speed/Response to Turn Run (Purple Pikmin)
 
 0x1FC
-No Description Available.
+Unknown
 
 0x200
-No Description Available.
+Unknown
 
 0x204 Purple Jump Momentum 1
 Ground jump momentum when Chasing (Purple Pikmin)
@@ -1346,13 +1346,13 @@ Max fall speed (Purple Pikmin)
 Knockback Ratio (Purple Pikmin)
 
 0x218
-No Description Available.
+Unknown
 
 *0x21C Purple Swim Time
 Max time for Purple Pikmin to swim
 
 0x220
-No Description Available.
+Unknown
 
 0x224 Purple H Momentum
 Horizontal velocity when Purple Pikmin Toss
@@ -1367,19 +1367,19 @@ Initial vertical velocity when Purple Pikmin Toss
 Has something to do with grab and dash grab length (Purple Pikmin)
 
 0x234
-No Description Available.
+Unknown
 
 0x238
-No Description Available.
+Unknown
 
 0x23C
-No Description Available.
+Unknown
 
 0x240
-No Description Available.
+Unknown
 
 0x244
-No Description Available.
+Unknown
 
 Par00-3
 ExtraParams19
@@ -1607,10 +1607,10 @@ Flags(HitData1-7)
 No Description Available.
 
 Par01-0
-Spaceship Parameter0
+Spaceship Article
 
 0x0
-No Description Available.
+Unknown
 
 0x4 Rising Acceleration
 Spaceship rising acceleration
@@ -1630,41 +1630,41 @@ Total damage excluding spaceship's damage
 0x18 Fall Speed
 Spaceship fall speed
 
-0x1C
-No Description Available.
+0x1C Floor Through in Falling
+This value that affects how much the falling spaceship passes through the floor. If this value is too high, the spaceship passes through the all floor and falls onto the blast line.
 
-0x20
-No Description Available.
+0x20 Camera Related
+This values is affect to camera. If this value is too high, the opponent will no longer be put into a magnifying glass state, and Bulborb's attacks will no longer be able to cause damage.
 
 *0x24 Explosion Time
 If this time passes before landing, it will explode
 
 0x28
-No Description Available.
+Unknown
 
 *0x2C
-No Description Available.
+Unknown
 
 Par01-1
-Spaceship Parameter1
+Spaceship Camera
 
 0x0 Camera Size Top 1
-Camera position in above of the character (The higher value of 0x0 and 0xC is applied)
+This value is how far in upward of the character the normal camera range. (The higher value of 0x0 and 0xC is applied)
 
 0x4 Camera Size Left
-Camera position in left of the character
+This value is how far in front of the character the normal camera range. (It is not affected by the character's orientation when activated)
 
 0x8 Camera Size Right
-Camera position in right of the character
+This value is how far in back of the character the normal camera range.
 
 0xC Camera Size Top 2
-Camera position in above of the character
+This value is how far in upward of the character the normal camera range.
 
 0x10 Camera Size Bottom
-Camera position in below of the character
+This value is how far in downward of the character the normal camera range.
 
 *0x14
-No Description Available.
+Unknown
 
 Par01-3
 hitDataDolfin__18wnPikminDolfinNode
@@ -1703,7 +1703,7 @@ Par02-0
 Pikmin Chain
 
 0x0
-No Description Available.
+Unknown
 
 0x4 Angle
 Pikmin Chain Angle
@@ -1715,10 +1715,10 @@ Pikmin Chain Length
 Tether Length
 
 0x10
-No Description Available.
+Unknown
 
 *0x14
-No Description Available.
+Unknown
 
 EXD 29-25x
 Flash Overlay Effect
@@ -1727,5 +1727,5 @@ Offset(Event)
 Event Data(Flash Overlay Effect)
 
 Flags
-No Description Available.
+Unknown
 

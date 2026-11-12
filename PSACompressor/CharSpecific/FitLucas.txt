@@ -6,49 +6,49 @@
 08C Par04 5
 090 Par05 8
 094 Par06 A
-098 Art0
-09C Art1
-0A0 Art2
-0A4 Art3
-0A8 Art4
-0AC Art5
+098 Art0 PK Freeze
+09C Art1 PK Fire
+0A0 Art2 PK Thunder
+0A4 Art3 (ID=2) PK Thunder's Tail (Attached to PK Thunder)
+0A8 Art4 (ID=3) PK Starstorm
+0AC Art5 (ID=4) Rope Snake
 
-Art0
+Art0 PK Freeze
 4-4
 034 Par00-0 C
 
-Art1
+Art1 PK Fire
 2-2
 034 Par01-0 7
 X14 27-0E-00x
 
-Art2
+Art2 PK Thunder
 1-1
 034 Par02-0 6
 
-Art3
+Art3 (ID=2) PK Thunder's Tail (Attached to PK Thunder)
 1-1
 034 Par03-0 1
 
-Art4
+Art4 (ID=3) PK Starstorm
 1-1
 034 Par04-0 4
 
-Art5
+Art5 (ID=4) Rope Snake
 9-7
 034 Par05-0 4
 
 Par00
-PK Freeze
+Neutral B: PK Freeze
 
 *0x0 Fall Timing
 Number of frames to halt vert momentum before using 0xC as gravity
 
-*0x4 Fastest Ignite Time
+*0x4 Fastest Detonation Time
 Minimum frames it takes to ignite after PK Freeze appears
 
-*0x8 Duration
-Maximum frames it takes to ignite or disappear after PK Freeze appears
+*0x8 Max Hold Frame
+Maximum frames it takes to ignite after PK Freeze appears. It only affects during the action. Not affects disappear timing.
 
 0xC Gravity
 Gravity after initial vertical halt
@@ -60,7 +60,7 @@ Landing lag after Special Fall (frames)
 Unknown
 
 Par01
-PK Fire
+Side B: PK Fire
 
 0x0 Angle (Air)
 Aerial PK Fire angle (radians)
@@ -84,7 +84,7 @@ Y offset of starting point
 Landing lag (frames)
 
 Par02
-PK Thunder
+Up B: PK Thunder
 
 0x0
 Unknown
@@ -123,7 +123,7 @@ PK Thunder 2 angle tolerance when landing
 Landing lag after Special Fall (frames)
 
 Par03
-PSI Magnet
+Down B: PSI Magnet
 
 *0x0 Min Hold Time
 Minimum hold action frames
@@ -165,7 +165,7 @@ Absorption collision Z offset
 Absorption collision size
 
 Par05
-PK Starstorm
+Final Smash: PK Starstorm
 
 0x0 Fall Speed
 Fall speed at during action
@@ -222,7 +222,7 @@ Reflected speed multiplier
 Reflected duration multiplier
 
 *0x24
-No Description Available.
+Unknown
 
 Par00-0
 PK Freeze Article
@@ -255,7 +255,7 @@ Max horizontal speed
 Max fall speed
 
 0x24 Time to Explode
-The frame it takes from ignite to explode
+The frame it takes from ignite to explode. This is also the time from when X touches the stage object to when it disappears.
 
 0x28 Base Damage
 Base Damage
@@ -270,7 +270,7 @@ PK Fire Article
 Spark Duration
 
 *0x4 Pillar Duration
-Pillar duration
+Fire pillar duration
 
 0x8 Pillar Y Offset
 Pillar start Y offset
@@ -281,11 +281,11 @@ Pillar gravity
 0x10 Pillar Max Fall Speed
 Pillar max fall speed
 
-0x14
-Unknown
+0x14 Shorten by Damage
+Multiplier of Pillar duration that decreases when damage taken. If set 0, not decreases by damage taken.
 
 0x18 Pillar Final Size
-Pillar final size multiplier
+Pillar final size multiplier. (Compare initial size)
 
 Par02-0
 PK Thunder Article
@@ -306,7 +306,7 @@ Joystick sensitivity. If over 1, can't change angle.
 Turning speed
 
 *0x14
-No Description Available.
+Unknown
 
 Par03-0
 ExtraParams0
@@ -327,7 +327,7 @@ Fall Acceleration
 Unknown (Not affect to duration)
 
 *0xC
-No Description Available.
+Unknown
 
 Par05-0
 Rope Snake Article
@@ -342,7 +342,7 @@ Tether Speed
 Speed to pull the grabbed character
 
 *0xC
-No Description Available.
+Unknown
 
 EXD 27-0E-00x
 ParamList1

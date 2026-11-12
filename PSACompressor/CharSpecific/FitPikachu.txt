@@ -4,34 +4,34 @@
 084 Par02 16
 088 Par03 4
 08C Par04 6
-090 Art0
-094 Art1
-098 Art2
-09C Art3
-0A0 Art4
+090 Art0 Thunder Jolt (Air)
+094 Art1 (ID=0) Thunder Jolt (Ground, change from Aerial Jolt)
+098 Art2 (ID=1) Thunder (Appears from Thundercloud)
+09C Art3 (ID=1) Thundercloud
+0A0 Art4 (ID=2) Volt Tackle
 
-Art0
+Art0 Thunder Jolt (Air)
 1-1
 034 Par00-0 5
 
-Art1
+Art1 (ID=0) Thunder Jolt (Ground, change from Aerial Jolt)
 1-1
 034 Par01-0 5
 
-Art2
+Art2 (ID=1) Thunder (Appears from Thundercloud)
 1-1
 034 Par02-0 4
 
-Art3
+Art3 (ID=1) Thundercloud
 1-1
 
-Art4
+Art4 (ID=2) Volt Tackle
 3-3
 034 Par04-0 9
 038 Par04-1 5
 
 Par00
-Thunder Jolt
+Neutral B: Thunder Jolt
 
 0x0 X Offset (Ground)
 Grounded X offset
@@ -49,7 +49,7 @@ Aerial Y offset
  ?? (read on startup)
 
 Par01
-Skull Bash
+Side B: Skull Bash
 
 0x0
  ?? (read on startup)
@@ -72,20 +72,20 @@ Aerial horizontal momentum preservation on startup (less = more)
 0x18
  ?? (read on air startup)
 
-0x1C
-Unknown
+0x1C Gravity on Startup
+Fall acceleration on startup when in the air. If set a negative value, character will rise. Vertical speed doesn't exceed maximum falling speed.
 
 0x20 Base H Momentum
-Base horizontal firing momentum
+Base horizontal momentum at launch
 
 0x24 H Momentum Growth Rate
-Horizontal momentum growth rate
+Horizontal momentum growth rate at launch
 
 0x28 Upward Momentum
 Launch upward momentum
 
-0x2C Downward Momentum
-Launch downward momentum
+0x2C Launch Gravity
+Gravity during launch. If launch will continue regardless of reaching the ground by increasing this value.
 
 0x30
  ?? (read on firing)
@@ -100,13 +100,13 @@ Ending horizontal momentum preservation
 Ending gravity
 
 *0x40
-No Description Available.
+Unknown
 
 *0x44
-No Description Available.
+Unknown
 
 Par02
-Quick Attack
+Up B: Quick Attack
 
 *0x0
  ?? (read on startup)
@@ -175,7 +175,7 @@ Special Fall max horizontal speed multiplier
 Landing lag
 
 Par03
-Thunder
+Down B: Thunder
 
 0x0 Y Offset
 Height of thunder creation
@@ -190,7 +190,7 @@ Vertical momentum on aerial thunder hit
 Gravity on aerial thunder hit
 
 Par04
-Volt Tackle
+Final Smash: Volt Tackle
 
 0x0 Duration
 FS Duration (second)
@@ -208,10 +208,10 @@ Frames to change movement before the end
 Frame interval when button input
 
 *0x14
-No Description Available.
+Unknown
 
 Par00-0
-Thunder Jolt Article
+Thunder Jolt Article0
 
 *0x0 Duration
 Duration (frames)
@@ -223,13 +223,13 @@ Aerial jolt angle (radians)
 Aerial jolt speed
 
 *0xC
-No Description Available.
+Unknown
 
 *0x10
-No Description Available.
+Unknown
 
 Par01-0
-Thunder Jolt Article (Same as 0)
+Thunder Jolt Article1 (Same as Article No.0)
 
 *0x0 Duration
 Duration (frames)
@@ -241,10 +241,10 @@ Aerial jolt angle (radians)
 Aerial jolt speed
 
 *0xC
-No Description Available.
+Unknown
 
 *0x10
-No Description Available.
+Unknown
 
 Par02-0
 Thunder Article
@@ -253,13 +253,13 @@ Thunder Article
 Width where generated thunder hits Pikachu
 
 0x4 Speed
-Thunder Speed
+Thunder falling speed
 
 0x8 Duration
 Thunder duration (frames)
 
 *0xC
-No Description Available.
+Unknown
 
 Par04-0
 Volt Tackle Attribute
@@ -292,20 +292,20 @@ Range to move vertically automatically
 How long the post-attack action (Discharge)
 
 Par04-1
-ExtraParams1
+Volt Tackle Camera
 
-0x0
-No Description Available.
+0x0 Camera V Place
+The basic vertical position the camera is at relative to the Volt Tackle
 
-0x4
-No Description Available.
+0x4 Camera Size Left
+This value is how far in front of Volt Tackle the normal camera range.
 
-0x8
-No Description Available.
+0x8 Camera Size Right
+This value is how far in back of Volt Tackle the normal camera range.
 
-0xC
-No Description Available.
+0xC Camera Size Top
+This value is how far in upward of Volt Tackle the normal camera range.
 
-0x10
-No Description Available.
+0x10 Camera Size Bottom
+This value is how far in downward of Volt Tackle the normal camera range.
 

@@ -5,43 +5,43 @@
 088 Par03 8
 08C Par04 6
 090 Par05 1
-094 Art0
-098 Art1
-09C Art2
-0A0 Art3
-0A4 Art4
-0A8 Art5
-0AC Art6
+094 Art0 Chef
+098 Art1 Fire
+09C Art2 Parachute
+0A0 Art3 Judge
+0A4 Art4 Oil Panic
+0A8 Art5 Octopus
+0AC Art6 Attack Weapons
 0B0 Par13 9
 0B8 Par15 BA
 
-Art0
+Art0 Chef
 2-6
 034 Par00-0 5
 X19 25-0D-03x
 
-Art1
+Art1 Fire
 1-3
 034 Par01-0 1
 
-Art2
+Art2 Parachute
 1-5
 034 Par02-0 1
 
-Art3
+Art3 Judge
 1-1
 034 Par03-0 1
 
-Art4
+Art4 Oil Panic
 1-3
 034 Par04-0 1
 
-Art5
+Art5 Octopus
 4-7
 034 Par05-0 4
 X14 2A-0E-00x
 
-Art6
+Art6 Attack Weapons
 1-B
 034 Par06-0 1
 038 Par06-1 2
@@ -52,16 +52,16 @@ Art6
 04C Par06-6 2
 
 Par00
-Chef
+Neutral B: Chef
 
 0x0
-No Description Available.
+Unknown
 
 *0x4 Max Fire Count
 Maximum number that can be fire continuously
 
 Par01
-Judge
+Side B: Judge
 
 0x0 Aerial H Preservation
 Aerial horizontal momentum preservation on startup (less = more)
@@ -70,31 +70,31 @@ Aerial horizontal momentum preservation on startup (less = more)
 Aerial deceleration to horizontal preservation on startup
 
 0x8
-No Description Available.
+Unknown
 
 0xC
-No Description Available.
+Unknown
 
 0x10
-No Description Available.
+Unknown
 
 Par02
-Fire
+Up B: Fire
 
-0x0 Sensitivity
-Forward/backward sensitivity. If over 1, can't change angle.
+0x0 Angle Change Sensitivity
+Sideway sensitivity. The input strength required to change angle. If over 1, can't change jumping angle.
 
 0x4 Changeable Angle
 Changeable Angle (Degrees) Example: If 30, shift 30 degrees forward when forward input.
 
 0x8
-No Description Available.
+Unknown
 
 0xC Floating Fall Speed
 Floating fall speed
 
 Par03
-Oil Panic
+Down B: Oil Panic
 
 0x0 Aerial H Preservation
 Aerial horizontal momentum preservation on startup (less = more)
@@ -139,7 +139,7 @@ Absorption Collision Z Offset
 Absorption Collision Size
 
 *0x14
-No Description Available.
+Unknown
 
 Par05
 ExtraParams5
@@ -178,7 +178,7 @@ Odds for getting a 8 (Detail: 0x0)
 Odds for getting a 9 (Detail: 0x0)
 
 Par15
-Octopus
+Final Smash: Octopus (Attributes)
 
 0x0 Walk Acceleration A
 The speed of acceleration while walking (Slow grounded move).
@@ -793,7 +793,7 @@ Final Smash duration (seconds)
 Frames that shortens Final Smash
 
 *0xC
-No Description Available.
+Unknown
 
 Par06-0
 ExtraParams0
@@ -802,58 +802,58 @@ ExtraParams0
 No Description Available.
 
 Par06-1
-ExtraParams1
+Weapon0
 
 *0x0
-No Description Available.
+Unknown
 
-*0x4
-No Description Available.
+*0x4 Greenhouse Bone
+Greenhouse (Jab weapon) attached Bone to (LA-Basic[69]=0)
 
 Par06-2
-ExtraParams2
+Weapon1
 
 *0x0
-No Description Available.
+Unknown
 
-*0x4
-No Description Available.
+*0x4 Manhole Bone
+Manhole (Down-Tilt weapon) attached Bone to (LA-Basic[69]=1)
 
 Par06-3
-ExtraParams3
+Weapon2
 
 *0x0
-No Description Available.
+Unknown
 
-*0x4
-No Description Available.
+*0x4 Fire Attack Bone
+Fire Attack (Side-Smash weapon) attached Bone to (LA-Basic[69]=2)
 
 Par06-4
-ExtraParams4
+Weapon3
 
 *0x0
-No Description Available.
+Unknown
 
-*0x4
-No Description Available.
+*0x4 Tropical Fish Bone
+Tropical Fish (Neutral Aerial) attached Bone to (LA-Basic[69]=3)
 
 Par06-5
-ExtraParams5
+Weapon4
 
 *0x0
-No Description Available.
+Unknown
 
-*0x4
-No Description Available.
+*0x4 Spitball Sparky Bone
+Spitball Sparky (Up Aerial) attached Bone to (LA-Basic[69]=4)
 
 Par06-6
-ExtraParams6
+Weapon5
 
 *0x0
-No Description Available.
+Unknown
 
-*0x4
-No Description Available.
+*0x4 Turtle Bridge Bone
+Turtle Bridge (Back Aerial) attached Bone to (LA-Basic[69]=5)
 
 EXD 25-0D-03x
 Chef Extra

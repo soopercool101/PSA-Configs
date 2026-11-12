@@ -4,29 +4,29 @@
 084 Par02 E
 088 Par03 4
 08C Par04 1C
-094 Art0
-09C Art1
-0A4 Art2
-0AC Art3
+094 Art0 Peanut Popgun
+09C Art1 Flying Rocketbarrel
+0A4 Art2 Peanut Popgun Bullet when Final Smash
+0AC Art3 Explosion at End Final Smash
 
-Art0
+Art0 Peanut Popgun
 3-3
 
-Art1
+Art1 Flying Rocketbarrel
 3-3
 034 Par01-0 10
 038 Par01-1 8
 
-Art2
+Art2 Peanut Popgun Bullet when Final Smash
 2-2
 034 Par02-0 4
 
-Art3
+Art3 Explosion at End Final Smash
 1-1
 034 Par03-0 1
 
 Par00
-Peanut Popgun
+Neutral B: Peanut Popgun
 
 0x0 Start Angle
 Start angle (Angle when no charge. Closer to 0x4 angle when more charged)
@@ -47,10 +47,10 @@ Momentum backward from charged firing
 Damage added when shooting before explosion (charge to limit)
 
 0x18
-No Description Available.
+Unknown
 
 *0x1C
-No Description Available.
+Unknown
 
 0x20 X Offset
 X Offset
@@ -59,7 +59,7 @@ X Offset
 Y Offset
 
 Par01
-Monkey Flip
+Side B: Monkey Flip
 
 0x0 Initial H Momentum
 Initial horizontal momentum
@@ -68,13 +68,13 @@ Initial horizontal momentum
 Initial vertical momentum
 
 0x8 Smash H Momentum
-Initial horizontal momentum when Smash input
+Initial horizontal momentum when Smash input (Not Multiplier)
 
 *0xC
-No Description Available.
+Unknown
 
 Par02
-Rocketbarrel Boost
+Up B: Rocketbarrel Boost
 
 0x0 Pre Fly Turning Speed
 Pre fly turning speed
@@ -89,7 +89,7 @@ Unknown
 Knockback Armor Strength when charging
 
 0x10
-No Description Available.
+Unknown
 
 0x14 Base V Momentum
 Base vertical momentum (affects charge as well)
@@ -101,13 +101,13 @@ Vertical growth rate
 Related to uncharged height
 
 0x20
-No Description Available.
+Unknown
 
 0x24
-No Description Available.
+Unknown
 
 0x28
-No Description Available.
+Unknown
 
 0x2C Recoil Damage
 Damage taken when hitting a wall or ceiling
@@ -119,7 +119,7 @@ Initial vertical momentum when hitting a wall or ceiling
 Initial horizontal momentum when hitting a wall or ceiling
 
 Par03
-Banana Peel
+Down B: Banana Peel
 
 0x0 Throw Angle
 Angle of banana toss in degrees
@@ -134,7 +134,7 @@ A value that is affected if the character has upward momentum when throwing a ba
 Max bananas out at once
 
 Par04
-Rocketbarrel Barrage
+Final Smash: Rocketbarrel Barrage
 
 0x0 Gravity
 The speed at which accelerates downward
@@ -145,23 +145,23 @@ The maximum fall speed
 0x8 Max Rising Speed
 The maximum rising speed
 
-0xC
-The speed at which accelerates upward when input upward
+0xC Naturally rising speed
+The speed at which naturally accelerates upward
 
-0x10
+0x10 Rising Speed by Side Input
 The speed at which accelerates upward when input left or right
 
-0x14
+0x14 Rising Speed
 The speed at which accelerates upward when input upward
 
 0x18
-No Description Available.
+Unknown
 
 0x1C Rising Animation Speed
 Rising animation speed multiplier
 
 0x20
-No Description Available.
+Unknown
 
 0x24
 Angle that changes when input horizontal. It also affects to horizontal movement.
@@ -170,13 +170,13 @@ Angle that changes when input horizontal. It also affects to horizontal movement
 Angle that changes when input horizontal.
 
 0x2C
-No Description Available.
+Angle that changes when input horizontal.
 
-0x30
+0x30 Side Turning Speed
 Speed to change the direction of travel sideways
 
-0x34
-No Description Available.
+0x34 Side Return Speed
+The speed at which the left or right tilt returns
 
 0x38 H deceleration
 Horizontal deceleration
@@ -185,10 +185,10 @@ Horizontal deceleration
 The maximum horizontal velocity
 
 0x40
-No Description Available.
+Unknown
 
 0x44 Peanut Speed
-The speed at which the peanuts fly
+The speed at which the Peanut Popgun bullet fly (Angle variable is RA-Float[7])
 
 *0x48 FS Duration
 Final Smash duration. (seconds) Counting starts after it becomes possible to attack.
@@ -218,10 +218,10 @@ Horizontal explosion place at the end
 Vertical explosion place at the end
 
 *0x6C
-No Description Available.
+Unknown
 
 Par01-0
-paramDiddyBarrel__20wnDiddyBarrelJetNode
+Flying Rocketbarrel (paramDiddyBarrel__20wnDiddyBarrelJetNode)
 
 *0x0
 Unknown, read once on stage collision
@@ -230,7 +230,7 @@ Unknown, read once on stage collision
 Projectile Rocket Barrel flight speed
 
 0x8 Speed Growth Rate
-Projectile Rocket Barrel flight speed growth rate (Value that affects charge time)
+Projectile Rocket Barrel flight speed growth rate (Value that affects charge time RA-Basic[0])
 
 *0xC
 Unknown, projectile rocket barrel reads every few frames
@@ -257,7 +257,7 @@ Max Fall Speed
 Value related to damage (Close to 0 = higher damage)
 
 0x2C
-No Description Available.
+If the value of 0x28 and 0x2C are 0, the target hit by the attack will be destroyed.
 
 *0x30
 Unknown, projectile rocket barrel reads frame, sometimes more
@@ -269,7 +269,7 @@ Unknown, never read?
 Unknown, never read?
 
 *0x3C
-No Description Available.
+Unknown
 
 Par01-1
 hitDataBarrel__20wnDiddyBarrelJetNode
@@ -299,7 +299,7 @@ Flags 0x1C
 No Description Available.
 
 Par02-0
-paramDiddyPeanuts__18wnDiddyPeanutsNode
+Peanut Article (paramDiddyPeanuts__18wnDiddyPeanutsNode)
 
 0x0 Nuts Ratio
 Odds of final smash spawning nuts (Item)
@@ -314,8 +314,8 @@ Peanut rotation speed
 Unknown
 
 Par03-0
-paramDiddyExplosion__20wnDiddyExplosionNode
+Explosion Article (paramDiddyExplosion__20wnDiddyExplosionNode)
 
-*0x0
-No Description Available.
+*0x0 Duration
+Duration (frames)
 

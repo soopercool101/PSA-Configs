@@ -3,21 +3,21 @@
 080 Par01 8
 084 Par02 8
 088 Par03 6
-08C Art0
-090 Art1
+08C Art0 Beast Ganon
+090 Art1 Sword
 
-Art0
+Art0 Beast Ganon
 2-2
 034 Par00-0 3
 038 Par00-1 5
 040 Par00-3 78
 030 Par00D3 17
 
-Art1
+Art1 Sword
 0-1
 
 Par00
-Warlock Punch (paramGanonPunch__11ftGanonNode)
+Neutral B: Warlock Punch (paramGanonPunch__11ftGanonNode)
 
 0x0
 If 0x0 value is the same as 0x4, the Falcon will break when punching in the air
@@ -35,10 +35,10 @@ Momentum forward in air punch (Occur when RA-Bit[17] is True)
 Momentum speed in air punch (Occur when RA-Bit[17]=True and RA-Basic[0]=1)
 
 *0x14
-No Description Available.
+Unknown
 
 Par01
-Flame Choke (paramGanonExplosion__11ftGanonNode)
+Side B: Flame Choke (paramGanonExplosion__11ftGanonNode)
 
 0x0 Grab Slide Momentum
 Flame Choke grab slide momentum
@@ -65,7 +65,7 @@ Final Gravity after grab successed
 Final Max fall speed after grab successed
 
 Par02
-Dark Dive (paramGanonSpecialHi__11ftGanonNode)
+Up B: Dark Dive (paramGanonSpecialHi__11ftGanonNode)
 
 *0x0
 Unknown, but if set a negative value, the character will break at the start of the rise.
@@ -92,7 +92,7 @@ Unknown, read once on leap
 Post-release gravity
 
 Par03
-Wizard's Foot (paramGanonKick__11ftGanonNode)
+Down B: Wizard's Foot (paramGanonKick__11ftGanonNode)
 
 0x0 Momentum Multiplier on Hit
 Momentum multiplier on hit when on ground
@@ -110,10 +110,10 @@ Air to ground landing animation speed multiplier
 Unknown, aerial-landing related
 
 0x14
-No Description Available.
+Unknown
 
 Par00-0
-Beast Ganon Params0
+Beast Ganon Article
 
 0x0 Camera X Pos
 Camera Horizontal position
@@ -122,25 +122,25 @@ Camera Horizontal position
 Camera Vertical position
 
 0x8 Speed
-Beast Ganon Speed
+Beast Ganon forward speed
 
 Par00-1
-Beast Ganon Params1
+Beast Ganon Camera
 
-0x0
-Related to camera position
+0x0 Camera Size Top 1
+This value is how far in upward of the character the normal camera range. (The higher value of 0x0 and 0xC is applied)
 
 0x4 Camera Size Front
-Camera position in front of the character
+This value is how far in front of the character the normal camera range.
 
 0x8 Camera Size Back
-Camera position in behind of the character
+This value is how far in back of the character the normal camera range.
 
-0xC Camera Size Top
-Camera position in above of the character
+0xC Camera Size Top 2
+This value is how far in upward of the character the normal camera range.
 
 0x10 Camera Size Bottom
-Camera position in below of the character
+This value is how far in downward of the character the normal camera range.
 
 Par00-3
 HitDataList

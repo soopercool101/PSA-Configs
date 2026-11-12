@@ -4,29 +4,29 @@
 084 Par02 10
 088 Par03 6
 08C Par04 8
-090 Art0
-094 Art1
-098 Art2
-09C Art3
+090 Art0 Needle
+094 Art1 Charging Needle
+098 Art2 Chain
+09C Art3 Vanish Explosion
 
-Art0
+Art0 Needle
 4-5
 034 Par00-0 4
 
-Art1
+Art1 Charging Needle
 1-1
 034 Par01-0 1
 
-Art2
+Art2 Chain
 9-3
 034 Par02-0 6
 
-Art3
+Art3 Vanish Explosion
 1-1
 034 Par03-0 1
 
 Par00
-Needle Storm
+Neutral B: Needle Storm
 
 0x0 X Offset (Ground)
 X offset grounded needles
@@ -41,13 +41,13 @@ X offset aerial needles
 Y offset aerial needles
 
 *0x10
-No Description Available.
+Unknown
 
 *0x14
-No Description Available.
+Unknown
 
 Par01
-Chain
+Side B: Chain
 
 *0x0 Min Hold Frame
 How long chain is out before reeling in (release B)
@@ -71,10 +71,10 @@ Frame it takes for the chain to remove
  ?? (read all the time when can move chain)
 
 *0x1C
-No Description Available.
+Unknown
 
 Par02
-Vanish
+Up B: Vanish
 
 0x0 Startup V Momentum
 Startup vertical momentum
@@ -89,7 +89,7 @@ Startup max fall speed
 Frames to travel (also changes distance too)
 
 *0x10
-No Description Available.
+Unknown
 
 0x14 Sensitivity
 Joystick sensitivity. If over 1, can't change travel Angle.
@@ -101,7 +101,7 @@ Travel speed
 Travel speed
 
 0x20
-No Description Available.
+Unknown
 
 *0x24
 Unknown
@@ -113,19 +113,19 @@ Vertical momentum out of second explosion
 Unknown
 
 0x30
-No Description Available.
+Unknown
 
-*0x34
-No Description Available.
+0x34 Explosion X Offset
+Horizontal position where Explosion occurs
 
-0x38
-No Description Available.
+0x38 Y Offset
+Vertical position where Explosion occurs
 
 *0x3C
-No Description Available.
+Unknown
 
 Par03
-Transform
+Down B: Transform
 
 0x0 H Preservation
 Horizontal momentum preservation (less = more)
@@ -140,37 +140,37 @@ Gravity
 Max fall speed
 
 *0x10
-No Description Available.
+Unknown
 
 *0x14
-No Description Available.
+Unknown
 
 Par04
-Light Arrow
+Final Smash: Light Arrow
 
-0x0
-No Description Available.
+0x0 H Camera Movement at Hit
+Horizontal Camera Movement at Hit. If set to 0, there will be no horizontal movement of the camera.
 
-0x4
-No Description Available.
+0x4 V Camera Movement at Hit
+Vertical Camera Movement at Hit. If set to 0, there will be no vertical movement of the camera in most cases.
 
-0x8
-No Description Available.
+0x8 Camera Initial V Position at Hit
+It seems to be this value related to the initial vertical position of the camera at the time at hit. For example, if set to 50, the camera will more often rotate from under the floor and approach when attack hit. However, there are also cases where it comes around from above. On the other hand, if set to -50, the zoom will end with the camera showing from above, and will not show from below.
 
-0xC
-No Description Available.
+0xC H Camera Rotation at Hit
+This value is related to the horizontal angle that the camera moves rotate at hit. The higher this value is, camera more turn the rotation, but there is an upper limit. Normally don't go around to the back of the stage. If set to 0, there will be no horizontal movement of the camera, but there is a case that zooms horizontally and from a diagonal angle.
 
-0x10
-No Description Available.
+0x10 Camera Rotation at Hit
+This value is related to the angle that the camera moves rotate at hit. The higher this value is, camera more turn the rotation, but there is an upper limit. Normally don't go around to the back of the stage. If set to 0, there will be no vertical movement of the camera, but there is a case that zooms vertically and from a diagonal angle.
 
-0x14
-Zoom time when hit (frames)
+0x14 Zoom Time at Hit
+Zoom time at hit (frames)
 
-0x18
+0x18 Multi-Hit Damage Multiplier
 Damage multiplier on secondary target hit
 
 *0x1C
-No Description Available.
+Unknown
 
 Par00-0
 Needles Article
@@ -178,8 +178,8 @@ Needles Article
 *0x0 Duration
 Needle duration
 
-*0x4
- ?? (frame count for something)
+*0x4 Remaining time
+How long frames a needle remains after stuck or bounced. If get stuck after bouncing, left time will be reset.
 
 0x8
  ?? (read on nB)

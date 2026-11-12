@@ -2,17 +2,17 @@
 07C Par00 D
 080 Par01 D
 088 Par03 2
-08C Art0
-090 Art1
+08C Art0 Pokemon Change
+090 Art1 Triple Finish
 094 Par06 9
 098 Par07 9
 
-Art0
+Art0 Pokemon Change
 9-3
 034 Par00-0 10
 038 Par00-1 6
 
-Art1
+Art1 Triple Finish
 1-13
 034 Par01-0 1
 038 Par01-1 6
