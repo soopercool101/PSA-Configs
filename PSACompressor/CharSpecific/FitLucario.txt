@@ -7,19 +7,19 @@
 090 Par05 8
 094 Par06 4
 098 Par07 8
-0A0 Art0
-0A4 Art1
+0A0 Art0 Aura Sphere
+0A4 Art1 Force Palm
 X08 27-00x
 
-Art0
+Art0 Aura Sphere
 3-A
 034 Par00-0 12
 
-Art1
+Art1 Force Palm
 1-1
 
 Par00
-Aura Sphere
+Neutral B: Aura Sphere
 
 *0x0 Max Charge Level
 Max charge level
@@ -46,37 +46,37 @@ Base Aura Sphere size
 Related to Aura Sphere size. If set high value, the size will not change even if it is charged.
 
 Par01
-ExtraParams1
+Aura GFX Size
 
-0x0
-No Description Available.
+0x0 Low Damage Size
+Aura GFX Size when percentage is low. If only this value is large, the greater the damage, the smaller the GFX will be.
 
-0x4
-No Description Available.
+0x4 High Damage Size
+Unknown. If changing this value, the size of Aura GFX may not change normally.
 
 0x8
-No Description Available.
+Aura GFX Size when percentage is high. If values of 0x0 and 0x8 are 0, the size of GFX will be 0. The size of GFX will also be 0 if all values other than 0x0 are set to 0.
 
 0xC
-No Description Available.
+Unknown. If changing this value, the size of Aura GFX may not change normally.
 
 Par02
 Aura physics
 
 0x0 Floor Damage Multiplier
-Aura floor multiplier
+Damage multiplier of aura attacks when percentage is low
 
 0x4 Ceiling Damage Multiplier
-Aura ceiling multiplier
+Damage multiplier of aura attacks when percentage is high
 
 0x8 Floor Percentage
-Aura floor percentage
+When over this percentage, increases damage of attacks.
 
 0xC Baseline Percentage
-Aura baseline percentage
+Percentage when the damage multiplier of aura attacks becomes the normal
 
 0x10 Ceiling Percentage
-Aura ceiling percentage
+Percentage when the damage multiplier of aura attacks becomes the maximum
 
 0x14
 Flat aura damage bonus
@@ -88,13 +88,13 @@ Aura maximum multiplier
 Aura minimum multiplier
 
 Par03
-Force Palm
+Side B: Force Palm
 
 0x0
-No Description Available.
+Unknown
 
 0x4
-No Description Available.
+Unknown
 
 0x8 X Offset (Ground)
 Grounded X offset
@@ -109,7 +109,7 @@ Aerial X offset
 Aerial Y offset
 
 Par04
-Extreme Speed
+Up B: Extreme Speed
 
 0x0 Startup H Preservation
 Horizontal momentum preservation on startup (higher = more)
@@ -157,10 +157,10 @@ Ending deceleration
 Horizontal momentum on slope landing when travel
 
 *0x3C
-No Description Available.
+Unknown
 
 Par05
-Double Team
+Down B: Double Team
 
 0x0 Startup H Preservation
 Aerial horizontal momentum preservation on startup
@@ -169,7 +169,7 @@ Aerial horizontal momentum preservation on startup
  ?? (read on startup)
 
 0x8
-No Description Available.
+Unknown
 
 *0xC Attack Lag
 Frames duration for dodge before attack action occurs
@@ -178,16 +178,16 @@ Frames duration for dodge before attack action occurs
 How far away from start attack occurs (in units)
 
 0x14
-No Description Available.
+Unknown
 
 *0x18 Duration
 Attack kick duration
 
 *0x1C
-No Description Available.
+Unknown
 
 Par06
-Aura Storm
+Final Smash: Aura Storm
 
 0x0 Rising Speed
 Rising speed
@@ -199,7 +199,7 @@ Max turning angle
 Turning speed
 
 *0xC
-No Description Available.
+Unknown
 
 Par07
 ExtraParams7

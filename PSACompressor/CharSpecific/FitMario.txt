@@ -4,39 +4,39 @@
 084 Par02 6
 088 Par03 5
 08C Par04 A
-090 Art0
-094 Art1
-098 Art2
-09C Art3
-0A0 Art4
+090 Art0 Cape
+094 Art1 Fireball
+098 Art2 FLUDD
+09C Art3 (ID=0 in Article2) FLUDD's Water
+0A0 Art4 (ID=3) Mario Finale
 
-Art0
+Art0 Cape
 0-2
 
-Art1
+Art1 Fireball
 1-1
 034 Par01-0 8
 
-Art2
+Art2 FLUDD
 3-6
 034 Par02-0 5
 
-Art3
+Art3 (ID=0 in Article2) FLUDD's Water
 3-3
 034 Par03-0 8
 
-Art4
+Art4 (ID=3) Mario Finale
 1-1
 034 Par04-0 2
 
 Par00
-Super Jump Punch
+Up B: Super Jump Punch (List 0)
 
-0x0
-Unknown
+0x0 Turn Sensitivity
+The input strength required to change direction the moment "RA-Bit[18] = true" is read. However, even if the value is set to over 1, the direction can be changed at the start and 3 frames after the start.
 
-0x4 Sensitivity
-Forward/backward sensitivity. If over 1, can't change jumping angle.
+0x4 Angle Change Sensitivity
+Sideway sensitivity. The input strength required to change angle. If over 1, can't change jumping angle.
 
 0x8 Changeable Angle
 Changeable Angle (Degrees) Example: If 30, shift 30 degrees forward when forward input.
@@ -48,7 +48,7 @@ Special Fall max horizontal speed multiplier
 Unknown (read on upB)
 
 Par01
-Super Jump Punch Extra
+Up B: Super Jump Punch (List 1)
 
 0x0 Air H Preservation pre-Jump
 Aerial horizontal momentum preservation on startup (higher = more)
@@ -60,7 +60,7 @@ Aerial gravity on startup
 Aerial Jump height
 
 Par02
-Cape
+Side B: Cape
 
 0x0 Air H Preservation
 Aerial horizontal momentum preservation on startup (less = more)
@@ -81,7 +81,7 @@ Max fall speed while RA-Bit [17] is set
 Unknown (read on caping in air)
 
 Par03
-FLUDD
+Down B: FLUDD
 
 *0x0 Max Charge Time
 Frames to fully charge
@@ -159,7 +159,7 @@ Minimum bounce velocity (any lower will delete fireball)
 Unknown
 
 Par02-0
-FLUDD Article2
+FLUDD Article
 
 0x0 Initial Angle
 Initial angle (degrees)
@@ -177,7 +177,7 @@ Turning speed (also affects going back to center)
 Water vertical offset randomness
 
 Par03-0
-FLUDD Article3 (Water)
+FLUDD's Water Article
 
 0x0 Base Speed
 Base water momentum
@@ -189,7 +189,7 @@ Water momentum add when fully charged
 Water gravity
 
 0xC
-Unknown (read on firing)
+Unknown. (read on firing) Does not affect maximum fall speed.
 
 *0x10 Duration
 How many frames water stays out

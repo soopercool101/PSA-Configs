@@ -5,25 +5,25 @@
 088 Par03 6
 08C Par04 2
 090 Par05 2
-094 Art0
-098 Art1
+094 Art0 Fireball
+098 Art1 Negative Zone
 
-Art0
+Art0 Fireball
 1-1
 034 Par00-0 8
 
-Art1
+Art1 Negative Zone
 2-2
 034 Par01-0 16
 
 Par00
-Super Jump Punch
+Up B: Super Jump Punch (List 0)
 
-0x0
-Unknown
+0x0 Turn Sensitivity
+The input strength required to change direction the moment "RA-Bit[18] = true" is read.
 
-0x4 Sensitivity
-Forward/backward sensitivity. If over 1, can't change jumping angle.
+0x4 Angle Change Sensitivity
+Sideway sensitivity. The input strength required to change angle. If over 1, can't change jumping angle.
 
 0x8 Changeable Angle
 Changeable Angle (Degrees) Example: If 30, shift 30 degrees forward when forward input.
@@ -35,7 +35,7 @@ Special Fall max horizontal speed multiplier
 Unknown, not affect landing lag
 
 Par01
-Super Jump Punch Extra
+Up B: Super Jump Punch (List 1)
 
 0x0 Air H Preservation pre-Jump
 Aerial horizontal momentum preservation on startup (higher = more)
@@ -47,7 +47,7 @@ Aerial gravity on startup
 Aerial Jump height
 
 Par02
-Green Missile
+Side B: Green Missile
 
 0x0
 Unknown
@@ -88,11 +88,11 @@ Base vertical momentum
 0x30 V Momentum Growth Rate
 Vertical momentum growth rate
 
-0x34 Downward momentum
-Downward momentum (affect misfire too)
+0x34 Launch Gravity
+Gravity during launch (affect misfire too)
 
-0x38
-Unknown
+0x38 Launch Max Fall Speed
+Max fall speed during launch. Even if set 0, start falling at the end of launch.
 
 0x3C
 Unknown
@@ -112,17 +112,17 @@ Misfire horizontal momentum
 0x50 Misfire V Momentum
 Misfire vertical momentum
 
-0x54
-Unknown
+0x54 Wall Stuck Related
+This value affects probability of head getting stuck inside the wall. If change this value will make it harder to get stuck on the wall.
 
-0x58
-Unknown
+0x58 Wall Stuck Probability
+This value affects probability of head getting stuck inside the wall. If set to 0, cannot head getting stuck on the wall.
 
 *0x5C
 No Description Available.
 
 Par03
-Luigi Cyclone
+Down B: Luigi Cyclone (List 3)
 
 0x0
 Unknown (read on downB ground only)
@@ -143,7 +143,7 @@ Vertical momentum added when tap B. Effective when RA-Bit[18] is True and LA-Bit
 Max rising speed
 
 Par04
-Luigi Cyclone Extra
+Down B: Luigi Cyclone (List 4)
 
 0x0 Max H Speed (Air)
 Aerial max horizontal momentum
@@ -152,13 +152,13 @@ Aerial max horizontal momentum
 Aerial horizontal acceleration. When RA-Bit[17] becomes True, the acceleration is disable and the deceleration is enable.
 
 Par05
-Negative Zone
+Final Smash: Negative Zone
 
 0x0 Gravity
-Gravity
+Gravity in action
 
 0x4 Max Fall Speed
-Max fall speed
+Max fall speed in action
 
 Par00-0
 Fireball Article

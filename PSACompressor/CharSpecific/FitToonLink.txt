@@ -7,37 +7,37 @@
 090 Par05 2
 094 Par06 4
 098 Par07 8
-0A8 Art0
-0B0 Art1
-0B8 Art2
-0BC Art3
-0C0 Art4
-0C4 Art5
-0C8 Art6
+0A8 Art0 (ID=2) Boomerang
+0B0 Art1 (ID=0) Bow
+0B8 Art2 (ID=1) Arrow
+0BC Art3 (ID=4) Hookshot's Chain
+0C0 Art4 (ID=5) Hookshot's Root
+0C4 Art5 (ID=4) Hookshot's Tip (Attached to Chain)
+0C8 Art6 (ID=3) Wind Waker baton
 
-Art0
+Art0 (ID=2) Boomerang
 4-3
 034 Par00-0 16
 
-Art1
+Art1 (ID=0) Bow
 0-6
 
-Art2
+Art2 (ID=1) Arrow
 3-3
 034 Par02-0 A
 
-Art3
+Art3 (ID=4) Hookshot's Chain
 9-1
 034 Par03-0 6
 
-Art4
+Art4 (ID=5) Hookshot's Root
 0-2
 
-Art5
+Art5 (ID=4) Hookshot's Tip (Attached to Chain)
 0-3
 
 Par00
-Arrows
+Neutral B: Arrows
 
 0x0
 More velocity with lower value, only affects charged arrows (no affects max charge arrows)
@@ -52,7 +52,7 @@ Unknown
 Angle (radians)
 
 Par01
-Spin Attack (Ground)
+Up B: Spin Attack (Ground)
 
 *0x0 Charge Time
 Number of frames until the damage multiplier reaches the value of 0x4
@@ -61,7 +61,7 @@ Number of frames until the damage multiplier reaches the value of 0x4
 Full charged damage multiplier
 
 Par02
-Spin Attack (Air)
+Up B: Spin Attack (Air)
 
 0x0 V Momentum
 Vertical momentum
@@ -82,7 +82,7 @@ Max horizontal speed
 Unknown, it is not landing lag
 
 Par03
-Boomerang
+Side B: Boomerang
 
 0x0 Sensitivity
 upward/downward sensitivity (If over 1, can't change angle)
@@ -91,7 +91,7 @@ upward/downward sensitivity (If over 1, can't change angle)
 Angle of upward/downward boomerang throw (radians)
 
 Par04
-Triforce Slash
+Final Smash: Triforce Slash
 
 0x0 V Range
 Vertical range
@@ -109,7 +109,7 @@ travel speed
 Travel frame. If do not approach within the time, will be canceled.
 
 0x14
-No Description Available.
+Unknown
 
 Par05
 ExtraParams5
@@ -214,22 +214,22 @@ Homing time (frames)
 Catchable range
 
 0x40
-No Description Available.
+Unknown
 
 0x44
-No Description Available.
+Unknown
 
 *0x48
-No Description Available.
+Unknown
 
 *0x4C
-No Description Available.
+Unknown
 
 *0x50
-No Description Available.
+Unknown
 
 *0x54
-No Description Available.
+Unknown
 
 Par02-0
 Arrows Article
@@ -252,8 +252,8 @@ Uncharged Arrow damage (Closer to fully charged damage when more charged)
 0x14 Charged Damage
 Full charged Arrow damage
 
-*0x18
-Unknown, no affect to frames to fully charge
+*0x18 Remaining time
+How long an arrow remains after hitting stage objects (frames)
 
 0x1C Gravity
 Arrow gravity
@@ -262,10 +262,10 @@ Arrow gravity
 Arrow weight
 
 *0x24
-No Description Available.
+Unknown
 
 Par03-0
-Clawshot Article
+Hookshot Article
 
 0x0 Speed
 Speed that the chain travels (Air/Ground)
@@ -283,5 +283,5 @@ Tether length
 Tether speed
 
 *0x14
-No Description Available.
+Unknown
 

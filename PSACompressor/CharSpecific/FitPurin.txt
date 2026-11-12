@@ -4,7 +4,7 @@
 084 Par02 4
 
 Par00
-Rollout (paramPurinSpecialN__11ftPurinNode)
+Neutral B: Rollout (paramPurinSpecialN__11ftPurinNode)
 
 *0x0 Roll Around Duration
 How many frames character roll around
@@ -43,25 +43,25 @@ Min Aerial Horizontal speed (momentum forward in air/momentum preservation in ai
  ?? (read in air)
 
 0x30
-No Description Available.
+Unknown
 
 0x34
-No Description Available.
+Unknown
 
 0x38 Pivot/Hit Animation Speed
 Rotation animation speed while pivoting or after hit
 
 *0x3C
-No Description Available.
+Unknown
 
 0x40
-No Description Available.
+Unknown
 
 0x44
-No Description Available.
+Unknown
 
 0x48
-No Description Available.
+Unknown
 
 0x4C Bonus Damage
 Bonus damage: +3x to fast
@@ -69,23 +69,23 @@ Bonus damage: +3x to fast
 0x50 Damage Multiplier
 Damage multiplier: 4x - 6x to fast
 
-0x54 H Recoil
+0x54 H Recoil at Hit
 Horizontal recoil on hit (negative = left, positive = right)
 
-0x58 V Recoil
+0x58 V Recoil at Hit
 Vertical recoil on hit
 
 0x5C H Slide at End
 Horizontal ending slide speed
 
 0x60
-No Description Available.
+Unknown
 
 0x64 Max Roll Animation speed
 Max rolling animation speed
 
 *0x68
-No Description Available.
+Unknown
 
 0x6C Min Roll Power
 Initial roll power (min 40.0--see friction)
@@ -100,7 +100,7 @@ Roll power growth rate per charge frame
 Initial charge animation speed
 
 0x7C
-No Description Available.
+Unknown
 
 0x80 Deceleration 1
 Increasing it cuts short distance traveled (Deceleration related)
@@ -124,7 +124,7 @@ Deceleration speed when climb a slope. No affect to speed when going down a alop
 Minimum speed required for sparkle graphics and attack
 
 0x9C
-No Description Available.
+Unknown
 
 0xA0 Wall Bounce H Multiplier
 Wall bounce horizontal momentum multiplier
@@ -133,9 +133,9 @@ Wall bounce horizontal momentum multiplier
 Landing lag (post-recoil)
 
 Par01
-Pound (paramPurinSpecialS__11ftPurinNode)
+Side B: Pound (paramPurinSpecialS__11ftPurinNode)
 
-0x0 Sensitivity
+0x0 Angle Change Sensitivity
 Upward/Downward sensitivity. If over 1, can't change angle.
 
 0x4
@@ -148,7 +148,7 @@ Changeable Angle (Degrees) Example: If 30, shift 30 degrees upward when upward i
 Unknown, it does not seems affect gravity
 
 0x10
-No Description Available.
+Unknown
 
 0x14 Air Momentum 1
 Momentum forward in air punch (Occur when RA-Bit[17] is True)
@@ -157,10 +157,10 @@ Momentum forward in air punch (Occur when RA-Bit[17] is True)
 Momentum and fall speed in air punch (Occur when RA-Bit[17] and RA-Bit[18] are True, and RA-Basic[0] is 1)
 
 *0x1C
-No Description Available.
+Unknown
 
 Par02
-Puff Up (paramPurinFinal__11ftPurinNode)
+Final Smash: Puff Up (paramPurinFinal__11ftPurinNode)
 
 0x0 Max Size
 Max Size

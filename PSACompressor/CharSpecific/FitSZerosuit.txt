@@ -3,32 +3,32 @@
 080 Par01 1
 084 Par02 A
 088 Par03 2
-08C Art0
-090 Art1
-094 Art2
-098 Art3
+08C Art0 Gun
+090 Art1 Paralyzer
+094 Art2 Plasma Wire
+098 Art3 Power Suit Piece
 09C Par08 8
 0A4 Par10 20
 
-Art0
+Art0 Gun
 1-14
 034 Par00-0 1
 030 Par00D3 4
 
-Art1
+Art1 Paralyzer
 2-2
 034 Par01-0 8
 
-Art2
+Art2 Plasma Wire
 9-F
 034 Par02-0 4
 
-Art3
+Art3 Power Suit Piece
 1-1
 034 Par03-0 1
 
 Par00
-Paralyzer
+Neutral B: Paralyzer
 
 0x0 X Offset
 X offset
@@ -46,7 +46,7 @@ Par02
 ExtraParams2
 
 0x0
-No Description Available.
+Unknown
 
 *0x4
  ?? (read on starting frame)
@@ -73,16 +73,16 @@ Unknown
  ?? (read on starting frame)
 
 *0x24
-No Description Available.
+Unknown
 
 Par03
-ExtraParams3
+Power Suit Piece Falling Speed
 
-0x0
-No Description Available.
+0x0 Random Fall Speed 1
+Random fall speed from 0x0 to 0x4.
 
-0x4
-No Description Available.
+0x4 Random Fall Speed 2
+Random fall speed from 0x0 to 0x4.
 
 Par08
 ExtraParams8
@@ -235,16 +235,16 @@ Par01-0
 Paralyzer Article
 
 0x0
-No Description Available.
+Unknown
 
 0x4
-No Description Available.
+Unknown
 
 0x8
-No Description Available.
+Unknown
 
 0xC
-No Description Available.
+Unknown
 
 0x10 Uncharged Speed
 Uncharged speed
@@ -262,16 +262,16 @@ Par02-0
 Plasma Whip / Plasma Wire Article
 
 0x0 Tether Length
-Tether length
+Tether length (Affects both Side B and Up B)
 
 0x4 Tether Speed
-Tether speed
+Tether speed (Affects both Side B and Up B)
 
 0x8
-No Description Available.
+Unknown
 
 *0xC
-No Description Available.
+Unknown
 
 Par03-0
 ExtraParams0

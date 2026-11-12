@@ -5,15 +5,15 @@
 088 Par03 A
 08C Par04 6
 090 Par05 E
-098 Art0
+098 Art0 Ragnell
 
-Art0
+Art0 Ragnell
 4-4
 034 Par00-0 1
 030 Par00D3 3
 
 Par00
-Eruption (paramIkeSpecialN__9ftIkeNode)
+Neutral B: Eruption (paramIkeSpecialN__9ftIkeNode)
 
 *0x0 Max Charge Level
 Max charge level
@@ -34,7 +34,7 @@ Aerial deceleration to horizontal preservation on startup
 Fully charged self damage
 
 Par01
-Quickdraw (paramIkeSpecialS__9ftIkeNode)
+Side B: Quickdraw (paramIkeSpecialS__9ftIkeNode)
 
 *0x0 Max Damage Charge
 Max charge time for damage (frames)
@@ -91,7 +91,7 @@ Height place to start attack
 Range to start attack
 
 Par02
-Aether (paramIkeSpecialHi__9ftIkeNode)
+Up B: Aether (paramIkeSpecialHi__9ftIkeNode)
 
 0x0 Aerial Height Ratio
 Aerial jump height ratio (relative to ground version)
@@ -106,7 +106,7 @@ unknown, read once on startup and jump
 Maximum number of times character can grab the ledge before needing to land on stage
 
 Par03
-Counter (paramIkeSpecialLw__9ftIkeNode)
+Down B: Counter (paramIkeSpecialLw__9ftIkeNode)
 
 0x0 Air H Preservation
 Aerial horizontal momentum preservation on startup (higher = more)
@@ -157,10 +157,10 @@ Block bubble Z Offset (Normal = Front place)
 Block bubble size
 
 *0x14
-No Description Available.
+Unknown
 
 Par05
-Great Aether (paramIkeFinal__9ftIkeNode)
+Final Smash: Great Aether (paramIkeFinal__9ftIkeNode)
 
 0x0 Terget H Specing
 Horizontal spacing when first attack was hit multiple tergets
@@ -181,7 +181,7 @@ Ike falling speed (does not affect opponent)
 Horizontal position where Ike moves after the first attack hits
 
 *0x18
-No Description Available.
+Unknown
 
 *0x1C
 The number of frames it takes to take the thrown sword after the first attack hits
@@ -190,19 +190,19 @@ The number of frames it takes to take the thrown sword after the first attack hi
 Move speed after the first attack was hit
 
 0x24
-No Description Available.
+Unknown
 
 0x28
-No Description Available.
+Unknown
 
 0x2C
-No Description Available.
+Unknown
 
 0x30
-No Description Available.
+Unknown
 
 0x34
-No Description Available.
+Unknown
 
 Par00-0
 ExtraParams0

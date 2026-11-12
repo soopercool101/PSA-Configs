@@ -4,20 +4,20 @@
 084 Par02 1
 088 Par03 5
 08C Par04 3
-090 Art0
-094 Art1
-098 Art2
+090 Art0 Flame
+094 Art1 Rock
+098 Art2 (ID=1) Rock Piece (Appears from Rock)
 
-Art0
+Art0 Flame
 1-1
 034 Par00-0 6
 
-Art1
+Art1 Rock
 5-5
 034 Par01-0 8
 038 Par01-1 A
 
-Art2
+Art2 (ID=1) Rock piece (Appears from Rock)
 2-2
 
 Par00
@@ -123,13 +123,13 @@ Rock Smash?
 No Description Available.
 
 Par03
-Fly
+Fly (List 3)
 
-0x0
-Unknown
+0x0 Turn Sensitivity
+The input strength required to change direction the moment "RA-Bit[18] = true" is read. However, even if the value is set to over 1, the direction can be changed at the start and 3 frames after the start.
 
-0x4 Sensitivity
-Forward/backward sensitivity. If over 1, can't change jumping Angle.
+0x4 Angle Change Sensitivity
+Sideway sensitivity. The input strength required to change angle. If over 1, can't change jumping angle.
 
 0x8 Changeable Angle
 Changeable Angle (Degrees) Example: If 30, shift 30 degrees forward when forward input.
@@ -141,7 +141,7 @@ Special Fall max horizontal speed multiplier
 Unknown
 
 Par04
-Fly Extra
+Fly (List 4)
 
 0x0 Air H Preservation pre-Fly
 Aerial horizontal momentum preservation on startup (higher = more)
@@ -153,7 +153,7 @@ Aerial gravity on startup
 Aerial fly height
 
 Par00-0
-FlameThrower Article
+Flamethrower Article
 
 0x0 Landing Detection
 Landing detection
@@ -171,19 +171,19 @@ Flame momentum randomness. Random momentum from 0xC to 0x10. The higher value is
 Flame momentum randomness. Random momentum from 0xC to 0x10.
 
 *0x14
-No Description Available.
+Unknown
 
 Par01-0
-RockSmash Article
+Rock Smash Article
 
 0x0
-No Description Available.
+Unknown
 
 0x4
-No Description Available.
+Unknown
 
 0x8
-No Description Available.
+Unknown
 
 *0xC Rock Piece Count
 Number of broken rock piece
@@ -198,7 +198,7 @@ Rock piece speed
 The frame it takes for rock piece to lose momentum
 
 *0x1C
-No Description Available.
+Unknown
 
 Par01-1
 ExtraParams1

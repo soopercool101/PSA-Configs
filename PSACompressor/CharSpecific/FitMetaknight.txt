@@ -3,15 +3,15 @@
 080 Par01 6
 084 Par02 6
 088 Par03 6
-08C Art0
+08C Art0 Cape
 
-Art0
+Art0 Cape
 1-17
 034 Par00-0 1
 030 Par00D3 1A
 
 Par00
-Mach Tornado (paramSpecialN__16ftMetaknightNode)
+Neutral B: Mach Tornado (paramSpecialN__16ftMetaknightNode)
 
 0x0 Initial V Momentum
 Initial vertical momentum (can't over Max Rise Speed)
@@ -71,10 +71,10 @@ Subtracts this each frame while not listening for button input
 Spin speed equal to or less than this to end move (If negative, can't end normally)
 
 *0x4C
-No Description Available.
+Unknown
 
 Par01
-Drill Rush (paramSpecialS__16ftMetaknightNode)
+Side B: Drill Rush (paramSpecialS__16ftMetaknightNode)
 
 0x0 Startup H Preservation
 Horizontal momentum preservation on startup
@@ -92,10 +92,10 @@ Turning speed
 Angle at the end of landing
 
 *0x14
-No Description Available.
+Unknown
 
 Par02
-Dimensional Cape (paramSpecialLw__16ftMetaknightNode)
+Down B: Dimensional Cape (paramSpecialLw__16ftMetaknightNode)
 
 0x0 H Preservation
 Horizontal momentum preservation on startup
@@ -116,7 +116,7 @@ Vertical acceleration
 Max vertical speed
 
 Par03
-Galaxia Darkness (paramFinal__16ftMetaknightNode)
+Final Smash: Galaxia Darkness (paramFinal__16ftMetaknightNode)
 
 *0x0 Transition Time
 Frame it takes to darkness
@@ -128,13 +128,13 @@ Darkness frame
 Attack Interval
 
 *0xC
-No Description Available.
+Unknown
 
 *0x10
-No Description Available.
+Unknown
 
 *0x14
-No Description Available.
+Unknown
 
 Par00-0
 ExtraParams0

@@ -3,19 +3,19 @@
 080 Par01 6
 084 Par02 8
 088 Par03 1
-08C Art0
-090 Art1
-094 Art2
+08C Art0 Leaf
+090 Art1 Seed
+094 Art2 Vine Whip
 
-Art0
+Art0 Leaf
 2-2
 034 Par00-0 8
 
-Art1
+Art1 Seed
 3-3
 034 Par01-0 2
 
-Art2
+Art2 Vine Whip
 9-2
 034 Par02-0 2
 030 Par02D3 8
@@ -54,7 +54,7 @@ Knockback multiplier when taken resistance element attack
 Weakest stamina level
 
 Par01
-Bullet Seed
+Neutral B: Bullet Seed
 
 *0x0 Interval
 Frames between seeds
@@ -72,10 +72,10 @@ Minimum hold continue frame
 Maximum hold continue frame
 
 *0x14
-No Description Available.
+Unknown
 
 Par02
-Razor Leaf
+Side B: Razor Leaf
 
 0x0 Tilt Speed
 Tilt (Normal) speed
@@ -126,7 +126,7 @@ Random rotation speed 2. Random speed from 0x8 to 0xC.
 Random Launch Trajectory upon spawn
 
 *0x14
-No Description Available.
+Unknown
 
 0x18
 If value is low, what is launched on ground sometimes disappears in the middle

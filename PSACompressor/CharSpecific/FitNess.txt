@@ -6,54 +6,54 @@
 08C Par04 5
 090 Par05 8
 094 Par06 A
-098 Art0
-09C Art1
-0A0 Art2
-0A4 Art3
-0A8 Art4
-0AC Art5
-0B0 Art6
+098 Art0 PK Flash
+09C Art1 PK Fire
+0A0 Art2 PK Thunder
+0A4 Art3 (ID=2) PK Thunder's Tail (Attached to PK Thunder)
+0A8 Art4 (ID=3) PK Starstorm
+0AC Art5 (ID=4) Yo-yo String
+0B0 Art6 (ID=5) Yo-yo
 
-Art0
+Art0 PK Flash
 4-4
 034 Par00-0 C
 
-Art1
+Art1 PK Fire
 2-2
 034 Par01-0 7
 X14 27-0E-00x
 
-Art2
+Art2 PK Thunder
 1-1
 034 Par02-0 6
 
-Art3
+Art3 (ID=2) PK Thunder's Tail (Attached to PK Thunder)
 1-1
 034 Par03-0 1
 
-Art4
+Art4 (ID=3) PK Starstorm
 1-1
 034 Par04-0 3
 
-Art5
+Art5 (ID=4) Yo-yo String
 3-1
 034 Par05-0 3
 
-Art6
+Art6 (ID=5) Yo-yo
 3-6
 034 Par06-0 9
 
 Par00
-PK Flash
+Neutral B: PK Flash
 
 *0x0 Fall Timing
 Number of frames to halt vert momentum before using 0xC as gravity
 
-*0x4 Fastest Ignite Time
+*0x4 Fastest Detonation Time
 Minimum frames it takes to ignite after PK Flash appears
 
 *0x8 Duration
-Maximum frames it takes to ignite or disappear after PK Flash appears
+Maximum frames it takes to ignite after PK Flash appears. It only affects during the action. Not affects disappear timing.
 
 0xC Gravity
 Gravity after initial vertical halt
@@ -65,7 +65,7 @@ Landing lag after Special Fall (frames)
  ?? (read on release/PK Flash explosion)
 
 Par01
-PK Fire
+Side B: PK Fire
 
 0x0 Angle (Air)
 Aerial PK Fire angle (radians)
@@ -89,7 +89,7 @@ Y offset of starting point
 Landing lag (frames)
 
 Par02
-PK Thunder
+Up B: PK Thunder
 
 0x0
  ?? (read on startup)
@@ -128,7 +128,7 @@ PK Thunder 2 angle tolerance when landing
 Landing lag after Special Fall (frames)
 
 Par03
-PSI Magnet
+Down B: PSI Magnet
 
 *0x0 Min Hold Time
 Minimum hold action frames
@@ -170,7 +170,7 @@ Absorption collision Z offset
 Absorption collision size
 
 Par05
-PK Starstorm
+Final Smash: PK Starstorm
 
 0x0 Fall Speed
 Fall speed at during action
@@ -197,7 +197,7 @@ Vertical fall at the right or left edge ratio (i.e. 1 out of this chance of edge
 Unknown
 
 Par06
-Reflect Data (Bat Swing)
+Reflect Data (Forward Smash: Bat Swing)
 
 *0x0 Bone
 Focus Bone
@@ -260,7 +260,7 @@ Max horizontal speed
 Max fall speed
 
 0x24 Time to Explode
-The frame it takes from ignite to explode
+The frame it takes from ignite to explode. This is also the time from when X touches the stage object to when it disappears.
 
 0x28 Base Damage
 Base damage
@@ -275,7 +275,7 @@ PK Fire Article
 Spark duration
 
 *0x4 Pillar Duration
-Pillar duration
+Fire pillar duration
 
 0x8 Pillar Y Offset
 Pillar start Y offset
@@ -286,11 +286,11 @@ Pillar gravity
 0x10 Pillar Max Fall Speed
 Pillar max fall speed
 
-0x14
-Unknown
+0x14 Shorten by Damage
+Multiplier of Pillar duration that decreases when damage taken. If set 0, not decreases by damage taken.
 
 0x18 Pillar Final Size
-Pillar final size multiplier
+Pillar final size multiplier. (Compare initial size)
 
 Par02-0
 PK Thunder Article

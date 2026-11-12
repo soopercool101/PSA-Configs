@@ -5,40 +5,40 @@
 098 Par03 16
 09C Par04 A
 0A0 Par05 1
-0AC Art0
-0B0 Art1
-0B4 Art2
-0B8 Art3
-0BC Art4
+0AC Art0 Blizzard
+0B0 Art1 Ice Block
+0B4 Art2 Iceberg
+0B8 Art3 Rope
+0BC Art4 Part of Iceberg (Invisible)
 0C0 Par13 4
 XNS 29xNana Sound Lists
 
-Art0
+Art0 Blizzard
 1-1
 034 Par00-0 4
 
-Art1
+Art1 Ice Block
 3-2
 034 Par01-0 12
 038 Par01-1 8
 
-Art2
+Art2 Iceberg
 4-3
 034 Par02-0 10
 038 Par02-1 10
 X03 2D-10x
 X0A 2D-10-00x
 
-Art3
+Art3 Rope
 5-1
 034 Par03-0 1
 
-Art4
+Art4 Part of Iceberg (Invisible)
 1-1
 034 Par04-0 1
 
 Par00
-Ice Shot (paramSpecialN__10ftPopoNode)
+Neutral B: Ice Shot (paramSpecialN__10ftPopoNode)
 
 0x0 Air V Momentum
 Vertical momentum for 1st aerial usage
@@ -53,7 +53,7 @@ X offset where generate ice block
 Y offset where generate ice block
 
 Par01
-Blizzard (paramSpecialLw__10ftPopoNode)
+Down B: Blizzard (paramSpecialLw__10ftPopoNode)
 
 0x0 X Offset
 X offset where generate blizzard
@@ -65,10 +65,10 @@ Y offset where generate blizzard
 Maximum distance from partner where a synchronous action (ground only)
 
 *0xC
-No Description Available.
+Unknown
 
 Par02
-Squall Hammer (paramSpecialS__10ftPopoNode)
+Side B: Squall Hammer (paramSpecialS__10ftPopoNode)
 
 0x0 Partner Snap Distance
 Maximum distance from partner where a synchronous action
@@ -77,7 +77,7 @@ Maximum distance from partner where a synchronous action
 Downward acceleration that occurs when the character is on a slope
 
 0x8
-Unknown
+Unknown. It doesn't seem to affect slope acceleration.
 
 0xC Ground Initial H Velocity
 Grounded initial horizontal velocity
@@ -91,8 +91,8 @@ Grounded horizontal acceleration
 0x18 Air H Acceleration
 Aerial horizontal acceleration
 
-0x1C
- % of initial solo grounded vertical velocity subtracted from initial velocity?
+0x1C Sideway Sensitivity
+The input strength required to accelerate horizontally. If the input strength is less than this value, keeps currently horizontal speed when sideway input.
 
 0x20 Ground Max H Speed
 Grounded max horizontal speed
@@ -137,7 +137,7 @@ Distance to move backward teleportation when hitting a wall
 Unknown
 
 Par03
-Belay (paramSpecialHi__10ftPopoNode)
+Up B: Belay (paramSpecialHi__10ftPopoNode)
 
 0x0 Partner Snap Distance
 Maximum distance from partner where a synchronous action
@@ -184,8 +184,8 @@ Maximum horizontal speed multiplier when jump after partner
 0x38 Synced Jump Angle
 Jumping angle when jump after partner (degrees, 0 = Top)
 
-0x3C
-If set higher value, the more difficult it is to downward momentum when jumping, even if the partner is lower position than character before the jump. (It also affects initial horizontal momentum when jumping)
+0x3C Pulled Momentum when Synced Jump
+If set more higher value, the character becomes more difficult to gain downward momentum when jumping, even if the partner is lower position than character before the jump. (It also affects initial horizontal momentum when jumping)
 
 0x40 Synced Ledge Jump Speed
 When a partner grabs a ledge, the speed at which character is pulled in the direction of the partner
@@ -239,7 +239,7 @@ Maximum horizontal speed multiplier when jump after partner. Note: No change in 
 Speed when jumping towards a ledge. (Closer to 0: faster, Closer to 1: slower)
 
 Par05
-Iceberg (paramFinal__10ftPopoNode)
+Final Smash: Iceberg (paramFinal__10ftPopoNode)
 
 0x0 Partner Snap Distance
 Maximum distance from partner where a synchronous action
@@ -248,10 +248,10 @@ Par13
 Partner Z Distance
 
 *0x0
-No Description Available.
+Unknown
 
 *0x4
-No Description Available.
+Unknown
 
 0x8 Move Speed
 The speed at which the partner moves on the Z axis
@@ -313,7 +313,7 @@ Time until knockback disable (frames) The sum of 0x1C and 0x28 value is duration
 *0x2C Duration
 How many frames before they delete. The sum of 0x1C and 0x2C value is duration.
 
-0x30
+0x30 Slope Acceleration Related
 Related to acceleration in the going down the slope. The closer the value is to 0, the weaker the acceleration and deceleration on the slope.
 
 0x34 Slope Deceleration
@@ -359,7 +359,7 @@ Flags 0x1C
 No Description Available.
 
 Par02-0
-IceBerg Article
+Iceberg Article
 
 *0x0 Rising Frame
 Frame it takes to rise to a specific position after the iceberg appears
@@ -395,19 +395,19 @@ The distance the target is launched proportional to weight for fixed knockback h
 The distance the target is launched regardless of its damage. It hitbox same as 0x1C.
 
 *0x2C
-No Description Available.
+Unknown
 
 *0x30
-No Description Available.
+Unknown
 
 *0x34
-No Description Available.
+Unknown
 
 *0x38
-No Description Available.
+Unknown
 
 *0x3C
-No Description Available.
+Unknown
 
 Par02-1
 hitDataIceBerg__17wnPopoIceBergNode

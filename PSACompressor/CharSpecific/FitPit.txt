@@ -6,32 +6,32 @@
 08C Par04 8
 098 Par07 8
 09C Par08 A
-0A0 Art0
-0A4 Art1
-0A8 Art2
-0AC Art3
+0A0 Art0 Bow
+0A4 Art1 Arrow
+0A8 Art2 (ID=0 in Article No.3) Centurion
+0AC Art3 (ID=2) Palutena
 X08 26-00x
 
-Art0
+Art0 Bow
 0-10
 034 Par00-0 1
 030 Par00D3 4
 
-Art1
+Art1 Arrow
 3-3
 034 Par01-0 A
 
-Art2
+Art2 (ID=0 in Article No.3) Centurion
 5-3
 034 Par02-0 E
 038 Par02-1 8
 
-Art3
+Art3 (ID=2) Palutena
 2-3
 034 Par03-0 A
 
 Par00
-Arrows
+Neutral B: Palutena's Arrow
 
 0x0
  ??
@@ -46,7 +46,7 @@ Joystick sensitivity backwards
 Joystick sensitivity upwards
 
 Par01
-Angel Ring
+Side B: Angel Ring
 
 *0x0
 Something with how long it's out at startup?
@@ -73,7 +73,7 @@ Spin speed equal to or less than this to end move
  ?? (read on startup)
 
 Par02
-Wings of Icarus
+Up B: Wings of Icarus
 
 0x0 H Preservation (Air)
 Aerial horizontal momentum preservation on startup (higher = more)
@@ -127,10 +127,10 @@ Min flying Time. If value is 2 or more, can always fly for the maximum time.
 Flying frame recovery speed (par frame)
 
 *0x44
-No Description Available.
+Unknown
 
 Par03
-Mirror Shield
+Down B: Mirror Shield
 
 0x0 Max Angle
 Max upward angle
@@ -157,10 +157,10 @@ Shield maximum durability (HP). When the shield's durability reaches 0, it can't
 Durability recovery speed (par frame)
 
 0x20
-No Description Available.
+Unknown
 
 *0x24
-No Description Available.
+Unknown
 
 Par04
 HitDataList4 (Mirror Shield Block)
@@ -211,10 +211,10 @@ Damage threshold
 Reflected duration multiplier
 
 0x18
-No Description Available.
+Unknown
 
 *0x1C
-No Description Available.
+Unknown
 
 Par08
 Angel Ring Reflect
@@ -247,7 +247,7 @@ Reflected speed multiplier
 Reflected duration multiplier
 
 *0x24
-No Description Available.
+Unknown
 
 Par00-0
 ExtraParams0
@@ -289,7 +289,7 @@ Up arrow speed
 Arrow turning speed
 
 *0x14
-No Description Available.
+Unknown
 
 0x18 Base Damage
 Base damage
@@ -301,7 +301,7 @@ Damage growth rate (extra damage per charging frame)
 Landing detection (Vertical detection offset of floor and wall)
 
 *0x24
-No Description Available.
+Unknown
 
 Par02-0
 Centurion Article
@@ -345,8 +345,8 @@ Randomness of Z-axis momentum when attack hits. Random momentum from 0x2C to 0x3
 0x30 Hit Z Momentum Random 2
 Randomness of Z-axis momentum when attack hits. Random momentum from 0x2C to 0x30.
 
-0x34
-No Description Available.
+0x34 Durability
+Durability (Centurion HP)
 
 Par02-1
 hitDataIkarus__15wnPitIkarusNode
@@ -405,8 +405,8 @@ The distance at which Centurion appears (higher = farther)
 *0x20 Interval 2
 Time interval when Centurion appears after the second Centurion
 
-*0x24
-No Description Available.
+*0x24 Centurion Count
+Number of times to make X appear
 
 EXD 26-00x
 HitDataList7>Offset (Mirror Shield Reflect2)

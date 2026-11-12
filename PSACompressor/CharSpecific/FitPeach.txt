@@ -7,25 +7,25 @@
 090 Par05 8
 094 Par06 6
 09C Par08 8
-0A8 Art0
-0AC Art1
-0B0 Art2
+0A8 Art0 Parasol
+0AC Art1 Toad
+0B0 Art2 (ID=0 in Article1) Toad's Spore
 
-Art0
+Art0 Parasol
 1-9
 034 Par00-0 1
 030 Par00D3 4
 
-Art1
+Art1 Toad
 1-2
 034 Par01-0 4
 
-Art2
+Art2 (ID=0 in Article1) Toad's Spore
 1-1
 034 Par02-0 4
 
 Par00
-Toad (paramSpecialN__11ftPeachNode)
+Neutral B: Toad (paramSpecialN__11ftPeachNode)
 
 0x0 Air H Preservation
 Aerial Horizontal momentum preservation on startup (Peach continues moving horizontally at her previous speed divided by this constant.)
@@ -46,7 +46,7 @@ Max fall speed
 Unknown, not affect hitlag
 
 Par01
-Peach Bomber (paramSpecialS__11ftPeachNode)
+Side B: Peach Bomber (paramSpecialS__11ftPeachNode)
 
 0x0
 Unknown, read once on ground pullback
@@ -91,19 +91,19 @@ Recoil vertical boost
 Unknown, something to do with ending
 
 0x38
-Unknown, something to do with ending, when set low causes massive fall speed, when set high casues momentary floating
+Unknown, something to do with ending. If set to 0, the character will instantly fall to the ground at the end. And, when use it on the ground, the character will be broken. When set low causes massive fall speed, when set high casues momentary floating.
 
 *0x3C
-No Description Available.
+Unknown
 
 Par02
-Turnip Pull (paramSpecialLw__11ftPeachNode)
+Down B: Turnip Pull (paramSpecialLw__11ftPeachNode)
 
 *0x0 Item Get Ratio
 Odds of getting an item (i.e. a one in this chance)
 
 Par03
-Peach Parasol (paramSpecialHi__11ftPeachNode)
+Up B: Peach Parasol (paramSpecialHi__11ftPeachNode)
 
 0x0 Sensitivity
 Forward/backward sensitivity. If over 1, can't change jumping Angle.
@@ -133,7 +133,7 @@ Falling max horizontal speed multiplier
 Landing lag from falling state (frames)
 
 *0x24
-No Description Available.
+Unknown
 
 Par04
 paramUniqFloat__11ftPeachNode
@@ -142,7 +142,7 @@ paramUniqFloat__11ftPeachNode
 Float time (frames)
 
 Par05
-Peach Blossom (paramFinal__11ftPeachNode)
+Final Smash: Peach Blossom (paramFinal__11ftPeachNode)
 
 0x0
 Unknown, read 3 times at startup
@@ -151,25 +151,25 @@ Unknown, read 3 times at startup
 Unknown, read 3 times at startup
 
 0x8
-No Description Available.
+Unknown
 
 *0xC
-No Description Available.
+Unknown
 
 *0x10
-No Description Available.
+Unknown
 
 *0x14
-No Description Available.
+Unknown
 
 *0x18 Item Count
 Number of falling peaches
 
 *0x1C
-No Description Available.
+Unknown
 
 Par06
-Turnip Item Table (paramSpecialUniqItemTable__11ftPeachNode)
+Down B: Turnip Item Table (paramSpecialUniqItemTable__11ftPeachNode)
 
 *0x0 Item ID 1
 Item ID 1 (Normal: Bob-omb ID)
@@ -250,7 +250,7 @@ Spore X offset (Positive = Right)
 Spore Y offset
 
 *0xC
-No Description Available.
+Unknown
 
 Par02-0
 Toad's spore Article
@@ -259,7 +259,7 @@ Toad's spore Article
 Relate of speed
 
 0x4
-No Description Available.
+Unknown
 
 0x8 Speed
 Speed

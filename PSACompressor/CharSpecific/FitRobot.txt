@@ -4,30 +4,30 @@
 084 Par02 12
 088 Par03 6
 08C Par04 6
-094 Art0
-09C Art1
-0A4 Art2
-0AC Art3
+094 Art0 Charging Gyro
+09C Art1 Robo Beam
+0A4 Art2 Gyro Stand
+0AC Art3 Diffusion Beam
 0B0 Par13 8
 X08 2C-00x
 
-Art0
+Art0 Charging Gyro
 3-1
 034 Par00-0 2
 
-Art1
+Art1 Robo Beam
 2-2
 034 Par01-0 8
 
-Art2
+Art2 Gyro Stand
 3-6
 
-Art3
+Art3 Diffusion Beam
 4-4
 034 Par03-0 1
 
 Par00
-Robo Beam
+Neutral B: Robo Beam
 
 0x0 Max Downwards Angle
 Max downwards angle (higher is more angled down)
@@ -78,10 +78,10 @@ Lamp X offset
 Lamp Z offset
 
 Par01
-Arm Rotor
+Side B: Arm Rotor
 
-0x0
-Related to arm rotation speed. If set low value, character will move, but it will not be possible to attack by turning the arm
+0x0 Initial Spin Speed
+Initial arm rotation speed. If set low value, character will move, but it will not be possible to attack by turning the arm.
 
 0x4
 Unknown
@@ -113,14 +113,14 @@ Maximum angle that can be tilted back and front
 0x28 Angle Change Speed
 Angle change speed when can be tilted back and front
 
-0x2C
-Related to duration
+0x2C Initial Deceleration
+This value is rotation deceleration until the frame set in 0x30 elapses
 
-*0x30
-Probably, duration of enable to rotation speed deceleration by 0x2C value
+*0x30 Initial Deceleration Valid Frame
+Time during which rotation speed deceleration is valid by 0x2C value (frames)
 
 0x34 Spin Speed Deceleration
-Spin speed deceleration
+Rotation speed deceleration
 
 0x38
 Unknown
@@ -137,17 +137,17 @@ Minimum frames between button presses
 *0x48 Max Tap Count
 Maximum number of valid B button inputs
 
-0x4C
-Unknown
+0x4C Angle Return Speed
+Angle return speed when not input sideway
 
 0x50 Max H Speed
 Maximum horizontal speed
 
 *0x54
-No Description Available.
+Unknown
 
 Par02
-Robo Burner
+Up B: Robo Burner
 
 0x0 Max Fuel
 Max fuel of rising time
@@ -204,7 +204,7 @@ Fuel drain rate
 Unknown
 
 Par03
-Gyro
+Down B: Gyro
 
 0x0 Max Charge Frame
 Time to fully charge (frames)
@@ -225,13 +225,13 @@ Gryo firing Y offset
 Max number of gyros at once
 
 Par04
-Diffusion Beam
+Final Smash: Diffusion Beam
 
 *0x0
-No Description Available.
+Unknown
 
-0x4
-No Description Available.
+0x4 Take Knockback
+This value affects amount of knockback when attacked during Final Smash. If set to 5, the character will be launched very strongly. If set to 0.01, the character will be very difficult to launch. It seems that Weight is changing instead of knockback Multiplier. 
 
 *0x8 Duration
 FS Duration (Seconds)(If 0, it will last forever)
@@ -267,10 +267,10 @@ Damage threshold
 Reflected duration multiplier
 
 0x18
-No Description Available.
+Unknown
 
 *0x1C
-No Description Available.
+Unknown
 
 Par00-0
 Gyro Attribute
@@ -296,8 +296,8 @@ Normal Robo Beam duration
 0xC Robo Beam Speed
 Normal Robo Beam speed
 
-*0x10
-Unknown
+*0x10 Floor Bounce Related
+When bouncing on the floor, if the remaining duration is less than this value, it will disappear and the next robo beam will not come out. When the remaining duration is greater than this value, nothing happens.
 
 *0x14 Super Beam Duration
 Super Robo Beam duration
@@ -306,7 +306,7 @@ Super Robo Beam duration
 Super Robo Beam speed
 
 0x1C
-No Description Available.
+Unknown
 
 Par03-0
 ExtraParams0

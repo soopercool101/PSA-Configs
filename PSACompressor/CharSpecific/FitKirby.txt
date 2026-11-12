@@ -40,19 +40,19 @@
 114 Par38 4
 118 Par39 2
 11C Par40 2
-124 Art0
-128 Art1
-130 Art2
-134 Art3
-138 Art4
-13C Art5
-150 Art6
-154 Art7
-158 Art8
+124 Art0 Hammer
+128 Art1 Final Cutter
+130 Art2 Star Bullet
+134 Art3 Stone?
+138 Art4 Cook Kirby's hot pot
+13C Art5 Cook Kirby's hat
+150 Art6 (ID=D) Flamethrower (Only while Copying Charizard)
+154 Art7 (ID=D) Bullet Seed (Only while Copying Ivysaur)
+158 Art8 (ID=D) Water Gun (Only while Copying Squirtle)
 15C Par56 8
-168 Art9
+168 Art9 (ID=E) Paralyzer (Only while Copying Zero suit Samus)
 16C Par60 A
-170 Art10
+170 Art10 (ID=D) Pikmin (Only while Copying Olimar)
 174 Par62 D2
 17C Par64 18
 184 Par66 24
@@ -111,46 +111,46 @@ XKA 4D-10xArticle3-ExtraData3
 XKA 4D-11xArticle3-ExtraData4
 XKA 4D-12xArticle3-ExtraData5
 
-Art0
+Art0 Hammer
 2-2
 
-Art1
+Art1 Final Cutter
 1-1
 034 Par01-0 4
 
-Art2
+Art2 Star Bullet
 2-2
 034 Par02-0 14
 
-Art3
+Art3 Stone?
 1-1
 034 Par03-0 1
 04C Par03-6 8
 054 Par03-8 5
 
-Art4
+Art4 Cook Kirby's hot pot
 6-6
 
-Art5
+Art5 Cook Kirby's hat
 4-6
 
-Art6
+Art6 (ID=D) Flamethrower (Only while Copying Charizard)
 1-1
 034 Par06-0 6
 
-Art7
+Art7 (ID=D) Bullet Seed (Only while Copying Ivysaur)
 3-3
 034 Par07-0 2
 
-Art8
+Art8 (ID=D) Water Gun (Only while Copying Squirtle)
 3-3
 034 Par08-0 8
 
-Art9
+Art9 (ID=E) Paralyzer (Only while Copying Zero suit Samus)
 2-2
 034 Par09-0 8
 
-Art10
+Art10 (ID=D) Pikmin (Only while Copying Olimar)
 3-4
 034 SubAction RedMain
 038 SubAction YellowMain
@@ -171,25 +171,25 @@ Art10
 074 Par10-1 1
 
 Par00
-Inhale
+Neutral B (Normal): Inhale
 
 *0x0 Min Hold Frame
-Minimum hold continue frame
+Minimum hold continue frames
 
-0x4
- ?? (read on EatWait; freezes very easily)
+0x4 Turn Sensitivity
+Backward sensitivity. In other words, strength of input required to change direction. If set to 0, it will turn when waiting on the ground. If increase the value, the game will crash when the input is less than the set value.
 
-0x8
- ?? (read on EatWait; freezes very easily)
+0x8 Copy Sensitivity
+Downward sensitivity. In other words, values that affect the strength of input required for doing copy action by downward input.
 
 0xC Walk Speed
 Inhale walk speed
 
-0x10 Jump Height
-Inhale jump height
+0x10 Jump Momentum Multiplier
+Inhale jump momentum Multiplier (Multiplier of Attributes 0x38)
 
-0x14
-Inhale stop walk momentum?
+0x14 Button Mashing Movement
+When waiting on the ground, if the target who is inhaled it inputs sideways or upwards, the strength to move in that direction.
 
 0x18 X Offset
 X offset of exhale
@@ -198,10 +198,10 @@ X offset of exhale
 Y offset of exhale
 
 *0x20
-No Description Available.
+Unknown
 
 0x24
-No Description Available.
+Unknown
 
 0x28
 full swallow aerial mobility multiplier?
@@ -213,28 +213,28 @@ Odds of losing power when hit?
 Damage taken when eat a bomb
 
 *0x34
-No Description Available.
+Unknown
 
 Par01
-Hammer
+Side B: Hammer
 
 0x0 V Momentum
 Vertical momentum on startup
 
 *0x4
-No Description Available.
+Unknown
 
 *0x8 Landing Lag
 Landing lag (frames) (It also affects after exit down B in air)
 
 *0xC
-No Description Available.
+Unknown
 
 Par02
-Final Cutter
+Up B: Final Cutter
 
-0x0 Air V Momentum
-Aerial vertical momentum
+0x0 Air Rise Multiplier
+Aerial rise multiplier compared to on the ground
 
 0x4
  ?? (read on upB input and initial rise)
@@ -246,13 +246,13 @@ X offset of cutter
 Y offset of cutter
 
 0x10
-No Description Available.
+Unknown
 
 *0x14
-No Description Available.
+Unknown
 
 Par03
-Stone
+Down B: Stone
 
 *0x0 Max Frame
 Max frames in stone
@@ -279,16 +279,16 @@ Gravity
 Durability (Stone HP)
 
 0x20
-No Description Available.
+Unknown
 
 0x24
-No Description Available.
+Unknown
 
 *0x28
-No Description Available.
+Unknown
 
 Par04
-Cook Kirby
+Final Smash: Cook Kirby
 
 *0x0 Take Fighter Interval
 Frames to take the next Fighter
@@ -366,7 +366,7 @@ If set negative value, the pot will appear on the left and Kirby will also move 
 It value that affects the number of items that can take. (Example: 49 = 4 Items, 50 = 5 Items)
 
 0x64
-No Description Available.
+Unknown
 
 Par05
 Captain Falcon: Falcon Punch (paramFalconPunch__11ftKirbyNode)
@@ -387,7 +387,7 @@ Momentum forward in air punch (Occur when RA-Bit[17] is True)
 Momentum and fall speed in air punch (Occur when RA-Bit[17]=True and RA-Basic[0]=1)
 
 *0x14
-No Description Available.
+Unknown
 
 Par06
 Pikachu: Thunder Jolt
@@ -405,10 +405,10 @@ Aerial X offset
 Aerial Y offset
 
 *0x10
-No Description Available.
+Unknown
 
 *0x14
-No Description Available.
+Unknown
 
 Par07
 MetaKnight: Mach Tornado (paramMetaknightSpecialN__11ftKirbyNode)
@@ -471,7 +471,7 @@ Subtracts this each frame while not listening for button input
 Spin speed equal to or less than this to end move (If negative, can't end normally)
 
 *0x4C
-No Description Available.
+Unknown
 
 Par08
 Sonic: Homing Attack (paramSonicSpecialN__11ftKirbyNode)
@@ -573,7 +573,7 @@ Laser speed
 Landing lag (Frames. If 1 or more, it will be Special Fall)
 
 *0x1C
-No Description Available.
+Unknown
 
 Par10
 Falco: Blaster
@@ -600,7 +600,7 @@ Laser speed
 Landing lag (Frames. If 1 or more, it will be Special Fall)
 
 *0x1C
-No Description Available.
+Unknown
 
 Par11
 Wolf: Blaster
@@ -627,7 +627,7 @@ Laser speed
 Unknown
 
 *0x1C
-No Description Available.
+Unknown
 
 Par12
 Charizard: Flamethrower
@@ -711,7 +711,7 @@ Minimum hold continue frame
 Maximum hold continue frame
 
 *0x14
-No Description Available.
+Unknown
 
 Par14
 Squirtle: Water Gun
@@ -756,10 +756,10 @@ Minimum hold continue frame
 Maximum hold continue frame
 
 0x8
-No Description Available.
+Unknown
 
 0xC
-No Description Available.
+Unknown
 
 0x10 Bite Speed
 Biting animation speed when attack button pressed
@@ -768,13 +768,13 @@ Biting animation speed when attack button pressed
 If value is low, can't change biting animation speed when attack button pressed
 
 0x18
-No Description Available.
+Unknown
 
 0x1C Bomb Damage
 Damage taken when eat a bomb
 
 0x20
-No Description Available.
+Unknown
 
 *0x24 Interval after Throw
 Frame to can't bite after throwing
@@ -870,13 +870,13 @@ Backward angled throw vertical momentum
 Duck and cover animation range
 
 *0x24
-No Description Available.
+Unknown
 
 Par19
 Zelda: Nayru's Love
 
 0x0
-No Description Available.
+Unknown
 
 *0x4 Fall Timing
 Fall start timing on startup
@@ -903,10 +903,10 @@ X offset aerial needles
 Y offset aerial needles
 
 *0x10
-No Description Available.
+Unknown
 
 *0x14
-No Description Available.
+Unknown
 
 Par21
 Lucas: PK Freeze
@@ -914,11 +914,11 @@ Lucas: PK Freeze
 *0x0 Fall Timing
 Number of frames to halt vert momentum before using 0xC as gravity
 
-*0x4 Fastest Ignite Time
+*0x4 Fastest Detonation Frame
 Minimum frames it takes to ignite after PK Freeze appears
 
-*0x8 Duration
-Maximum frames it takes to ignite or disappear after PK Freeze appears
+*0x8 Max Hold Frame
+Maximum frames it takes to ignite after PK Freeze appears. It only affects during the action. Not affects disappear timing.
 
 0xC Gravity
 Gravity after initial vertical halt
@@ -927,7 +927,7 @@ Gravity after initial vertical halt
 Landing lag (frames)
 
 *0x14
-No Description Available.
+Unknown
 
 Par22
 Ness: PK Flash
@@ -935,11 +935,11 @@ Ness: PK Flash
 *0x0 Fall Timing
 Number of frames to halt vert momentum before using 0xC as gravity
 
-*0x4 Fastest Ignite Time
+*0x4 Fastest Detonation Frame
 Minimum frames it takes to ignite after PK Flash appears
 
-*0x8 Duration
-Maximum frames it takes to ignite or disappear after PK Flash appears
+*0x8 Max Hold Frame
+Maximum frames it takes to ignite after PK Flash appears. It only affects during the action. Not affects disappear timing.
 
 0xC Gravity
 Gravity after initial vertical halt
@@ -960,10 +960,10 @@ How many arm swings to fully charge
 Damage per arm swing (first arm swing has no effect)
 
 0x8
-No Description Available.
+Unknown
 
 0xC
-No Description Available.
+Unknown
 
 Par24
 Ike: Eruption (paramIkeSpecialN__11ftKirbyNode)
@@ -1050,22 +1050,22 @@ Min aerial horizontal speed (momentum forward in air/momentum preservation in ai
 Unknown
 
 0x34
-No Description Available.
+Unknown
 
 0x38 Pivot/Hit Animation Speed
 Rotation animation speed while pivoting or after hit
 
 *0x3C
-No Description Available.
+Unknown
 
 0x40
-No Description Available.
+Unknown
 
 0x44
-No Description Available.
+Unknown
 
 0x48
-No Description Available.
+Unknown
 
 0x4C Bonus Damage
 Bonus damage: +3x to fast
@@ -1083,13 +1083,13 @@ Vertical recoil on hit
 Horizontal ending slide speed
 
 0x60
-No Description Available.
+Unknown
 
 0x64 Max Roll Animation speed
 Max rolling animation speed
 
 *0x68
-No Description Available.
+Unknown
 
 0x6C Min Roll Power
 Initial roll power (min 40.0--see friction)
@@ -1104,7 +1104,7 @@ Roll power growth rate per charge frame
 Initial charge animation speed
 
 0x7C
-No Description Available.
+Unknown
 
 0x80 Deceleration 1
 Increasing it cuts short distance traveled (Deceleration related)
@@ -1128,7 +1128,7 @@ Deceleration speed when climb a slope. No affect to speed when going down a alop
 Minimum speed required for sparkle graphics
 
 0x9C
-No Description Available.
+Unknown
 
 0xA0 Wall Bounce H Multiplier
 Wall bounce horizontal momentum multiplier
@@ -1176,10 +1176,10 @@ Momentum backward from charged firing
 Damage added when shooting before explosion (charge to limit)
 
 0x18
-No Description Available.
+Unknown
 
 *0x1C
-No Description Available.
+Unknown
 
 0x20 X Offset
 X Offset
@@ -1242,22 +1242,22 @@ Par29
 Dedede: Inhale
 
 *0x0 Min Hold Frame
-Minimum hold continue frame
+Minimum hold continue frames
 
-0x4
-No Description Available.
+0x4 Turn Sensitivity
+Backward sensitivity. In other words, strength of input required to change direction. If set to 0, it will turn when waiting on the ground. If set -1, move to spit action if the strength of the input in the opposite direction is less than the maximum input.
 
 0x8
-No Description Available.
+Unknown
 
 0xC Walk Speed
 Inhale walk speed
 
-0x10
-No Description Available.
+0x10 Button Mashing Movement
+When waiting on the ground, if the target who is inhaled it inputs sideways or upwards, the strength to move in that direction.
 
-0x14 Jump Height
-Inhale jump height
+0x14 Jump Momentum Multiplier
+Inhale jump momentum Multiplier (Multiplier of Attributes 0x38)
 
 0x18 X Offset
 X offset of exhale
@@ -1265,20 +1265,20 @@ X offset of exhale
 0x1C Y Offset
 Y offset of exhale
 
-*0x20
-Related to Inhale base time
+*0x20 Auto Spit Time
+Frames to automatically move to spit action. No effect on the time it takes for the inhaled target to escape.
 
 0x24
-No Description Available.
+Unknown
 
 0x28 Bomb Damage
 Damage taken when eat a bomb
 
 *0x2C
-No Description Available.
+Unknown
 
 Par30
-Pikmin: Pluck (paramPikminSpecialN__11ftKirbyNode)
+Olimar: Pikmin Pluck (paramPikminSpecialN__11ftKirbyNode)
 
 0x0 X Offset
 X offset of pluck
@@ -1287,10 +1287,10 @@ X offset of pluck
 Y offset of pluck
 
 Par31
-Pikmin: Pikmin Toss (paramPikminSpecialS__11ftKirbyNode)
+Olimar: Pikmin Toss (paramPikminSpecialS__11ftKirbyNode)
 
 *0x0
-No Description Available.
+Unknown
 
 0x4 X Offset
 X offset of Side-B toss
@@ -1299,7 +1299,7 @@ X offset of Side-B toss
 Y offset of Side-B toss
 
 *0xC
-No Description Available.
+Unknown
 
 Par32
 Ganondorf: Warlock Punch (paramGanonPunch__11ftKirbyNode)
@@ -1320,7 +1320,7 @@ Momentum forward in air punch (Occur when RA-Bit[17] is True)
 Momentum and fall speed in air punch (Occur when RA-Bit[17]=True and RA-Basic[0]=1)
 
 *0x14
-No Description Available.
+Unknown
 
 Par33
 Link: Arrows
@@ -1329,10 +1329,10 @@ Link: Arrows
 More velocity with lower value, only affects charged arrows (no affects max charge arrows)
 
 0x4
-No Description Available.
+Unknown
 
 *0x8
-No Description Available.
+Unknown
 
 0xC Angle
 Firing angle (radians)
@@ -1344,10 +1344,10 @@ Toon Link: Arrows
 More velocity with lower value, only affects charged arrows (no affects max charge arrows)
 
 0x4
-No Description Available.
+Unknown
 
 *0x8
-No Description Available.
+Unknown
 
 0xC Angle
 Firing angle (radians)
@@ -1392,7 +1392,7 @@ Aerial horizontal momentum from shooting charged Charge shot (negative = backwar
 Frames between change in charge level
 
 *0xC
-No Description Available.
+Unknown
 
 Par37
 Bowser: Fire Breath
@@ -1476,7 +1476,7 @@ Par39
 Game and Watch: Chef
 
 0x0
-No Description Available.
+Unknown
 
 *0x4 Max Fire Count
 Maximum number that can be fire continuously
@@ -1548,7 +1548,7 @@ Reflected speed multiplier
 Reflected duration multiplier
 
 *0x24
-No Description Available.
+Unknown
 
 Par62
 pikminPullOutParam__11ftKirbyNode
@@ -2517,7 +2517,7 @@ Flame momentum randomness. Random momentum from 0xC to 0x10. The higher value is
 Flame momentum randomness. Random momentum from 0xC to 0x10
 
 *0x14
-No Description Available.
+Unknown
 
 Par07-0
 Ivysaur: Bullet Seed Article
@@ -2559,16 +2559,16 @@ Par09-0
 Zero suit Samus: Paralyzer Article
 
 0x0
-No Description Available.
+Unknown
 
 0x4
-No Description Available.
+Unknown
 
 0x8
-No Description Available.
+Unknown
 
 0xC
-No Description Available.
+Unknown
 
 0x10 Uncharged Speed
 Uncharged speed
@@ -2691,7 +2691,7 @@ Purple Pikmin horizontal deceleration when landing
 Purple Pikmin horizontal momentum when landing
 
 *0x8C
-No Description Available.
+Unknown
 
 Par10-1
 ExtraParams16

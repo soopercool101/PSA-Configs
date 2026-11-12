@@ -4,30 +4,30 @@
 084 Par02 E
 088 Par03 6
 08C Par04 C
-094 Art0
-09C Art1
-0A4 Art2
-0AC Art3
-0B4 Art4
+094 Art0 (ID=3) Waddle Doo Beam
+09C Art1 (ID=0) Super Dedede Jump Landing Star
+0A4 Art2 (ID=1) Jet Hammer
+0AC Art3 (ID=2) Star Bullet
+0B4 Art4 Waddle Dee / Waddle Doo / Gordo
 X10 2E-00x
 
-Art0
+Art0 (ID=3) Waddle Doo Beam
 1-1
 034 Par00-0 2
 
-Art1
+Art1 (ID=0) Super Dedede Jump Landing Star
 1-1
 034 Par01-0 1
 
-Art2
+Art2 (ID=1) Jet Hammer
 A-E
 030 Par02D3 4
 
-Art3
+Art3 (ID=2) Star Bullet
 1-1
 034 Par03-0 6
 
-Art4
+Art4 Waddle Dee / Waddle Doo / Gordo
 1A-1C
 034 SubAction DeeMain
 038 SubAction DooMain
@@ -45,25 +45,25 @@ X08 2D-18-02x
 X08 2D-18-04x
 
 Par00
-Inhale
+Neutral B: Inhale
 
 *0x0 Min Hold Frame
-Minimum hold continue frame
+Minimum hold continue frames
 
-0x4
-No Description Available.
+0x4 Turn Sensitivity
+Backward sensitivity. If set to 0, it will turn when waiting on the ground. If set -1, move to spit action if the strength of the input in the opposite direction is less than the maximum input.
 
 0x8
-No Description Available.
+Unknown
 
 0xC Walk Speed
 Inhale walk speed
 
-0x10
-No Description Available.
+0x10 Button Mashing Movement
+When waiting on the ground, if the target who is inhaled it inputs sideways or upwards, the strength to move in that direction.
 
-0x14 Jump Height
-Inhale jump height
+0x14 Jump Height Multiplier
+Inhale jump height Multiplier (Multiplier of Attributes 0x38)
 
 0x18 X Offset
 X offset of exhale
@@ -71,29 +71,29 @@ X offset of exhale
 0x1C Y Offset
 Y offset of exhale
 
-*0x20
-Related to Inhale base time
+*0x20 Auto Spit Time
+Frames to automatically move to spit action. No effect on the time it takes for the inhaled target to escape.
 
 0x24
-No Description Available.
+Unknown
 
 0x28 Bomb Damage
 Damage taken when eat a bomb
 
 *0x2C
-No Description Available.
+Unknown
 
 Par01
-Waddle Dee Toss (paramDededeWdThrow__12ftDededeNode)
+Side B: Waddle Dee Toss (paramDededeWdThrow__12ftDededeNode)
 
 0x0 Base Throw Speed
 Base throw speed
 
 0x4 Strong Throw Ratio
-Strong throw ratio (throw speed ratio when smash input)
+Strong throw ratio (throw speed ratio when smash input) (When smash input, RA-Bit[20] is True)
 
 0x8 Normal Angle
-Default throw angle
+Default throw angle (Angle variable is RA-Float[4])
 
 0xC Downward Angle
 Downward angle
@@ -105,16 +105,16 @@ Upward angle
 Max number of minions
 
 0x18 Waddle Dee Ratio
-Relative odds of throwing a Waddle Dee (The actual Waddle Dee Ratio never falls below 50 percent)
+Relative odds of throwing a Waddle Dee (Because it is recorded by LA-Basic[65], Waddle Dee will come out once every two times. Can Always get it by RA-Basic[0]=0. Also, can Always get it by RA-Basic[0]=0.)
 
 0x1C Waddle Doo Ratio
-Relative odds of throwing a Waddle Doo
+Relative odds of throwing a Waddle Doo (Can Always get it by RA-Basic[0]=1)
 
 0x20 Gordo Ratio
-Relative odds of throwing a Gordo
+Relative odds of throwing a Gordo (Can Always get it by RA-Basic[0]=2)
 
 0x24 Capsule Ratio
-Relative odds of throwing a Capsule (If Item Switch is set so that the capsule does not come out, it will not come out at all)
+Relative odds of throwing a Capsule (If Item Switch is set so that the capsule does not come out, it will not come out at all. Also, can Always get it by RA-Basic[0]=3.)
 
 *0x28
  ?? (read on waddle toss)
@@ -123,7 +123,7 @@ Relative odds of throwing a Capsule (If Item Switch is set so that the capsule d
  ?? (read on waddle toss)
 
 Par02
-Super Dedede Jump (paramDededeSuperJump__12ftDededeNode)
+Up B: Super Dedede Jump (paramDededeSuperJump__12ftDededeNode)
 
 0x0 Pre Jump Slide
 How much slide when pre jump
@@ -156,19 +156,19 @@ Related to fall start timing (higher = fast)
  ?? (read on upB normal landing)
 
 0x28 X Offset (Right)
-X offset of right buttstar
+X offset of right star
 
 0x2C Y Offset (Right)
-Y offset of right buttstar
+Y offset of right star
 
 0x30 X Offset (Left)
-X offset of left buttstar
+X offset of left star
 
 0x34 Y Offset (Left)
-Y offset of left buttstar
+Y offset of left star
 
 Par03
-Jet Hammer (paramDededeJetHammer__12ftDededeNode)
+Down B: Jet Hammer (paramDededeJetHammer__12ftDededeNode)
 
 0x0
  ?? (read on upB normal landing)
@@ -182,20 +182,20 @@ Damage growth rate
 *0xC Damage Interval
 Frame interval of self-damage when fully charged
 
-*0x10
-Unknown (Was thought to be a value related to Full charge hold self-damage limit)
+*0x10 Damage Increase Limit
+Maximum amount of damage by self-damage when fully charged
 
 *0x14
-No Description Available.
+Unknown
 
 Par04
-Waddle Dee Army (paramDededeFinal__12ftDededeNode)
+Final Smash: Waddle Dee Army (paramDededeFinal__12ftDededeNode)
 
 *0x0 Interval
 How long before the next minion comes out (frames)
 
-*0x4
-Unknown
+*0x4 Dedede Base Ratio
+After minions appear based on the stage for the number of times set in 0x4, appears once based on the position of Dedede. Repeat this alternately during Final Smash.
 
 *0x8 Max minions
 Max minions
@@ -221,11 +221,11 @@ Gordo ratio
 0x24
  ?? (read on FS)
 
-*0x28
- ?? (read on FS)
+0x28 Dedede Base X Offset
+X offset when minion appears based on the position of Dedede. If set 50, minion will appear 50 right.
 
-0x2C
-Unknown
+0x2C Dedede Base Y Offset
+Y offset when minion appears based on the position of Dedede
 
 Par00-0
 Waddle Doo Beam Article
@@ -258,7 +258,7 @@ No Description Available.
 No Description Available.
 
 Par03-0
-paramDededeStarmissile__23wnDededeStarMissileNode
+Star Bullet Article (paramDededeStarmissile__23wnDededeStarMissileNode)
 
 0x0 Speed
 Speed of star shot
@@ -564,7 +564,7 @@ Angle of the first shot of the Waddle Doo Beam
 The angle of the next beam that is added each time Waddle Doo shoots a beam
 
 *0x2C Doo Attack Ratio
-The probability that Waddle Dee will attack. If the value is 0, attack will not be taken. But, if set ratio of all actions to 0, will only do this action.
+The probability that Waddle Doo will attack. If the value is 0, attack will not be taken. But, if set ratio of all actions to 0, will only do this action.
 
 0x30 Doo Beam X Offset
 Waddle Doo Beam X Offset
